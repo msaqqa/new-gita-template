@@ -3,41 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>الذهبية العالمية للسياحة</title>
+    <link
+      rel="icon"
+      href="images/logo.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/bootstrap.rtl.min.css" />
     <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
+     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
   </head>
+
   <body>
     <!-- Preloader HTML -->
-    <!-- <div id="preloader">
+    <div id="preloader">
       <div class="loading-container">
         <img src="./images/logo.png" alt="Logo" />
       </div>
-    </div> -->
+    </div>
 
-    <!-- alert -->
+    <!-- Alert -->
     <div
-    id="alert"
-    class="alert d-none d-md-block alert-secondary alert-dismissible fade show m-0 text-center border-0 rounded-0"
-    role="alert"
-  >
-    <strong>نوفمبر ذهبي مع الذهبية العالمية ✈️</strong> حجز تذكرتك بخصم 10%
-    عرحلات مميزة خلال شهر نوفمبر
-    <button
+      id="alert"
+      class="alert d-none d-md-block alert-secondary alert-dismissible fade show m-0 text-center border-0 rounded-0"
+      role="alert"
+    >
+      <a href="#">
+        <strong>نوفمبر ذهبي مع الذهبية العالمية ✈️</strong> حجز تذكرتك بخصم 10%
+      عرحلات مميزة خلال شهر نوفمبر
+      </a>
+      <button
       type="button"
       id="closeAlert"
       class="btn-close"
       data-bs-dismiss="alert"
       aria-label="Close"
     ></button>
-  </div>
+    </div>
 
-    <!-- Navbar -->
+    <!--Start Navbar -->
     <nav
       id="navbar"
       class="navbar navbar-expand-lg default-background"
@@ -96,24 +105,19 @@
             </div>
       </div>
     </nav>
+    <!-- End Navbar -->
 
-    <!-- home secyion -->
+    <!-- Start Home Section -->
     <section class="home-section">
       <div class="container position-relative h-100">
-        <div class="home-content wow animate__animated animate__fadeInDown">
-          <h2>
-            إجازتك مع
-            <span class="" style="color: var(--accent-color)"
-              >الذهبية العالمية</span
-            >
-            <br />
-            إستثنائية لك ولعائلتك
-          </h2>
+        <div class="home-text wow animate__animated animate__fadeInDown">
+          <h2>إجازتك مع <span class="text-accent">الذهبية العالمية</span><br />إستثنائية لك ولعائلتك</h2>
           <hr />
-          <h3 class="text-white h4">
-            احجز بسهولة <span class="">وجهتك التي تبيها</span>
+          <h3 class="text-white h4 mb-4">
+            احجز بسهولة <span class="text-accent">وجهتك التي تبيها</span>
           </h3>
         </div>
+
         <div class="search-widget shadow-lg rounded-3 wow animate__animated animate__fadeInDown">
           
             <div class="widget-menu">
@@ -189,79 +193,156 @@
                 </li>
               </ul>
             </div>
+
             <div class="search-container">
-            <div class="tab-content">
-              <div class="tab-pane active show" id="oneWay" role="tabpanel">
-                <form class="row">
-                  <div class="col-md-4 mb-2">
-                    <label for="inputEmail4" class="form-label">من</label>
-                    <input type="email" class="form-control" id="inputEmail4" />
-                  </div>
-                  <div class="col-md-4 mb-2">
-                    <label for="inputPassword4" class="form-label"
-                      >وجهة الوصول</label
-                    >
-                    <input
-                      type="password"
-                      class="form-control"
-                      id="inputPassword4"
-                    />
-                  </div>
-                  <div class="col-md-4 mb-2">
-                    <label for="inputPassword4" class="form-label"
-                      >تاريخ الذهاب</label
-                    >
-                    <input
-                      type="date"
-                      class="form-control"
-                      data-date-format="yyyy-mm-dd"
-                      placeholder="تاريخ الذهاب"
-                    />
-                  </div>
-                  <div class="col-md-4">
-                    <label for="inputState" class="form-label"
-                      >نوع الرحلة</label
-                    >
-                    <select id="inputState" class="form-select">
-                      <option selected>اختر...</option>
-                      <option value="ECONOMY">اقتصادية</option>
-                      <option value="PREMIUM_ECONOMY">اقتصادية مميزه</option>
-                      <option value="BUSINESS">اعمال</option>
-                      <option value="FIRST">اولي</option>
-                    </select>
-                  </div>
-                  <div class="col-md-4">
-                    <label for="inputState" class="form-label"
-                      >عمر المسافر</label
-                    >
-                    <select id="inputState" class="form-select">
-                      <option selected>اختر...</option>
-                      <option value="ECONOMY">بالغ</option>
-                      <option value="PREMIUM_ECONOMY">طفل</option>
-                      <option value="BUSINESS">رضيغ</option>
-                    </select>
-                  </div>
-                  <div class="col-md-4 pt-2">
-                    <div class="form-check pt-4">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="gridCheck"
-                      />
-                      <label class="form-check-label" for="gridCheck">
-                        رحلات مباشرة
-                      </label>
-                    </div>
-                  </div>
-                </form>
-              </div>
-              <div class="tab-pane" id="roundTrip" role="tabpanel">
+              <div class="tab-content">
+                <div class="tab-pane active show" id="oneWay" role="tabpanel">
                   <form class="row">
                     <div class="col-md-4 mb-2">
                       <label for="inputEmail4" class="form-label">من</label>
                       <input type="email" class="form-control" id="inputEmail4" />
                     </div>
                     <div class="col-md-4 mb-2">
+                      <label for="travleAccess" class="form-label"
+                        >وجهة الوصول</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="travleAccess"
+                      />
+                    </div>
+                    <div class="col-md-4 mb-2">
+                      <label for="gowignDate" class="form-label"
+                        >تاريخ الذهاب</label
+                      >
+                      <input
+                        type="date"
+                        class="form-control"
+                        data-date-format="yyyy-mm-dd"
+                        id="gowignDate"
+                      />
+                    </div>
+                    <div class="col-md-4">
+                      <label for="travelType" class="form-label"
+                        >نوع الرحلة</label
+                      >
+                      <select id="travelType" class="form-select">
+                        <option selected>اختر...</option>
+                        <option value="ECONOMY">اقتصادية</option>
+                        <option value="PREMIUM_ECONOMY">اقتصادية مميزه</option>
+                        <option value="BUSINESS">اعمال</option>
+                        <option value="FIRST">اولي</option>
+                      </select>
+                    </div>
+                    <div class="col-md-4">
+                      <label for="travelrtAge" class="form-label"
+                        >عمر المسافر</label
+                      >
+                      <select id="travelrtAge" class="form-select">
+                        <option selected>اختر...</option>
+                        <option value="ECONOMY">بالغ</option>
+                        <option value="PREMIUM_ECONOMY">طفل</option>
+                        <option value="BUSINESS">رضيغ</option>
+                      </select>
+                    </div>
+                    <div class="col-md-4 pt-2">
+                      <div class="form-check pt-4">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="oneWayCheck"
+                        />
+                        <label class="form-check-label" for="oneWayCheck">
+                          رحلات مباشرة
+                        </label>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="tab-pane" id="roundTrip" role="tabpanel">
+                    <form class="row">
+                      <div class="col-md-4 mb-2">
+                        <label for="inputEmail4" class="form-label">من</label>
+                        <input type="email" class="form-control" id="inputEmail4" />
+                      </div>
+                      <div class="col-md-4 mb-2">
+                        <label for="inputPassword4" class="form-label"
+                          >وجهة الوصول</label
+                        >
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="inputPassword4"
+                        />
+                      </div>
+                      <div class="col-md-4 mb-2">
+                        <label for="inputPassword4" class="form-label"
+                          >تاريخ الذهاب</label
+                        >
+                        <input
+                          type="date"
+                          class="form-control"
+                          data-date-format="yyyy-mm-dd"
+                          placeholder="تاريخ الذهاب"
+                        />
+                      </div>
+                      <div class="col-md-4 mb-2">
+                        <label for="inputPassword4" class="form-label"
+                          >تاريخ العودة</label
+                        >
+                        <input
+                          type="date"
+                          class="form-control"
+                          data-date-format="yyyy-mm-dd"
+                          placeholder="تاريخ العودة"
+                        />
+                      </div>
+                      <div class="col-md-4 mb-2">
+                        <label for="inputState" class="form-label"
+                          >نوع الرحلة</label
+                        >
+                        <select id="inputState" class="form-select">
+                          <option selected>اختر...</option>
+                          <option value="ECONOMY">اقتصادية</option>
+                          <option value="PREMIUM_ECONOMY">اقتصادية مميزه</option>
+                          <option value="BUSINESS">اعمال</option>
+                          <option value="FIRST">اولي</option>
+                        </select>
+                      </div>
+                      <div class="col-md-4 mb-2">
+                        <label for="inputState" class="form-label"
+                          >عمر المسافر</label
+                        >
+                        <select id="inputState" class="form-select">
+                          <option selected>اختر...</option>
+                          <option value="ECONOMY">بالغ</option>
+                          <option value="PREMIUM_ECONOMY">طفل</option>
+                          <option value="BUSINESS">رضيغ</option>
+                        </select>
+                      </div>
+                      <div class="col-md-4 mb-2">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="roundTripCheck"
+                          />
+                          <label class="form-check-label" for="roundTripCheck">
+                            رحلات مباشرة
+                          </label>
+                        </div>
+                      </div>
+                    </form>
+                </div>
+                <div class="tab-pane" id="multiCity" role="tabpanel">
+                  <form class="row">
+                    <legend class="fs-5">رحلة 1</legend>
+                    <div class="col-lg-2 col-md-3 mb-3">
+                      <label for="inputEmail4" class="form-label">من</label>
+                      <input type="email" class="form-control" id="inputEmail4" />
+                    </div>
+                    <div class="col-lg-2 col-md-3 mb-3">
                       <label for="inputPassword4" class="form-label"
                         >وجهة الوصول</label
                       >
@@ -271,7 +352,7 @@
                         id="inputPassword4"
                       />
                     </div>
-                    <div class="col-md-4 mb-2">
+                    <div class="col-lg-2 col-md-3 mb-3">
                       <label for="inputPassword4" class="form-label"
                         >تاريخ الذهاب</label
                       >
@@ -282,18 +363,7 @@
                         placeholder="تاريخ الذهاب"
                       />
                     </div>
-                    <div class="col-md-4 mb-2">
-                      <label for="inputPassword4" class="form-label"
-                        >تاريخ العودة</label
-                      >
-                      <input
-                        type="date"
-                        class="form-control"
-                        data-date-format="yyyy-mm-dd"
-                        placeholder="تاريخ العودة"
-                      />
-                    </div>
-                    <div class="col-md-4 mb-2">
+                    <div class="col-lg-2 col-md-3">
                       <label for="inputState" class="form-label"
                         >نوع الرحلة</label
                       >
@@ -305,7 +375,7 @@
                         <option value="FIRST">اولي</option>
                       </select>
                     </div>
-                    <div class="col-md-4 mb-2">
+                    <div class="col-lg-2 col-md-3">
                       <label for="inputState" class="form-label"
                         >عمر المسافر</label
                       >
@@ -316,306 +386,239 @@
                         <option value="BUSINESS">رضيغ</option>
                       </select>
                     </div>
-                    <div class="col-md-4 mb-2">
+                    <div class="col-lg-2 col-md-4">
                       <div class="form-check">
                         <input
                           class="form-check-input"
                           type="checkbox"
-                          id="gridCheck"
+                          id="multiCityOne"
                         />
-                        <label class="form-check-label" for="gridCheck">
+                        <label class="form-check-label" for="multiCityOne">
                           رحلات مباشرة
                         </label>
                       </div>
                     </div>
                   </form>
-              </div>
-              <div class="tab-pane" id="multiCity" role="tabpanel">
-                <form class="row">
-                  <legend class="fs-3 fw-500">رحلة 1</legend>
-                  <div class="col-lg-2 col-md-3 mb-3">
-                    <label for="inputEmail4" class="form-label">من</label>
-                    <input type="email" class="form-control" id="inputEmail4" />
-                  </div>
-                  <div class="col-lg-2 col-md-3 mb-3">
-                    <label for="inputPassword4" class="form-label"
-                      >وجهة الوصول</label
-                    >
-                    <input
-                      type="password"
-                      class="form-control"
-                      id="inputPassword4"
-                    />
-                  </div>
-                  <div class="col-lg-2 col-md-3 mb-3">
-                    <label for="inputPassword4" class="form-label"
-                      >تاريخ الذهاب</label
-                    >
-                    <input
-                      type="date"
-                      class="form-control"
-                      data-date-format="yyyy-mm-dd"
-                      placeholder="تاريخ الذهاب"
-                    />
-                  </div>
-                  <div class="col-lg-2 col-md-3">
-                    <label for="inputState" class="form-label"
-                      >نوع الرحلة</label
-                    >
-                    <select id="inputState" class="form-select">
-                      <option selected>اختر...</option>
-                      <option value="ECONOMY">اقتصادية</option>
-                      <option value="PREMIUM_ECONOMY">اقتصادية مميزه</option>
-                      <option value="BUSINESS">اعمال</option>
-                      <option value="FIRST">اولي</option>
-                    </select>
-                  </div>
-                  <div class="col-lg-2 col-md-3">
-                    <label for="inputState" class="form-label"
-                      >عمر المسافر</label
-                    >
-                    <select id="inputState" class="form-select">
-                      <option selected>اختر...</option>
-                      <option value="ECONOMY">بالغ</option>
-                      <option value="PREMIUM_ECONOMY">طفل</option>
-                      <option value="BUSINESS">رضيغ</option>
-                    </select>
-                  </div>
-                  <div class="col-lg-2 col-md-4">
-                    <div class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="gridCheck"
-                      />
-                      <label class="form-check-label" for="gridCheck">
-                        رحلات مباشرة
-                      </label>
+                  <form class="row">
+                    <legend class="fs-5">رحلة 2</legend>
+                    <div class="col-lg-2 col-md-3 mb-3">
+                      <label for="inputEmail4" class="form-label">من</label>
+                      <input type="email" class="form-control" id="inputEmail4" />
                     </div>
-                  </div>
-                </form>
-                <form class="row">
-                  <legend class="fs-5">رحلة 2</legend>
-                  <div class="col-lg-2 col-md-3 mb-3">
-                    <label for="inputEmail4" class="form-label">من</label>
-                    <input type="email" class="form-control" id="inputEmail4" />
-                  </div>
-                  <div class="col-lg-2 col-md-3 mb-3">
-                    <label for="inputPassword4" class="form-label"
-                      >وجهة الوصول</label
-                    >
-                    <input
-                      type="password"
-                      class="form-control"
-                      id="inputPassword4"
-                    />
-                  </div>
-                  <div class="col-lg-2 col-md-3 mb-3">
-                    <label for="inputPassword4" class="form-label"
-                      >تاريخ الذهاب</label
-                    >
-                    <input
-                      type="date"
-                      class="form-control"
-                      data-date-format="yyyy-mm-dd"
-                      placeholder="تاريخ الذهاب"
-                    />
-                  </div>
-                  <div class="col-lg-2 col-md-3">
-                    <label for="inputState" class="form-label"
-                      >نوع الرحلة</label
-                    >
-                    <select id="inputState" class="form-select">
-                      <option selected>اختر...</option>
-                      <option value="ECONOMY">اقتصادية</option>
-                      <option value="PREMIUM_ECONOMY">اقتصادية مميزه</option>
-                      <option value="BUSINESS">اعمال</option>
-                      <option value="FIRST">اولي</option>
-                    </select>
-                  </div>
-                  <div class="col-lg-2 col-md-3">
-                    <label for="inputState" class="form-label"
-                      >عمر المسافر</label
-                    >
-                    <select id="inputState" class="form-select">
-                      <option selected>اختر...</option>
-                      <option value="ECONOMY">بالغ</option>
-                      <option value="PREMIUM_ECONOMY">طفل</option>
-                      <option value="BUSINESS">رضيغ</option>
-                    </select>
-                  </div>
-                  <div class="col-lg-2 col-md-4">
-                    <div class="form-check">
+                    <div class="col-lg-2 col-md-3 mb-3">
+                      <label for="inputPassword4" class="form-label"
+                        >وجهة الوصول</label
+                      >
                       <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="gridCheck"
+                        type="password"
+                        class="form-control"
+                        id="inputPassword4"
                       />
-                      <label class="form-check-label" for="gridCheck">
-                        رحلات مباشرة
-                      </label>
                     </div>
-                  </div>
-                </form>
-              </div>
-              <div class="tab-pane" id="compareFlights" role="tabpanel">
-                <form class="row">
-                  <legend class="fs-5">رحلة 1</legend>
-                  <div class="col-lg-2 col-md-3 mb-3">
-                    <label for="inputEmail4" class="form-label">من</label>
-                    <input type="email" class="form-control" id="inputEmail4" />
-                  </div>
-                  <div class="col-lg-2 col-md-3 mb-3">
-                    <label for="inputPassword4" class="form-label"
-                      >وجهة الوصول</label
-                    >
-                    <input
-                      type="password"
-                      class="form-control"
-                      id="inputPassword4"
-                    />
-                  </div>
-                  <div class="col-lg-2 col-md-3 mb-3">
-                    <label for="inputPassword4" class="form-label"
-                      >تاريخ الذهاب</label
-                    >
-                    <input
-                      type="date"
-                      class="form-control"
-                      data-date-format="yyyy-mm-dd"
-                      placeholder="تاريخ الذهاب"
-                    />
-                  </div>
-                  <div class="col-lg-2 col-md-3">
-                    <label for="inputState" class="form-label"
-                      >نوع الرحلة</label
-                    >
-                    <select id="inputState" class="form-select">
-                      <option selected>اختر...</option>
-                      <option value="ECONOMY">اقتصادية</option>
-                      <option value="PREMIUM_ECONOMY">اقتصادية مميزه</option>
-                      <option value="BUSINESS">اعمال</option>
-                      <option value="FIRST">اولي</option>
-                    </select>
-                  </div>
-                  <div class="col-lg-2 col-md-3">
-                    <label for="inputState" class="form-label"
-                      >عمر المسافر</label
-                    >
-                    <select id="inputState" class="form-select">
-                      <option selected>اختر...</option>
-                      <option value="ECONOMY">بالغ</option>
-                      <option value="PREMIUM_ECONOMY">طفل</option>
-                      <option value="BUSINESS">رضيغ</option>
-                    </select>
-                  </div>
-                  <div class="col-lg-2 col-md-4">
-                    <div class="form-check">
+                    <div class="col-lg-2 col-md-3 mb-3">
+                      <label for="inputPassword4" class="form-label"
+                        >تاريخ الذهاب</label
+                      >
                       <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="gridCheck"
+                        type="date"
+                        class="form-control"
+                        data-date-format="yyyy-mm-dd"
+                        placeholder="تاريخ الذهاب"
                       />
-                      <label class="form-check-label" for="gridCheck">
-                        رحلات مباشرة
-                      </label>
                     </div>
-                  </div>
-                </form>
-                <form class="row">
-                  <legend class="fs-5">رحلة 2</legend>
-                  <div class="col-lg-2 col-md-3 mb-3">
-                    <label for="inputEmail4" class="form-label">من</label>
-                    <input type="email" class="form-control" id="inputEmail4" />
-                  </div>
-                  <div class="col-lg-2 col-md-3 mb-3">
-                    <label for="inputPassword4" class="form-label"
-                      >وجهة الوصول</label
-                    >
-                    <input
-                      type="password"
-                      class="form-control"
-                      id="inputPassword4"
-                    />
-                  </div>
-                  <div class="col-lg-2 col-md-3 mb-3">
-                    <label for="inputPassword4" class="form-label"
-                      >تاريخ الذهاب</label
-                    >
-                    <input
-                      type="date"
-                      class="form-control"
-                      data-date-format="yyyy-mm-dd"
-                      placeholder="تاريخ الذهاب"
-                    />
-                  </div>
-                  <div class="col-lg-2 col-md-3">
-                    <label for="inputState" class="form-label"
-                      >نوع الرحلة</label
-                    >
-                    <select id="inputState" class="form-select">
-                      <option selected>اختر...</option>
-                      <option value="ECONOMY">اقتصادية</option>
-                      <option value="PREMIUM_ECONOMY">اقتصادية مميزه</option>
-                      <option value="BUSINESS">اعمال</option>
-                      <option value="FIRST">اولي</option>
-                    </select>
-                  </div>
-                  <div class="col-lg-2 col-md-3">
-                    <label for="inputState" class="form-label"
-                      >عمر المسافر</label
-                    >
-                    <select id="inputState" class="form-select">
-                      <option selected>اختر...</option>
-                      <option value="ECONOMY">بالغ</option>
-                      <option value="PREMIUM_ECONOMY">طفل</option>
-                      <option value="BUSINESS">رضيغ</option>
-                    </select>
-                  </div>
-                  <div class="col-lg-2 col-md-4">
-                    <div class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="gridCheck"
-                      />
-                      <label class="form-check-label" for="gridCheck">
-                        رحلات مباشرة
-                      </label>
+                    <div class="col-lg-2 col-md-3">
+                      <label for="inputState" class="form-label"
+                        >نوع الرحلة</label
+                      >
+                      <select id="inputState" class="form-select">
+                        <option selected>اختر...</option>
+                        <option value="ECONOMY">اقتصادية</option>
+                        <option value="PREMIUM_ECONOMY">اقتصادية مميزه</option>
+                        <option value="BUSINESS">اعمال</option>
+                        <option value="FIRST">اولي</option>
+                      </select>
                     </div>
-                  </div>
-                </form>
-              </div>
-              <div class="tab-pane" id="bookingInquiry" role="tabpanel">
-                <form class="row">
-                <div class="col-md-6">
-                  <label for="pnr" class="form-label">رقم الحجز</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="pnr"
-                    name="pnr"
-                    required
-                  />
+                    <div class="col-lg-2 col-md-3">
+                      <label for="inputState" class="form-label"
+                        >عمر المسافر</label
+                      >
+                      <select id="inputState" class="form-select">
+                        <option selected>اختر...</option>
+                        <option value="ECONOMY">بالغ</option>
+                        <option value="PREMIUM_ECONOMY">طفل</option>
+                        <option value="BUSINESS">رضيغ</option>
+                      </select>
+                    </div>
+                    <div class="col-lg-2 col-md-4">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="multiCityTwo"
+                        />
+                        <label class="form-check-label" for="multiCityTwo">
+                          رحلات مباشرة
+                        </label>
+                      </div>
+                    </div>
+                  </form>
                 </div>
-                <div class="col-md-6">
-                  <label for="lastName" class="form-label">الاسم الاخير</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="lastName"
-                    name="lastName"
-                    required
-                  />
+                <div class="tab-pane" id="compareFlights" role="tabpanel">
+                  <form class="row">
+                    <legend class="fs-5">رحلة 1</legend>
+                    <div class="col-lg-2 col-md-3 mb-3">
+                      <label for="inputEmail4" class="form-label">من</label>
+                      <input type="email" class="form-control" id="inputEmail4" />
+                    </div>
+                    <div class="col-lg-2 col-md-3 mb-3">
+                      <label for="inputPassword4" class="form-label"
+                        >وجهة الوصول</label
+                      >
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="inputPassword4"
+                      />
+                    </div>
+                    <div class="col-lg-2 col-md-3 mb-3">
+                      <label for="inputPassword4" class="form-label"
+                        >تاريخ الذهاب</label
+                      >
+                      <input
+                        type="date"
+                        class="form-control"
+                        data-date-format="yyyy-mm-dd"
+                        placeholder="تاريخ الذهاب"
+                      />
+                    </div>
+                    <div class="col-lg-2 col-md-3">
+                      <label for="inputState" class="form-label"
+                        >نوع الرحلة</label
+                      >
+                      <select id="inputState" class="form-select">
+                        <option selected>اختر...</option>
+                        <option value="ECONOMY">اقتصادية</option>
+                        <option value="PREMIUM_ECONOMY">اقتصادية مميزه</option>
+                        <option value="BUSINESS">اعمال</option>
+                        <option value="FIRST">اولي</option>
+                      </select>
+                    </div>
+                    <div class="col-lg-2 col-md-3">
+                      <label for="inputState" class="form-label"
+                        >عمر المسافر</label
+                      >
+                      <select id="inputState" class="form-select">
+                        <option selected>اختر...</option>
+                        <option value="ECONOMY">بالغ</option>
+                        <option value="PREMIUM_ECONOMY">طفل</option>
+                        <option value="BUSINESS">رضيغ</option>
+                      </select>
+                    </div>
+                    <div class="col-lg-2 col-md-4">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="compareFlightsOne"
+                        />
+                        <label class="form-check-label" for="compareFlightsOne">
+                          رحلات مباشرة
+                        </label>
+                      </div>
+                    </div>
+                  </form>
+                  <form class="row">
+                    <legend class="fs-5">رحلة 2</legend>
+                    <div class="col-lg-2 col-md-3 mb-3">
+                      <label for="inputEmail4" class="form-label">من</label>
+                      <input type="email" class="form-control" id="inputEmail4" />
+                    </div>
+                    <div class="col-lg-2 col-md-3 mb-3">
+                      <label for="inputPassword4" class="form-label"
+                        >وجهة الوصول</label
+                      >
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="inputPassword4"
+                      />
+                    </div>
+                    <div class="col-lg-2 col-md-3 mb-3">
+                      <label for="inputPassword4" class="form-label"
+                        >تاريخ الذهاب</label
+                      >
+                      <input
+                        type="date"
+                        class="form-control"
+                        data-date-format="yyyy-mm-dd"
+                        placeholder="تاريخ الذهاب"
+                      />
+                    </div>
+                    <div class="col-lg-2 col-md-3">
+                      <label for="inputState" class="form-label"
+                        >نوع الرحلة</label
+                      >
+                      <select id="inputState" class="form-select">
+                        <option selected>اختر...</option>
+                        <option value="ECONOMY">اقتصادية</option>
+                        <option value="PREMIUM_ECONOMY">اقتصادية مميزه</option>
+                        <option value="BUSINESS">اعمال</option>
+                        <option value="FIRST">اولي</option>
+                      </select>
+                    </div>
+                    <div class="col-lg-2 col-md-3">
+                      <label for="inputState" class="form-label"
+                        >عمر المسافر</label
+                      >
+                      <select id="inputState" class="form-select">
+                        <option selected>اختر...</option>
+                        <option value="ECONOMY">بالغ</option>
+                        <option value="PREMIUM_ECONOMY">طفل</option>
+                        <option value="BUSINESS">رضيغ</option>
+                      </select>
+                    </div>
+                    <div class="col-lg-2 col-md-4">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="compareFlightsTwo"
+                        />
+                        <label class="form-check-label" for="compareFlightsTwo">
+                          رحلات مباشرة
+                        </label>
+                      </div>
+                    </div>
+                  </form>
                 </div>
-              </form>
+                <div class="tab-pane" id="bookingInquiry" role="tabpanel">
+                  <form class="row">
+                  <div class="col-md-6">
+                    <label for="pnr" class="form-label">رقم الحجز</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="pnr"
+                      name="pnr"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="lastName" class="form-label">الاسم الاخير</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="lastName"
+                      name="lastName"
+                      required
+                    />
+                  </div>
+                </form>
+                </div>
               </div>
-            </div>
-            <div class="search-btn text-end mt-2">
-              <button type="button" id="search-btn" class="btn btn-main btn-rounded">
-                بحث
-              </button>
-            </div>
+              <div class="search-btn text-end mt-2">
+                <button type="button" id="search-btn" class="btn btn-main btn-rounded">بحث</button>
+              </div>
           </div>
 
         </div>
@@ -623,45 +626,46 @@
 
       </div>
     </section>
+    <!-- End Home Section -->
 
     <!-- Start Features Section -->
     <section class="features-section section-padding">
       <div class="container">
-      
-    <div class="swiper swiper1">
-      <div class="slider-heading mb-5 pt-4">
-        <h2 class="section-title mb-0 wow animate__animated animate__fadeInRight">عروض رهيبة ومميزات كثيرة</h2>
-        <div class="swiper-buttons position-relative d-none d-md-block">
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+        <div class="swiper swiper-features">
+          <div class="slider-heading mb-5 pt-4">
+            <h2 class="section-title mb-0 wow animate__animated animate__fadeInRight">عروض رهيبة ومميزات كثيرة</h2>
+            <div class="swiper-buttons position-relative d-none d-md-block">
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+          <div class="swiper-wrapper h-100">
+            <div class="swiper-slide">
+              <a href="#">
+                <img src="images/features/feature-01.jpeg">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#"><img src="images/features/feature-02.jpeg"></a>
+              
+            </div>
+            <div class="swiper-slide">
+              <a href="#"><img src="images/features/feature-03.jpeg"></a>
+              
+            </div>
+            <div class="swiper-slide">
+              <a href="#"><img src="images/features/feature-04.jpeg"></a>
+              
+            </div>
+            <div class="swiper-slide">
+            <a href="#">
+              <img src="images/features/feature-05.jpeg">
+            </a>        
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
         </div>
       </div>
-      <div class="swiper-wrapper h-100">
-        <div class="swiper-slide">
-          <a href="#">
-            <img src="images/features/feature-01.jpeg">
-          </a>
-        </div>
-        <div class="swiper-slide">
-          <a href="#"><img src="images/features/feature-02.jpeg"></a>
-          
-        </div>
-        <div class="swiper-slide">
-          <a href="#"><img src="images/features/feature-03.jpeg"></a>
-          
-        </div>
-        <div class="swiper-slide">
-          <a href="#"><img src="images/features/feature-04.jpeg"></a>
-          
-        </div>
-        <div class="swiper-slide">
-        <a href="#">
-          <img src="images/features/feature-05.jpeg">
-        </a>        
-        </div>
-      </div>
-    </div>
-    </div>
     </section>
     <!-- End Features Section -->
 
@@ -670,152 +674,152 @@
     <section class="tourist-destinations section-padding">
       <div class="container">
         <h2 class="section-title wow animate__animated animate__fadeInRight">سافر معنا في رحلة جديدة على وجهات سياحية مميزة</h2>
-          <div class="row wow animate__animated animate__fadeInDown">
-            <div class="col-md-3 mb-4">
-              <div class="card position-relative rounded-5">
-                <div class="card-image h-100">
-                  <img class="h-100" src="images/tourist-destinations/دبي.avif" loading="lazy">
-                  <img class="travel-line" src="images/tourist-destinations/Emirates.svg" alt="">
-                </div>
-                <div class="card-img-overlay text-center h-100 d-flex flex-column justify-content-end">
-                    <div class="card-title"><h5 class="text-light">دبي</h5></div>
-                    <p class="card-text mt-2 text-light">ابتداءً من</p>
-                    <p class="card-text mt-2 text-light fw-bold txt-price"> ريال  269.99*</p>
-                    <p class="card-text mt-2 text-light">ذهاب فقط / الاقتصادية</p>
-                    <p class="card-button mt-2 text-light"><a class="btn btn-main btn-sm xy-popularsearch" href="https://booking.flynas.com/#/booking/search-redirect?origin=RUH&amp;destination=BAH&amp;origin1=undefined&amp;destination1=0&amp;currency=SAR&amp;departureDate=2024-10-04&amp;returnDate=null&amp;flightMode=oneway&amp;adultCount=1&amp;childCount=0&amp;infantCount=0&amp;culture=en-GB&amp;utm_source=&amp;tagtag_uid=" tabindex="-1">احجز الآن</a></p>
-                </div>
-              </div> 
-            </div>
-
-            <div class="col-md-3 mb-4">
-              <div class="card position-relative rounded-5">
-                <div class="card-image h-100">
-                      <img class="h-100" src="images/tourist-destinations/اسطنبول.jpg" loading="lazy">
-                      <img class="travel-line" src="images/tourist-destinations/خطوط السعودية.png" alt="">
-                </div>
-                <div class="card-img-overlay text-center h-100 d-flex flex-column justify-content-end">
-                    <div class="card-title"><h5 class="text-light">اسطنبول</h5></div>
-                    <p class="card-text mt-2 text-light">ابتداءً من</p>
-                    <p class="card-text mt-2 text-light fw-bold txt-price"> ريال  269.99*</p>
-                    <p class="card-text mt-2 text-light">ذهاب فقط / الاقتصادية</p>
-                    <p class="card-button mt-2 text-light"><a class="btn btn-main btn-sm xy-popularsearch" href="https://booking.flynas.com/#/booking/search-redirect?origin=RUH&amp;destination=BAH&amp;origin1=undefined&amp;destination1=0&amp;currency=SAR&amp;departureDate=2024-10-04&amp;returnDate=null&amp;flightMode=oneway&amp;adultCount=1&amp;childCount=0&amp;infantCount=0&amp;culture=en-GB&amp;utm_source=&amp;tagtag_uid=" tabindex="-1">احجز الآن</a></p>
-                </div>
-              </div> 
-            </div>
-
-            <div class="col-md-3 mb-4">
-              <div class="card position-relative rounded-5">
-                <div class="card-image h-100">
-                      <img class="h-100" src="images/tourist-destinations/لندن.jpg" loading="lazy">
-                      <img class="travel-line" src="images/tourist-destinations/Qatar.svg" alt="">
-                </div>
-                <div class="card-img-overlay text-center h-100 d-flex flex-column justify-content-end">
-                    <div class="card-title"><h5 class="text-light">لندن</h5></div>
-                    <p class="card-text mt-2 text-light">ابتداءً من</p>
-                    <p class="card-text mt-2 text-light fw-bold txt-price"> ريال  269.99*</p>
-                    <p class="card-text mt-2 text-light">ذهاب فقط / الاقتصادية</p>
-                    <p class="card-button mt-2 text-light"><a class="btn btn-main btn-sm xy-popularsearch" href="https://booking.flynas.com/#/booking/search-redirect?origin=RUH&amp;destination=BAH&amp;origin1=undefined&amp;destination1=0&amp;currency=SAR&amp;departureDate=2024-10-04&amp;returnDate=null&amp;flightMode=oneway&amp;adultCount=1&amp;childCount=0&amp;infantCount=0&amp;culture=en-GB&amp;utm_source=&amp;tagtag_uid=" tabindex="-1">احجز الآن</a></p>
-                </div>
-              </div> 
-            </div>
-
-            
-            <div class="col-md-3 mb-4">
-              <div class="card position-relative rounded-5">
-                <div class="card-image h-100">
-                      <img class="h-100" src="images/tourist-destinations/القاهرة.webp" loading="lazy">
-                      <img class="travel-line" src="images/tourist-destinations/ايجبت اير.png" alt="">
-                </div>
-                <div class="card-img-overlay text-center h-100 d-flex flex-column justify-content-end">
-                  
-                    <div class="card-title"><h5 class="text-light">القاهرة</h5></div>
-                    <p class="card-text mt-2 text-light">ابتداءً من</p>
-                    <p class="card-text mt-2 text-light fw-bold txt-price"> ريال  269.99*</p>
-                    <p class="card-text mt-2 text-light">ذهاب فقط / الاقتصادية</p>
-                    <p class="card-button mt-2 text-light"><a class="btn btn-main btn-sm xy-popularsearch" href="https://booking.flynas.com/#/booking/search-redirect?origin=RUH&amp;destination=BAH&amp;origin1=undefined&amp;destination1=0&amp;currency=SAR&amp;departureDate=2024-10-04&amp;returnDate=null&amp;flightMode=oneway&amp;adultCount=1&amp;childCount=0&amp;infantCount=0&amp;culture=en-GB&amp;utm_source=&amp;tagtag_uid=" tabindex="-1">احجز الآن</a></p>
-                </div>
-              </div> 
-            </div>
-
-            <div class="col-md-3 mb-4">
-              <div class="card position-relative rounded-5">
-                <div class="card-image h-100">
-                      <img class="h-100" src="images/tourist-destinations/كوز.jpg" loading="lazy">
-                      <img class="travel-line" src="images/tourist-destinations/Emirates.svg" alt="">
-                </div>
-                <div class="card-img-overlay text-center h-100 d-flex flex-column justify-content-end">
-                  
-                    <div class="card-title"><h5 class="text-light">كوز</h5></div>
-                    <p class="card-text mt-2 text-light">ابتداءً من</p>
-                    <p class="card-text mt-2 text-light fw-bold txt-price"> ريال  269.99*</p>
-                    <p class="card-text mt-2 text-light">ذهاب فقط / الاقتصادية</p>
-                    <p class="card-button mt-2 text-light"><a class="btn btn-main btn-sm xy-popularsearch" href="https://booking.flynas.com/#/booking/search-redirect?origin=RUH&amp;destination=BAH&amp;origin1=undefined&amp;destination1=0&amp;currency=SAR&amp;departureDate=2024-10-04&amp;returnDate=null&amp;flightMode=oneway&amp;adultCount=1&amp;childCount=0&amp;infantCount=0&amp;culture=en-GB&amp;utm_source=&amp;tagtag_uid=" tabindex="-1">احجز الآن</a></p>
-                </div>
-              </div> 
-            </div>
-
-            <div class="col-md-3 mb-4">
-              <div class="card position-relative rounded-5">
-                <div class="card-image h-100">
-                      <img class="h-100" src="images/tourist-destinations/ميلان.jpg" loading="lazy">
-                      <img class="travel-line" src="images/tourist-destinations/Turkish AirLines.svg" alt="">
-                </div>
-                <div class="card-img-overlay text-center h-100 d-flex flex-column justify-content-end">
-                  
-                    <div class="card-title"><h5 class="text-light">ميلان</h5></div>
-                    <p class="card-text mt-2 text-light">ابتداءً من</p>
-                    <p class="card-text mt-2 text-light fw-bold txt-price"> ريال  269.99*</p>
-                    <p class="card-text mt-2 text-light">ذهاب فقط / الاقتصادية</p>
-                    <p class="card-button mt-2 text-light"><a class="btn btn-main btn-sm xy-popularsearch" href="https://booking.flynas.com/#/booking/search-redirect?origin=RUH&amp;destination=BAH&amp;origin1=undefined&amp;destination1=0&amp;currency=SAR&amp;departureDate=2024-10-04&amp;returnDate=null&amp;flightMode=oneway&amp;adultCount=1&amp;childCount=0&amp;infantCount=0&amp;culture=en-GB&amp;utm_source=&amp;tagtag_uid=" tabindex="-1">احجز الآن</a></p>
-                </div>
-              </div> 
-            </div>
-
-            <div class="col-md-3 mb-4">
-              <div class="card position-relative rounded-5">
-                <div class="card-image h-100">
-                      <img class="h-100" src="images/tourist-destinations/بانكوك.jpg" loading="lazy">
-                      <img class="travel-line" src="images/tourist-destinations/الخطوط العمانية.jpeg" alt="">
-                </div>
-                <div class="card-img-overlay text-center h-100 d-flex flex-column justify-content-end">
-                  
-                    <div class="card-title"><h5 class="text-light">بانكوك</h5></div>
-                    <p class="card-text mt-2 text-light">ابتداءً من</p>
-                    <p class="card-text mt-2 text-light fw-bold txt-price"> ريال  269.99*</p>
-                    <p class="card-text mt-2 text-light">ذهاب فقط / الاقتصادية</p>
-                    <p class="card-button mt-2 text-light"><a class="btn btn-main btn-sm xy-popularsearch" href="https://booking.flynas.com/#/booking/search-redirect?origin=RUH&amp;destination=BAH&amp;origin1=undefined&amp;destination1=0&amp;currency=SAR&amp;departureDate=2024-10-04&amp;returnDate=null&amp;flightMode=oneway&amp;adultCount=1&amp;childCount=0&amp;infantCount=0&amp;culture=en-GB&amp;utm_source=&amp;tagtag_uid=" tabindex="-1">احجز الآن</a></p>
-                </div>
-              </div> 
-            </div>
-
-            <div class="col-md-3 mb-4">
-              <div class="card position-relative rounded-5">
-                <div class="card-image h-100">
-                      <img class="h-100" src="images/tourist-destinations/الاردن.webp" loading="lazy">
-                      <img class="travel-line" src="images/tourist-destinations/الخطوط الاردنية.jpeg" alt="">
-                </div>
-                <div class="card-img-overlay text-center h-100 d-flex flex-column justify-content-end">
-                  
-                    <div class="card-title"><h5 class="text-light">الاردن</h5></div>
-                    <p class="card-text mt-2 text-light">ابتداءً من</p>
-                    <p class="card-text mt-2 text-light fw-bold txt-price"> ريال  269.99*</p>
-                    <p class="card-text mt-2 text-light">ذهاب فقط / الاقتصادية</p>
-                    <p class="card-button mt-2 text-light"><a class="btn btn-main btn-sm xy-popularsearch" href="https://booking.flynas.com/#/booking/search-redirect?origin=RUH&amp;destination=BAH&amp;origin1=undefined&amp;destination1=0&amp;currency=SAR&amp;departureDate=2024-10-04&amp;returnDate=null&amp;flightMode=oneway&amp;adultCount=1&amp;childCount=0&amp;infantCount=0&amp;culture=en-GB&amp;utm_source=&amp;tagtag_uid=" tabindex="-1">احجز الآن</a></p>
-                </div>
-              </div> 
-            </div>
-
-
+        <div class="row wow animate__animated animate__fadeInDown">
+          
+          <div class="col-lg-3 col-md-4 mb-4">
+            <div class="card position-relative rounded-5">
+              <div class="card-image h-100">
+                <img class="h-100" src="images/tourist-destinations/دبي.avif" loading="lazy">
+                <img class="travel-line" src="images/tourist-destinations/Emirates.svg" alt="">
+              </div>
+              <div class="card-img-overlay text-center h-100 d-flex flex-column justify-content-end">
+                  <div class="card-title"><h5 class="text-light">دبي</h5></div>
+                  <p class="card-text mt-2 text-light">ابتداءً من</p>
+                  <p class="card-text mt-2 text-light fw-bold txt-price"> ريال  269.99*</p>
+                  <p class="card-text mt-2 text-light">ذهاب فقط / الاقتصادية</p>
+                  <p class="card-button mt-2 text-light"><a class="btn btn-main btn-sm xy-popularsearch" href="https://booking.flynas.com/#/booking/search-redirect?origin=RUH&amp;destination=BAH&amp;origin1=undefined&amp;destination1=0&amp;currency=SAR&amp;departureDate=2024-10-04&amp;returnDate=null&amp;flightMode=oneway&amp;adultCount=1&amp;childCount=0&amp;infantCount=0&amp;culture=en-GB&amp;utm_source=&amp;tagtag_uid=" tabindex="-1">احجز الآن</a></p>
+              </div>
+            </div> 
           </div>
+
+          <div class="col-lg-3 col-md-4 mb-4">
+            <div class="card position-relative rounded-5">
+              <div class="card-image h-100">
+                    <img class="h-100" src="images/tourist-destinations/اسطنبول.jpg" loading="lazy">
+                    <img class="travel-line" src="images/tourist-destinations/خطوط السعودية.png" alt="">
+              </div>
+              <div class="card-img-overlay text-center h-100 d-flex flex-column justify-content-end">
+                  <div class="card-title"><h5 class="text-light">اسطنبول</h5></div>
+                  <p class="card-text mt-2 text-light">ابتداءً من</p>
+                  <p class="card-text mt-2 text-light fw-bold txt-price"> ريال  269.99*</p>
+                  <p class="card-text mt-2 text-light">ذهاب فقط / الاقتصادية</p>
+                  <p class="card-button mt-2 text-light"><a class="btn btn-main btn-sm xy-popularsearch" href="https://booking.flynas.com/#/booking/search-redirect?origin=RUH&amp;destination=BAH&amp;origin1=undefined&amp;destination1=0&amp;currency=SAR&amp;departureDate=2024-10-04&amp;returnDate=null&amp;flightMode=oneway&amp;adultCount=1&amp;childCount=0&amp;infantCount=0&amp;culture=en-GB&amp;utm_source=&amp;tagtag_uid=" tabindex="-1">احجز الآن</a></p>
+              </div>
+            </div> 
+          </div>
+
+          <div class="col-lg-3 col-md-4 mb-4">
+            <div class="card position-relative rounded-5">
+              <div class="card-image h-100">
+                    <img class="h-100" src="images/tourist-destinations/لندن.jpg" loading="lazy">
+                    <img class="travel-line" src="images/tourist-destinations/Qatar.svg" alt="">
+              </div>
+              <div class="card-img-overlay text-center h-100 d-flex flex-column justify-content-end">
+                  <div class="card-title"><h5 class="text-light">لندن</h5></div>
+                  <p class="card-text mt-2 text-light">ابتداءً من</p>
+                  <p class="card-text mt-2 text-light fw-bold txt-price"> ريال  269.99*</p>
+                  <p class="card-text mt-2 text-light">ذهاب فقط / الاقتصادية</p>
+                  <p class="card-button mt-2 text-light"><a class="btn btn-main btn-sm xy-popularsearch" href="https://booking.flynas.com/#/booking/search-redirect?origin=RUH&amp;destination=BAH&amp;origin1=undefined&amp;destination1=0&amp;currency=SAR&amp;departureDate=2024-10-04&amp;returnDate=null&amp;flightMode=oneway&amp;adultCount=1&amp;childCount=0&amp;infantCount=0&amp;culture=en-GB&amp;utm_source=&amp;tagtag_uid=" tabindex="-1">احجز الآن</a></p>
+              </div>
+            </div> 
+          </div>
+          
+          <div class="col-lg-3 col-md-4 mb-4">
+            <div class="card position-relative rounded-5">
+              <div class="card-image h-100">
+                    <img class="h-100" src="images/tourist-destinations/القاهرة.webp" loading="lazy">
+                    <img class="travel-line" src="images/tourist-destinations/ايجبت اير.png" alt="">
+              </div>
+              <div class="card-img-overlay text-center h-100 d-flex flex-column justify-content-end">
+                
+                  <div class="card-title"><h5 class="text-light">القاهرة</h5></div>
+                  <p class="card-text mt-2 text-light">ابتداءً من</p>
+                  <p class="card-text mt-2 text-light fw-bold txt-price"> ريال  269.99*</p>
+                  <p class="card-text mt-2 text-light">ذهاب فقط / الاقتصادية</p>
+                  <p class="card-button mt-2 text-light"><a class="btn btn-main btn-sm xy-popularsearch" href="https://booking.flynas.com/#/booking/search-redirect?origin=RUH&amp;destination=BAH&amp;origin1=undefined&amp;destination1=0&amp;currency=SAR&amp;departureDate=2024-10-04&amp;returnDate=null&amp;flightMode=oneway&amp;adultCount=1&amp;childCount=0&amp;infantCount=0&amp;culture=en-GB&amp;utm_source=&amp;tagtag_uid=" tabindex="-1">احجز الآن</a></p>
+              </div>
+            </div> 
+          </div>
+
+          <div class="col-lg-3 col-md-4 mb-4">
+            <div class="card position-relative rounded-5">
+              <div class="card-image h-100">
+                    <img class="h-100" src="images/tourist-destinations/كوز.jpg" loading="lazy">
+                    <img class="travel-line" src="images/tourist-destinations/Emirates.svg" alt="">
+              </div>
+              <div class="card-img-overlay text-center h-100 d-flex flex-column justify-content-end">
+                
+                  <div class="card-title"><h5 class="text-light">كوز</h5></div>
+                  <p class="card-text mt-2 text-light">ابتداءً من</p>
+                  <p class="card-text mt-2 text-light fw-bold txt-price"> ريال  269.99*</p>
+                  <p class="card-text mt-2 text-light">ذهاب فقط / الاقتصادية</p>
+                  <p class="card-button mt-2 text-light"><a class="btn btn-main btn-sm xy-popularsearch" href="https://booking.flynas.com/#/booking/search-redirect?origin=RUH&amp;destination=BAH&amp;origin1=undefined&amp;destination1=0&amp;currency=SAR&amp;departureDate=2024-10-04&amp;returnDate=null&amp;flightMode=oneway&amp;adultCount=1&amp;childCount=0&amp;infantCount=0&amp;culture=en-GB&amp;utm_source=&amp;tagtag_uid=" tabindex="-1">احجز الآن</a></p>
+              </div>
+            </div> 
+          </div>
+
+          <div class="col-lg-3 col-md-4 mb-4">
+            <div class="card position-relative rounded-5">
+              <div class="card-image h-100">
+                    <img class="h-100" src="images/tourist-destinations/ميلان.jpg" loading="lazy">
+                    <img class="travel-line" src="images/tourist-destinations/Turkish AirLines.svg" alt="">
+              </div>
+              <div class="card-img-overlay text-center h-100 d-flex flex-column justify-content-end">
+                
+                  <div class="card-title"><h5 class="text-light">ميلان</h5></div>
+                  <p class="card-text mt-2 text-light">ابتداءً من</p>
+                  <p class="card-text mt-2 text-light fw-bold txt-price"> ريال  269.99*</p>
+                  <p class="card-text mt-2 text-light">ذهاب فقط / الاقتصادية</p>
+                  <p class="card-button mt-2 text-light"><a class="btn btn-main btn-sm xy-popularsearch" href="https://booking.flynas.com/#/booking/search-redirect?origin=RUH&amp;destination=BAH&amp;origin1=undefined&amp;destination1=0&amp;currency=SAR&amp;departureDate=2024-10-04&amp;returnDate=null&amp;flightMode=oneway&amp;adultCount=1&amp;childCount=0&amp;infantCount=0&amp;culture=en-GB&amp;utm_source=&amp;tagtag_uid=" tabindex="-1">احجز الآن</a></p>
+              </div>
+            </div> 
+          </div>
+
+          <div class="col-lg-3 col-md-4 mb-4">
+            <div class="card position-relative rounded-5">
+              <div class="card-image h-100">
+                    <img class="h-100" src="images/tourist-destinations/بانكوك.jpg" loading="lazy">
+                    <img class="travel-line" src="images/tourist-destinations/الخطوط العمانية.jpeg" alt="">
+              </div>
+              <div class="card-img-overlay text-center h-100 d-flex flex-column justify-content-end">
+                
+                  <div class="card-title"><h5 class="text-light">بانكوك</h5></div>
+                  <p class="card-text mt-2 text-light">ابتداءً من</p>
+                  <p class="card-text mt-2 text-light fw-bold txt-price"> ريال  269.99*</p>
+                  <p class="card-text mt-2 text-light">ذهاب فقط / الاقتصادية</p>
+                  <p class="card-button mt-2 text-light"><a class="btn btn-main btn-sm xy-popularsearch" href="https://booking.flynas.com/#/booking/search-redirect?origin=RUH&amp;destination=BAH&amp;origin1=undefined&amp;destination1=0&amp;currency=SAR&amp;departureDate=2024-10-04&amp;returnDate=null&amp;flightMode=oneway&amp;adultCount=1&amp;childCount=0&amp;infantCount=0&amp;culture=en-GB&amp;utm_source=&amp;tagtag_uid=" tabindex="-1">احجز الآن</a></p>
+              </div>
+            </div> 
+          </div>
+
+          <div class="col-lg-3 col-md-4 mb-4">
+            <div class="card position-relative rounded-5">
+              <div class="card-image h-100">
+                    <img class="h-100" src="images/tourist-destinations/الاردن.webp" loading="lazy">
+                    <img class="travel-line" src="images/tourist-destinations/الخطوط الاردنية.jpeg" alt="">
+              </div>
+              <div class="card-img-overlay text-center h-100 d-flex flex-column justify-content-end">
+                
+                  <div class="card-title"><h5 class="text-light">الاردن</h5></div>
+                  <p class="card-text mt-2 text-light">ابتداءً من</p>
+                  <p class="card-text mt-2 text-light fw-bold txt-price"> ريال  269.99*</p>
+                  <p class="card-text mt-2 text-light">ذهاب فقط / الاقتصادية</p>
+                  <p class="card-button mt-2 text-light"><a class="btn btn-main btn-sm xy-popularsearch" href="https://booking.flynas.com/#/booking/search-redirect?origin=RUH&amp;destination=BAH&amp;origin1=undefined&amp;destination1=0&amp;currency=SAR&amp;departureDate=2024-10-04&amp;returnDate=null&amp;flightMode=oneway&amp;adultCount=1&amp;childCount=0&amp;infantCount=0&amp;culture=en-GB&amp;utm_source=&amp;tagtag_uid=" tabindex="-1">احجز الآن</a></p>
+              </div>
+            </div> 
+          </div>
+
         </div>
+      </div>
     </section>
 
     <!-- Start Offers section -->
-     <section class="offers-section section-padding">
+    <section class="offers-section section-padding">
       <div class="container">
         <h2 class="section-title wow animate__animated animate__fadeInRight">خطط لرحلتك القادمة مع أفضل عروض من الذهبية العالمية </h2>
         <div class="row">
-          <div class="col-md-4 mb-4 wow animate__animated animate__fadeInRight">
+
+          <div class="col-lg-3 col-md-4 mb-4 wow animate__animated animate__fadeInRight">
             <div class="card offer-box rounded-5">
               <div class="card-img-top position-relative">
                 <img
@@ -844,7 +848,7 @@
             </div>
           </div>
           
-          <div class="col-md-4 mb-4 wow animate__animated animate__fadeInUp">
+          <div class="col-lg-3 col-md-4 mb-4 wow animate__animated animate__fadeInUp">
             <div class="card offer-box rounded-5">
               <div class="card-img-top position-relative">
                 <img
@@ -874,7 +878,7 @@
             </div>
           </div>
 
-          <div class="col-md-4 mb-4 wow animate__animated animate__fadeInLeft">
+          <div class="col-lg-3 col-md-4 mb-4 wow animate__animated animate__fadeInLeft">
             <div class="card offer-box rounded-5">
               <div class="card-img-top position-relative">
                 <img
@@ -903,7 +907,7 @@
             </div>
           </div>
 
-          <div class="col-md-4 mb-4">
+          <div class="col-lg-3 col-md-4 mb-4">
             <div class="card offer-box rounded-5">
               <div class="card-img-top position-relative">
                 <img
@@ -932,175 +936,174 @@
               </div>
             </div>
           </div>
+
         </div>
       </div>
-     </section>
-     <!-- End Offers Section -->
+    </section>
+    <!-- End Offers Section -->
 
     <!-- Start best fares Section -->
-     <section class="best-fares section-padding">
-        <div class="container">
+    <section class="best-fares section-padding">
+      <div class="container">
         <h2 class="section-title wow animate__animated animate__fadeInRight">وجهات السفر الأكثر رواجا</h2>
-          <div class="swiper swiper-best-fares">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="card h-100 rounded-5 overflow-hidden">
-                  <div class="card-img">
-                    <img class="img-fluid" src="https://content.skyscnr.com/m/7e851dbf8ff26954/original/Al-Wathba-Fossil-Dune.jpg" class="card-img-top" alt="..."></div>
-                  <div class="card-body">
-                    <h5 class="card-title">ابو ظبي</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">الامارات</h6>
-                    <div class="price-from">
-                      <span>وابتدا من 194</span>
-                      <i class="fas fa-angle-left ms-2"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card h-100 rounded-5 overflow-hidden">
-                  <div class="card-img">
-                    <img class="img-fluid" src="https://content.skyscnr.com/m/25a4050e20f9b8eb/original/7945.jpg" class="card-img-top" alt="..."></div>
-                  <div class="card-body">
-                    <h5 class="card-title">الدمام</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">السعودية</h6>
-                    <div class="price-from">
-                      <span>وابتدا من 293</span>
-                      <i class="fas fa-angle-left ms-2"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card h-100 rounded-5 overflow-hidden">
-                  <div class="card-img">
-                    <img class="img-fluid" src="https://content.skyscnr.com/afaacdea074d53702da4daccbdfdd28a/GettyImages-115889746.jpg" class="card-img-top" alt="..."></div>
-                  <div class="card-body">
-                    <h5 class="card-title">الكويت</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">الكويت</h6>
-                    <div class="price-from">
-                      <span>وابتدا من 348</span>
-                      <i class="fas fa-angle-left ms-2"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card h-100 rounded-5 overflow-hidden">
-                  <div class="card-img">
-                    <img class="img-fluid" src="https://content.skyscnr.com/m/4dc3cee04825a86f/original/GettyImages-149110112_doc.jpg" class="card-img-top" alt="..."></div>
-                  <div class="card-body">
-                    <h5 class="card-title">بوخارست</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">رومانيا</h6>
-                    <div class="price-from">
-                      <span>وابتدا من 349</span>
-                      <i class="fas fa-angle-left ms-2"></i>
-                    </div>
+        <div class="swiper swiper-best-fares">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card h-100 rounded-5 overflow-hidden">
+                <div class="card-img">
+                  <img class="img-fluid" src="https://content.skyscnr.com/m/7e851dbf8ff26954/original/Al-Wathba-Fossil-Dune.jpg" class="card-img-top" alt="..."></div>
+                <div class="card-body">
+                  <h5 class="card-title">ابو ظبي</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">الامارات</h6>
+                  <div class="price-from">
+                    <span>وابتدا من 194</span>
+                    <i class="fas fa-angle-left ms-2"></i>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <div class="swiper-slide">
+              <div class="card h-100 rounded-5 overflow-hidden">
+                <div class="card-img">
+                  <img class="img-fluid" src="https://content.skyscnr.com/m/25a4050e20f9b8eb/original/7945.jpg" class="card-img-top" alt="..."></div>
+                <div class="card-body">
+                  <h5 class="card-title">الدمام</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">السعودية</h6>
+                  <div class="price-from">
+                    <span>وابتدا من 293</span>
+                    <i class="fas fa-angle-left ms-2"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card h-100 rounded-5 overflow-hidden">
+                <div class="card-img">
+                  <img class="img-fluid" src="https://content.skyscnr.com/afaacdea074d53702da4daccbdfdd28a/GettyImages-115889746.jpg" class="card-img-top" alt="..."></div>
+                <div class="card-body">
+                  <h5 class="card-title">الكويت</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">الكويت</h6>
+                  <div class="price-from">
+                    <span>وابتدا من 348</span>
+                    <i class="fas fa-angle-left ms-2"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card h-100 rounded-5 overflow-hidden">
+                <div class="card-img">
+                  <img class="img-fluid" src="https://content.skyscnr.com/m/4dc3cee04825a86f/original/GettyImages-149110112_doc.jpg" class="card-img-top" alt="..."></div>
+                <div class="card-body">
+                  <h5 class="card-title">بوخارست</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">رومانيا</h6>
+                  <div class="price-from">
+                    <span>وابتدا من 349</span>
+                    <i class="fas fa-angle-left ms-2"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
-     </section>
+      </div>
+    </section>
     <!-- End best fares Section -->
 
-     <!-- Start Reviews section  -->
-      <section class="reviews-section section-padding">
-        <!-- <video autoplay="" loop="" muted="" style="margin: auto; position: absolute; z-index: -1; top: 50%; left: 0%; transform: translate(0%, -50%); visibility: visible; opacity: 1; width: 1351px; height: auto;" __idm_id__="2441217"><source src="/front-assets/assets/video/plane.mp4" type="video/mp4"><source src="/front-assets/assets/video/plane.webm" type="video/webm"><source src="/front-assets/assets/video/plane.ogv" type="video/ogg"></video> -->
-        <div class="container">
-          <h2 class="section-title wow animate__animated animate__fadeInRight">إحجز وجهتك القادمة الأن واصنع تجربتك المميزة</h2>
-          <div class="swiper swiper-reviews">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="card h-100 prounded-5">
-                  <div class="card-body">
-                    <div class="d-flex align-items-center">
-                    <img class="rounded-circle shadow-1-strong mb-4"
-                        src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(10).webp" alt="avatar"
-                        style="width: 80px;" />
-                    <div class="ms-3">
-                      <h5>Nouf Khaled</h5>
-                      <ul class="list-unstyled d-flex text-warning mb-0">
-                        <li><i class="fas fa-star fa-sm"></i></li>
-                        <li><i class="fas fa-star fa-sm"></i></li>
-                        <li><i class="fas fa-star fa-sm"></i></li>
-                        <li><i class="fas fa-star fa-sm"></i></li>
-                        <li><i class="far fa-star fa-sm"></i></li>
-                      </ul>
-                      <p><span class="elementor-testimonial__title">المرشد المحلي</span></p>    
-                    </div>
+    <!-- Start Reviews section  -->
+    <section class="reviews-section section-padding">
+      <!-- <video autoplay="" loop="" muted="" style="margin: auto; position: absolute; z-index: -1; top: 50%; left: 0%; transform: translate(0%, -50%); visibility: visible; opacity: 1; width: 1351px; height: auto;" __idm_id__="2441217"><source src="/front-assets/assets/video/plane.mp4" type="video/mp4"><source src="/front-assets/assets/video/plane.webm" type="video/webm"><source src="/front-assets/assets/video/plane.ogv" type="video/ogg"></video> -->
+      <div class="container">
+        <h2 class="section-title wow animate__animated animate__fadeInRight">إحجز وجهتك القادمة الأن واصنع تجربتك المميزة</h2>
+        <div class="swiper swiper-reviews">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card h-100 rounded-5">
+                <div class="card-body">
+                  <div class="d-flex align-items-center">
+                  <img class="rounded-circle shadow-1-strong mb-4"
+                      src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(10).webp" alt="avatar"
+                      style="width: 80px;" />
+                  <div class="ms-3">
+                    <h5>Nouf Khaled</h5>
+                    <ul class="list-unstyled d-flex text-warning mb-0">
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="far fa-star fa-sm"></i></li>
+                    </ul>
+                    <p><span class="elementor-testimonial__title">المرشد المحلي</span></p>    
                   </div>
-                  <p class="text-muted text-center">
-                    <i class="fas fa-quote-left pe-2"></i> فعلا ذهبية الحجز عندهم بلا تردد 🍃حجزت في قروب النسائية من المدينة الى ريزا 🍃رحلة اسبوع كانت رحله جدا رائعة
-                    بكل تفاصيلها إن كان طيران ولا الفندق 🍃فندق رمادا عالمي نظيف كل شي مرتب 🍃
-                  </p>
-                  </div>
-
                 </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card h-100 prounded-5">
-                  <div class="card-body">
-                    <div class="d-flex align-items-center">
-                    <img class="rounded-circle shadow-1-strong mb-4"
-                        src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(10).webp" alt="avatar"
-                        style="width: 80px;" />
-                    <div class="ms-3">
-                      <h5>عبدالله الحربي</h5>
-                      <ul class="list-unstyled d-flex text-warning mb-0">
-                        <li><i class="fas fa-star fa-sm"></i></li>
-                        <li><i class="fas fa-star fa-sm"></i></li>
-                        <li><i class="fas fa-star fa-sm"></i></li>
-                        <li><i class="fas fa-star fa-sm"></i></li>
-                        <li><i class="far fa-star fa-sm"></i></li>
-                      </ul>
-                      <p><span class="elementor-testimonial__title">شكرا شركة الذهبية للسياحة</span></p>    
-                    </div>
-                  </div>
-                  <p class="text-muted text-center">
-                    <i class="fas fa-quote-left pe-2"></i> كلمت شكرا قليله بحقكم كانت اول تجربه لي مع مكتب ولا عمري فكرت احجز عن طريق مكتب حجزت وماندمت كانت رحله جميله جدا وكان متعاون معانا حتى يوم وصلنا ولبى رغباتنا وطلباتنا
-                  </p>
-                  </div>
-
+                <p class="text-muted text-center">
+                  <i class="fas fa-quote-left pe-2"></i> فعلا ذهبية الحجز عندهم بلا تردد 🍃حجزت في قروب النسائية من المدينة الى ريزا 🍃رحلة اسبوع كانت رحله جدا رائعة
+                  بكل تفاصيلها إن كان طيران ولا الفندق 🍃فندق رمادا عالمي نظيف كل شي مرتب 🍃
+                </p>
                 </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card h-100 prounded-5">
-                  <div class="card-body">
-                    <div class="d-flex align-items-center">
-                    <img class="rounded-circle shadow-1-strong mb-4"
-                        src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(10).webp" alt="avatar"
-                        style="width: 80px;" />
-                    <div class="ms-3">
-                      <h5>نور المكلاوي</h5>
-                      <ul class="list-unstyled d-flex text-warning mb-0">
-                        <li><i class="fas fa-star fa-sm"></i></li>
-                        <li><i class="fas fa-star fa-sm"></i></li>
-                        <li><i class="fas fa-star fa-sm"></i></li>
-                        <li><i class="fas fa-star fa-sm"></i></li>
-                        <li><i class="far fa-star fa-sm"></i></li>
-                      </ul>
-                      <p><span class="elementor-testimonial__title">شكرا شركة الذهبية للسياحة</span></p>    
-                    </div>
-                  </div>
-                  <p class="text-muted text-center">
-                    <i class="fas fa-quote-left pe-2"></i> كل عبارات الامتنان والشكر الكبير للوكالة  الذهبية  لما قدّمته وكالتكم من خدمات، أنتم موظفين حريصون على تقديم ما هو أفضل وذو فائدة للجميع. وهذا ليس بغريب عليكم وهذه خامس مرة اسافر مع الذهبية
-                  </p>
-                  </div>
 
-                </div>
               </div>
-              <div class="swiper-slide">4</div>
-              <div class="swiper-slide">5</div>
             </div>
-            <div class="swiper-pagination"></div>
+            <div class="swiper-slide">
+              <div class="card h-100 rounded-5">
+                <div class="card-body">
+                  <div class="d-flex align-items-center">
+                  <img class="rounded-circle shadow-1-strong mb-4"
+                      src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(10).webp" alt="avatar"
+                      style="width: 80px;" />
+                  <div class="ms-3">
+                    <h5>عبدالله الحربي</h5>
+                    <ul class="list-unstyled d-flex text-warning mb-0">
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="far fa-star fa-sm"></i></li>
+                    </ul>
+                    <p><span class="elementor-testimonial__title">شكرا شركة الذهبية للسياحة</span></p>    
+                  </div>
+                </div>
+                <p class="text-muted text-center">
+                  <i class="fas fa-quote-left pe-2"></i> كلمت شكرا قليله بحقكم كانت اول تجربه لي مع مكتب ولا عمري فكرت احجز عن طريق مكتب حجزت وماندمت كانت رحله جميله جدا وكان متعاون معانا حتى يوم وصلنا ولبى رغباتنا وطلباتنا
+                </p>
+                </div>
+
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card h-100 rounded-5">
+                <div class="card-body">
+                  <div class="d-flex align-items-center">
+                  <img class="rounded-circle shadow-1-strong mb-4"
+                      src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(10).webp" alt="avatar"
+                      style="width: 80px;" />
+                  <div class="ms-3">
+                    <h5>نور المكلاوي</h5>
+                    <ul class="list-unstyled d-flex text-warning mb-0">
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="far fa-star fa-sm"></i></li>
+                    </ul>
+                    <p><span class="elementor-testimonial__title">شكرا شركة الذهبية للسياحة</span></p>    
+                  </div>
+                </div>
+                <p class="text-muted text-center">
+                  <i class="fas fa-quote-left pe-2"></i> كل عبارات الامتنان والشكر الكبير للوكالة  الذهبية  لما قدّمته وكالتكم من خدمات، أنتم موظفين حريصون على تقديم ما هو أفضل وذو فائدة للجميع. وهذا ليس بغريب عليكم وهذه خامس مرة اسافر مع الذهبية
+                </p>
+                </div>
+
+              </div>
+            </div>
           </div>
+          <div class="swiper-pagination"></div>
         </div>
-      </section>
+      </div>
+    </section>
     <!-- End Reviews Section  -->
 
     <!-- Start contact us Section -->
@@ -1284,9 +1287,9 @@
                 >
               </li>
               <li>
-                <a>
+                <a href="#">
                   <i class="fas fa-map-marker-alt"></i>
-                  <span>طريق الهجرة , حيي الاسكان , المدينة المنورة</span>
+                  <span>طريق الهجرة , حي الاسكان , المدينة المنورة</span>
                 </a>
               </li>
             </ul>
@@ -1357,137 +1360,15 @@
             </li>
           </ul>
         </div>
-        <p class="mb-0">&copy; 2024 جميع الحقوق محفوظة لشركـــة الذهـبــية العــالـمـيـة للـسفـر والسـيـاحة</p>    <p class="mb-0">سجل تجاري: 4650051095</p>
+        <p class="mb-0">&copy; 2024 جميع الحقوق محفوظة لشركـــة الذهـبــية العــالـمـيـة للـسفـر والسـيـاحة</p>    <p class="mb-0">سجل تجاري : 4650051095</p>
       </div>
     </div>
     <!-- End Copy Right -->
 
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="js/main.js"></script>
-    <script>
-      // Change Navbar Top
-    window.addEventListener("scroll", function () {
-      const navbar = document.getElementById("navbar");
-      const alert = document.getElementById("alert");
-      const alertHeight = alert.clientHeight;
-      const closeBtn = document.getElementById("closeAlert");
-      if (window.scrollY > alertHeight) {
-        navbar.style.top = 0;
-      } else {
-        navbar.style.top = `${alertHeight}px`;
-      }
-      closeBtn.addEventListener("click", () => {
-        navbar.style.top = 0;
-      });
-    });
-
-    const swiper1 = new Swiper(".swiper1", {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    loop: true,
-    autoplay: {
-      delay: 3000,  // Time between slides (in milliseconds)
-      disableOnInteraction: false,  // Keeps autoplay running after user interaction
-    },
-    breakpoints: {
-      // when window width is >= 320px
-      320: {
-        slidesPerView: 1,
-      },
-      // when window width is >= 480px
-      480: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-      // when window width is >= 640px
-      640: {
-        slidesPerView: 3,
-        spaceBetween: 30,
-      },
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
-
-  const swiperReviews = new Swiper(".swiper-reviews", {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    loop: true,
-    autoplay: {
-      delay: 3000,  // Time between slides (in milliseconds)
-      disableOnInteraction: false,  // Keeps autoplay running after user interaction
-    },
-    breakpoints: {
-      // when window width is >= 320px
-      320: {
-        slidesPerView: 1,
-      },
-      // when window width is >= 480px
-      480: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-      // when window width is >= 640px
-      640: {
-        slidesPerView: 3,
-        spaceBetween: 30,
-      },
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
-
-  const swiperBestFares = new Swiper(".swiper-best-fares", {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    loop: true,
-    autoplay: {
-      delay: 3000,  // Time between slides (in milliseconds)
-      disableOnInteraction: false,  // Keeps autoplay running after user interaction
-    },
-    breakpoints: {
-      // when window width is >= 320px
-      320: {
-        slidesPerView: 1,
-      },
-      // when window width is >= 480px
-      480: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-      // when window width is >= 640px
-      640: {
-        slidesPerView: 3,
-        spaceBetween: 30,
-      },
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
-
-  new WOW({
-  boxClass: 'wow',      // Default class to animate
-  animateClass: 'animate__animated',  // Default animation class
-  offset: 0,            // Distance to trigger animations
-  mobile: true,         // Enable WOW.js on mobile
-  live: true            // Continuously check for new elements to animate
-}).init();
-    </script>
-    
+    <script src="js/jquery.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+     <script src="js/swiper-bundle.min.js"></script>
+     <script src="./js/main.js"></script>
   </body>
 </html>
