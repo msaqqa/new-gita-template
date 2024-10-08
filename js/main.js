@@ -129,4 +129,4 @@ const swiperBestFares = new Swiper(".swiper-best-fares", {
 });
 
 // Initialize WOW Animated
-const WOW = new WOW().init();
+new WOW().init();
