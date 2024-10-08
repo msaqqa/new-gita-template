@@ -255,12 +255,11 @@ a {
 
 /*  Start Home Section */
 .home-section {
-  background-image: url("../images/sky.jpg");
+  background-image: url("../images/home-section.jpg");
   height: calc(100vh - 56px);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  position: relative;
   padding-bottom: 30px;
 }
 .home-section .home-text {
@@ -269,9 +268,8 @@ a {
 }
 .home-section .search-widget {
   position: absolute;
-  width: 85%;
-  top: 75%;
-  right: 0;
+  width: 75%;
+  top: 80%;
 }
 .home-section .search-widget .widget-menu {
   background-color: #00000080 !important;
@@ -403,12 +401,21 @@ a {
   position: relative;
 }
 .tourist-destinations .card-img-overlay {
-  background: rgba(0, 0, 0, 0.7);
-  margin-top: 85px;
-  transition: var(--main-transition);
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10100;
 }
-.tourist-destinations .card-img-overlay:hover {
-  margin-top: 0px;
+.tourist-destinations .card .card-content {
+  height: 150px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.tourist-destinations .card:hover .card-content {
+  height: 215px;
 }
 .tourist-destinations .travel-line {
   position: absolute;
@@ -518,7 +525,7 @@ a {
   left: 0;
   background-color: rgba(0, 0, 0, 0.4);
 }
-.contact-us .container {
+.contact-us .container-fluid {
   color: var(--secondary-color);
   z-index: 1000;
 }
