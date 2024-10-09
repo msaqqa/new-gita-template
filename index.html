@@ -129,474 +129,596 @@
         </div>
 
         <div class="search-widget shadow-lg rounded-3">
+          <!-- Outer Nav Tabs -->
           <div class="widget-menu">
-            <ul class="nav nav-tabs" id="main-tab" role="tablist">
-              <li class="nav-item" role="presentation">
+            <ul class="nav nav-tabs" id="outerTab" role="tablist">
+              <li class="nav-item">
                 <a
                   class="nav-link active"
-                  href="#"
+                  id="outer-flights-tab"
                   data-bs-toggle="tab"
-                  data-bs-target="#oneWay"
+                  href="#outer-flights"
+                  role="tab"
+                  aria-controls="outer-flights"
                   aria-selected="true"
-                  role="tab"
+                  >الرحلات الجوية</a
                 >
-                  <i class="widget-flight-icon"></i>
-                  <span>ذهاب فقط</span>
-                </a>
               </li>
-              <li class="nav-item flight-hotel-li" role="presentation">
-                <a
-                  class="nav-link flight-hotel-tab"
-                  href="#"
-                  data-bs-toggle="tab"
-                  data-bs-target="#roundTrip"
-                  aria-selected="false"
-                  role="tab"
-                  tabindex="-1"
-                >
-                  <i class="widget-flight-hotelicon"></i>
-                  <span>ذهاب وعودة</span>
-                </a>
-              </li>
-              <li class="nav-item" role="presentation">
+              <li class="nav-item">
                 <a
                   class="nav-link"
-                  href="#"
+                  id="outer-hotels-tab"
                   data-bs-toggle="tab"
-                  data-bs-target="#multiCity"
-                  aria-selected="false"
+                  href="#outer-hotels"
                   role="tab"
-                  tabindex="-1"
+                  aria-controls="outer-hotels"
+                  aria-selected="false"
+                  >الفنادق</a
                 >
-                  <i class="widget-manage-icon"></i>
-                  <span>وجهات متعددة</span>
-                </a>
               </li>
-              <li class="nav-item" role="presentation">
+              <li class="nav-item">
                 <a
                   class="nav-link"
-                  href="#"
+                  id="outer-booking-tab"
                   data-bs-toggle="tab"
-                  data-bs-target="#compareFlights"
-                  aria-selected="false"
+                  href="#outer-booking"
                   role="tab"
-                  tabindex="-1"
-                >
-                  <i class="widget-checkin-icon"></i>
-                  <span>مقارنة الرحلات</span>
-                </a>
-              </li>
-              <li class="nav-item" role="presentation">
-                <a
-                  class="nav-link"
-                  href="#"
-                  data-bs-toggle="tab"
-                  data-bs-target="#bookingInquiry"
+                  aria-controls="outer-booking"
                   aria-selected="false"
-                  role="tab"
-                  tabindex="-1"
+                  >ادارة الحجز</a
                 >
-                  <i class="widget-status-icon"></i>
-                  <span>ادارة الحجز</span>
-                </a>
               </li>
             </ul>
           </div>
 
           <div class="search-container">
-            <div class="tab-content">
-              <div class="tab-pane active show" id="oneWay" role="tabpanel">
-                <form class="row">
-                  <div class="col-md-4 mb-2">
-                    <label for="inputEmail4" class="form-label">من</label>
-                    <input type="email" class="form-control" id="inputEmail4" />
-                  </div>
-                  <div class="col-md-4 mb-2">
-                    <label for="travleAccess" class="form-label"
-                      >وجهة الوصول</label
+            <div class="tab-content" id="outerTabContent">
+              <div
+                class="tab-pane fade show active"
+                id="outer-flights"
+                role="tabpanel"
+                aria-labelledby="outer-flights-tab"
+              >
+                <!-- Inner Nav Tabs -->
+                <div class="nav nav-tabs pb-3" id="innerTab" role="tablist">
+                  <div class="me-2" role="presentation">
+                    <div
+                      data-bs-toggle="tab"
+                      data-bs-target="#oneWay"
+                      aria-selected="true"
+                      role="tab"
                     >
-                    <input type="text" class="form-control" id="travleAccess" />
-                  </div>
-                  <div class="col-md-4 mb-2">
-                    <label for="gowignDate" class="form-label"
-                      >تاريخ الذهاب</label
-                    >
-                    <input
-                      type="date"
-                      class="form-control"
-                      data-date-format="yyyy-mm-dd"
-                      id="gowignDate"
-                    />
-                  </div>
-                  <div class="col-md-4">
-                    <label for="travelType" class="form-label"
-                      >نوع الرحلة</label
-                    >
-                    <select id="travelType" class="form-select">
-                      <option selected>اختر...</option>
-                      <option value="ECONOMY">اقتصادية</option>
-                      <option value="PREMIUM_ECONOMY">اقتصادية مميزه</option>
-                      <option value="BUSINESS">اعمال</option>
-                      <option value="FIRST">اولي</option>
-                    </select>
-                  </div>
-                  <div class="col-md-4">
-                    <label for="travelrtAge" class="form-label"
-                      >عمر المسافر</label
-                    >
-                    <select id="travelrtAge" class="form-select">
-                      <option selected>اختر...</option>
-                      <option value="ECONOMY">بالغ</option>
-                      <option value="PREMIUM_ECONOMY">طفل</option>
-                      <option value="BUSINESS">رضيغ</option>
-                    </select>
-                  </div>
-                  <div class="col-md-4 pt-2">
-                    <div class="form-check pt-4">
                       <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="oneWayCheck"
+                        id="oneWayLabel"
+                        type="radio"
+                        class="form-check-input me-1"
+                        name="flightsRadio"
+                        checked
                       />
-                      <label class="form-check-label" for="oneWayCheck">
-                        رحلات مباشرة
-                      </label>
+                      <label for="oneWayLabel" class="widget-flight-hotelicon"
+                        >ذهاب فقط</label
+                      >
                     </div>
                   </div>
-                </form>
+                  <div class="me-2" role="presentation">
+                    <div
+                      class="flight-hotel-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#roundTrip"
+                      aria-selected="false"
+                      role="tab"
+                      tabindex="-1"
+                    >
+                      <input
+                        id="roundTripLabel"
+                        type="radio"
+                        class="form-check-input me-1"
+                        name="flightsRadio"
+                      />
+                      <label
+                        for="roundTripLabel"
+                        class="widget-flight-hotelicon"
+                        >ذهاب وعودة</label
+                      >
+                    </div>
+                  </div>
+                  <div class="me-2" role="presentation">
+                    <div
+                      data-bs-toggle="tab"
+                      data-bs-target="#multiCity"
+                      aria-selected="false"
+                      role="tab"
+                      tabindex="-1"
+                    >
+                      <input
+                        id="multiCityLabel"
+                        type="radio"
+                        class="form-check-input me-1"
+                        name="flightsRadio"
+                      />
+                      <label
+                        for="multiCityLabel"
+                        class="widget-flight-hotelicon"
+                        >وجهات متعددة</label
+                      >
+                    </div>
+                  </div>
+                  <div class="me-2" role="presentation">
+                    <div
+                      data-bs-toggle="tab"
+                      data-bs-target="#compareFlights"
+                      aria-selected="false"
+                      role="tab"
+                      tabindex="-1"
+                    >
+                      <input
+                        id="compareFlightsLabel"
+                        type="radio"
+                        class="form-check-input me-1"
+                        name="flightsRadio"
+                      />
+                      <label
+                        for="compareFlightsLabel"
+                        class="widget-flight-hotelicon"
+                        >مقارنة الرحلات</label
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-content pt-3" id="innerTabContent">
+                  <div class="tab-pane active show" id="oneWay" role="tabpanel">
+                    <form class="row">
+                      <div class="col-md-4 mb-2">
+                        <label for="inputEmail4" class="form-label">من</label>
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="inputEmail4"
+                        />
+                      </div>
+                      <div class="col-md-4 mb-2">
+                        <label for="travleAccess" class="form-label"
+                          >وجهة الوصول</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="travleAccess"
+                        />
+                      </div>
+                      <div class="col-md-4 mb-2">
+                        <label for="gowignDate" class="form-label"
+                          >تاريخ الذهاب</label
+                        >
+                        <input
+                          type="date"
+                          class="form-control"
+                          data-date-format="yyyy-mm-dd"
+                          id="gowignDate"
+                        />
+                      </div>
+                      <div class="col-md-4">
+                        <label for="travelType" class="form-label"
+                          >نوع الرحلة</label
+                        >
+                        <select id="travelType" class="form-select">
+                          <option selected>اختر...</option>
+                          <option value="ECONOMY">اقتصادية</option>
+                          <option value="PREMIUM_ECONOMY">
+                            اقتصادية مميزه
+                          </option>
+                          <option value="BUSINESS">اعمال</option>
+                          <option value="FIRST">اولي</option>
+                        </select>
+                      </div>
+                      <div class="col-md-4">
+                        <label for="travelrtAge" class="form-label"
+                          >عمر المسافر</label
+                        >
+                        <select id="travelrtAge" class="form-select">
+                          <option selected>اختر...</option>
+                          <option value="ECONOMY">بالغ</option>
+                          <option value="PREMIUM_ECONOMY">طفل</option>
+                          <option value="BUSINESS">رضيغ</option>
+                        </select>
+                      </div>
+                      <div class="col-md-4 pt-2">
+                        <div class="form-check pt-4">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="oneWayCheck"
+                          />
+                          <label class="form-check-label" for="oneWayCheck">
+                            رحلات مباشرة
+                          </label>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="tab-pane" id="roundTrip" role="tabpanel">
+                    <form class="row">
+                      <div class="col-md-4 mb-2">
+                        <label for="inputEmail4" class="form-label">من</label>
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="inputEmail4"
+                        />
+                      </div>
+                      <div class="col-md-4 mb-2">
+                        <label for="inputPassword4" class="form-label"
+                          >وجهة الوصول</label
+                        >
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="inputPassword4"
+                        />
+                      </div>
+                      <div class="col-md-4 mb-2">
+                        <label for="inputPassword4" class="form-label"
+                          >تاريخ الذهاب</label
+                        >
+                        <input
+                          type="date"
+                          class="form-control"
+                          data-date-format="yyyy-mm-dd"
+                          placeholder="تاريخ الذهاب"
+                        />
+                      </div>
+                      <div class="col-md-4 mb-2">
+                        <label for="inputPassword4" class="form-label"
+                          >تاريخ العودة</label
+                        >
+                        <input
+                          type="date"
+                          class="form-control"
+                          data-date-format="yyyy-mm-dd"
+                          placeholder="تاريخ العودة"
+                        />
+                      </div>
+                      <div class="col-md-4 mb-2">
+                        <label for="inputState" class="form-label"
+                          >نوع الرحلة</label
+                        >
+                        <select id="inputState" class="form-select">
+                          <option selected>اختر...</option>
+                          <option value="ECONOMY">اقتصادية</option>
+                          <option value="PREMIUM_ECONOMY">
+                            اقتصادية مميزه
+                          </option>
+                          <option value="BUSINESS">اعمال</option>
+                          <option value="FIRST">اولي</option>
+                        </select>
+                      </div>
+                      <div class="col-md-4 mb-2">
+                        <label for="inputState" class="form-label"
+                          >عمر المسافر</label
+                        >
+                        <select id="inputState" class="form-select">
+                          <option selected>اختر...</option>
+                          <option value="ECONOMY">بالغ</option>
+                          <option value="PREMIUM_ECONOMY">طفل</option>
+                          <option value="BUSINESS">رضيغ</option>
+                        </select>
+                      </div>
+                      <div class="col-md-4 mb-2">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="roundTripCheck"
+                          />
+                          <label class="form-check-label" for="roundTripCheck">
+                            رحلات مباشرة
+                          </label>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="tab-pane" id="multiCity" role="tabpanel">
+                    <form class="row">
+                      <legend class="fs-5">رحلة 1</legend>
+                      <div class="col-lg-2 col-md-3 mb-3">
+                        <label for="inputEmail4" class="form-label">من</label>
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="inputEmail4"
+                        />
+                      </div>
+                      <div class="col-lg-2 col-md-3 mb-3">
+                        <label for="inputPassword4" class="form-label"
+                          >وجهة الوصول</label
+                        >
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="inputPassword4"
+                        />
+                      </div>
+                      <div class="col-lg-2 col-md-3 mb-3">
+                        <label for="inputPassword4" class="form-label"
+                          >تاريخ الذهاب</label
+                        >
+                        <input
+                          type="date"
+                          class="form-control"
+                          data-date-format="yyyy-mm-dd"
+                          placeholder="تاريخ الذهاب"
+                        />
+                      </div>
+                      <div class="col-lg-2 col-md-3">
+                        <label for="inputState" class="form-label"
+                          >نوع الرحلة</label
+                        >
+                        <select id="inputState" class="form-select">
+                          <option selected>اختر...</option>
+                          <option value="ECONOMY">اقتصادية</option>
+                          <option value="PREMIUM_ECONOMY">
+                            اقتصادية مميزه
+                          </option>
+                          <option value="BUSINESS">اعمال</option>
+                          <option value="FIRST">اولي</option>
+                        </select>
+                      </div>
+                      <div class="col-lg-2 col-md-3">
+                        <label for="inputState" class="form-label"
+                          >عمر المسافر</label
+                        >
+                        <select id="inputState" class="form-select">
+                          <option selected>اختر...</option>
+                          <option value="ECONOMY">بالغ</option>
+                          <option value="PREMIUM_ECONOMY">طفل</option>
+                          <option value="BUSINESS">رضيغ</option>
+                        </select>
+                      </div>
+                      <div class="col-lg-2 col-md-4">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="multiCityOne"
+                          />
+                          <label class="form-check-label" for="multiCityOne">
+                            رحلات مباشرة
+                          </label>
+                        </div>
+                      </div>
+                    </form>
+                    <form class="row">
+                      <legend class="fs-5">رحلة 2</legend>
+                      <div class="col-lg-2 col-md-3 mb-3">
+                        <label for="inputEmail4" class="form-label">من</label>
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="inputEmail4"
+                        />
+                      </div>
+                      <div class="col-lg-2 col-md-3 mb-3">
+                        <label for="inputPassword4" class="form-label"
+                          >وجهة الوصول</label
+                        >
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="inputPassword4"
+                        />
+                      </div>
+                      <div class="col-lg-2 col-md-3 mb-3">
+                        <label for="inputPassword4" class="form-label"
+                          >تاريخ الذهاب</label
+                        >
+                        <input
+                          type="date"
+                          class="form-control"
+                          data-date-format="yyyy-mm-dd"
+                          placeholder="تاريخ الذهاب"
+                        />
+                      </div>
+                      <div class="col-lg-2 col-md-3">
+                        <label for="inputState" class="form-label"
+                          >نوع الرحلة</label
+                        >
+                        <select id="inputState" class="form-select">
+                          <option selected>اختر...</option>
+                          <option value="ECONOMY">اقتصادية</option>
+                          <option value="PREMIUM_ECONOMY">
+                            اقتصادية مميزه
+                          </option>
+                          <option value="BUSINESS">اعمال</option>
+                          <option value="FIRST">اولي</option>
+                        </select>
+                      </div>
+                      <div class="col-lg-2 col-md-3">
+                        <label for="inputState" class="form-label"
+                          >عمر المسافر</label
+                        >
+                        <select id="inputState" class="form-select">
+                          <option selected>اختر...</option>
+                          <option value="ECONOMY">بالغ</option>
+                          <option value="PREMIUM_ECONOMY">طفل</option>
+                          <option value="BUSINESS">رضيغ</option>
+                        </select>
+                      </div>
+                      <div class="col-lg-2 col-md-4">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="multiCityTwo"
+                          />
+                          <label class="form-check-label" for="multiCityTwo">
+                            رحلات مباشرة
+                          </label>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="tab-pane" id="compareFlights" role="tabpanel">
+                    <form class="row">
+                      <legend class="fs-5">رحلة 1</legend>
+                      <div class="col-lg-2 col-md-3 mb-3">
+                        <label for="inputEmail4" class="form-label">من</label>
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="inputEmail4"
+                        />
+                      </div>
+                      <div class="col-lg-2 col-md-3 mb-3">
+                        <label for="inputPassword4" class="form-label"
+                          >وجهة الوصول</label
+                        >
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="inputPassword4"
+                        />
+                      </div>
+                      <div class="col-lg-2 col-md-3 mb-3">
+                        <label for="inputPassword4" class="form-label"
+                          >تاريخ الذهاب</label
+                        >
+                        <input
+                          type="date"
+                          class="form-control"
+                          data-date-format="yyyy-mm-dd"
+                          placeholder="تاريخ الذهاب"
+                        />
+                      </div>
+                      <div class="col-lg-2 col-md-3">
+                        <label for="inputState" class="form-label"
+                          >نوع الرحلة</label
+                        >
+                        <select id="inputState" class="form-select">
+                          <option selected>اختر...</option>
+                          <option value="ECONOMY">اقتصادية</option>
+                          <option value="PREMIUM_ECONOMY">
+                            اقتصادية مميزه
+                          </option>
+                          <option value="BUSINESS">اعمال</option>
+                          <option value="FIRST">اولي</option>
+                        </select>
+                      </div>
+                      <div class="col-lg-2 col-md-3">
+                        <label for="inputState" class="form-label"
+                          >عمر المسافر</label
+                        >
+                        <select id="inputState" class="form-select">
+                          <option selected>اختر...</option>
+                          <option value="ECONOMY">بالغ</option>
+                          <option value="PREMIUM_ECONOMY">طفل</option>
+                          <option value="BUSINESS">رضيغ</option>
+                        </select>
+                      </div>
+                      <div class="col-lg-2 col-md-4">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="compareFlightsOne"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="compareFlightsOne"
+                          >
+                            رحلات مباشرة
+                          </label>
+                        </div>
+                      </div>
+                    </form>
+                    <form class="row">
+                      <legend class="fs-5">رحلة 2</legend>
+                      <div class="col-lg-2 col-md-3 mb-3">
+                        <label for="inputEmail4" class="form-label">من</label>
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="inputEmail4"
+                        />
+                      </div>
+                      <div class="col-lg-2 col-md-3 mb-3">
+                        <label for="inputPassword4" class="form-label"
+                          >وجهة الوصول</label
+                        >
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="inputPassword4"
+                        />
+                      </div>
+                      <div class="col-lg-2 col-md-3 mb-3">
+                        <label for="inputPassword4" class="form-label"
+                          >تاريخ الذهاب</label
+                        >
+                        <input
+                          type="date"
+                          class="form-control"
+                          data-date-format="yyyy-mm-dd"
+                          placeholder="تاريخ الذهاب"
+                        />
+                      </div>
+                      <div class="col-lg-2 col-md-3">
+                        <label for="inputState" class="form-label"
+                          >نوع الرحلة</label
+                        >
+                        <select id="inputState" class="form-select">
+                          <option selected>اختر...</option>
+                          <option value="ECONOMY">اقتصادية</option>
+                          <option value="PREMIUM_ECONOMY">
+                            اقتصادية مميزه
+                          </option>
+                          <option value="BUSINESS">اعمال</option>
+                          <option value="FIRST">اولي</option>
+                        </select>
+                      </div>
+                      <div class="col-lg-2 col-md-3">
+                        <label for="inputState" class="form-label"
+                          >عمر المسافر</label
+                        >
+                        <select id="inputState" class="form-select">
+                          <option selected>اختر...</option>
+                          <option value="ECONOMY">بالغ</option>
+                          <option value="PREMIUM_ECONOMY">طفل</option>
+                          <option value="BUSINESS">رضيغ</option>
+                        </select>
+                      </div>
+                      <div class="col-lg-2 col-md-4">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="compareFlightsTwo"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="compareFlightsTwo"
+                          >
+                            رحلات مباشرة
+                          </label>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
               </div>
-              <div class="tab-pane" id="roundTrip" role="tabpanel">
-                <form class="row">
-                  <div class="col-md-4 mb-2">
-                    <label for="inputEmail4" class="form-label">من</label>
-                    <input type="email" class="form-control" id="inputEmail4" />
-                  </div>
-                  <div class="col-md-4 mb-2">
-                    <label for="inputPassword4" class="form-label"
-                      >وجهة الوصول</label
-                    >
-                    <input
-                      type="password"
-                      class="form-control"
-                      id="inputPassword4"
-                    />
-                  </div>
-                  <div class="col-md-4 mb-2">
-                    <label for="inputPassword4" class="form-label"
-                      >تاريخ الذهاب</label
-                    >
-                    <input
-                      type="date"
-                      class="form-control"
-                      data-date-format="yyyy-mm-dd"
-                      placeholder="تاريخ الذهاب"
-                    />
-                  </div>
-                  <div class="col-md-4 mb-2">
-                    <label for="inputPassword4" class="form-label"
-                      >تاريخ العودة</label
-                    >
-                    <input
-                      type="date"
-                      class="form-control"
-                      data-date-format="yyyy-mm-dd"
-                      placeholder="تاريخ العودة"
-                    />
-                  </div>
-                  <div class="col-md-4 mb-2">
-                    <label for="inputState" class="form-label"
-                      >نوع الرحلة</label
-                    >
-                    <select id="inputState" class="form-select">
-                      <option selected>اختر...</option>
-                      <option value="ECONOMY">اقتصادية</option>
-                      <option value="PREMIUM_ECONOMY">اقتصادية مميزه</option>
-                      <option value="BUSINESS">اعمال</option>
-                      <option value="FIRST">اولي</option>
-                    </select>
-                  </div>
-                  <div class="col-md-4 mb-2">
-                    <label for="inputState" class="form-label"
-                      >عمر المسافر</label
-                    >
-                    <select id="inputState" class="form-select">
-                      <option selected>اختر...</option>
-                      <option value="ECONOMY">بالغ</option>
-                      <option value="PREMIUM_ECONOMY">طفل</option>
-                      <option value="BUSINESS">رضيغ</option>
-                    </select>
-                  </div>
-                  <div class="col-md-4 mb-2">
-                    <div class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="roundTripCheck"
-                      />
-                      <label class="form-check-label" for="roundTripCheck">
-                        رحلات مباشرة
-                      </label>
-                    </div>
-                  </div>
-                </form>
+              <div
+                class="tab-pane fade"
+                id="outer-hotels"
+                role="tabpanel"
+                aria-labelledby="outer-hotels-tab"
+              >
+                <h3>محتوى الفنادق</h3>
               </div>
-              <div class="tab-pane" id="multiCity" role="tabpanel">
-                <form class="row">
-                  <legend class="fs-5">رحلة 1</legend>
-                  <div class="col-lg-2 col-md-3 mb-3">
-                    <label for="inputEmail4" class="form-label">من</label>
-                    <input type="email" class="form-control" id="inputEmail4" />
-                  </div>
-                  <div class="col-lg-2 col-md-3 mb-3">
-                    <label for="inputPassword4" class="form-label"
-                      >وجهة الوصول</label
-                    >
-                    <input
-                      type="password"
-                      class="form-control"
-                      id="inputPassword4"
-                    />
-                  </div>
-                  <div class="col-lg-2 col-md-3 mb-3">
-                    <label for="inputPassword4" class="form-label"
-                      >تاريخ الذهاب</label
-                    >
-                    <input
-                      type="date"
-                      class="form-control"
-                      data-date-format="yyyy-mm-dd"
-                      placeholder="تاريخ الذهاب"
-                    />
-                  </div>
-                  <div class="col-lg-2 col-md-3">
-                    <label for="inputState" class="form-label"
-                      >نوع الرحلة</label
-                    >
-                    <select id="inputState" class="form-select">
-                      <option selected>اختر...</option>
-                      <option value="ECONOMY">اقتصادية</option>
-                      <option value="PREMIUM_ECONOMY">اقتصادية مميزه</option>
-                      <option value="BUSINESS">اعمال</option>
-                      <option value="FIRST">اولي</option>
-                    </select>
-                  </div>
-                  <div class="col-lg-2 col-md-3">
-                    <label for="inputState" class="form-label"
-                      >عمر المسافر</label
-                    >
-                    <select id="inputState" class="form-select">
-                      <option selected>اختر...</option>
-                      <option value="ECONOMY">بالغ</option>
-                      <option value="PREMIUM_ECONOMY">طفل</option>
-                      <option value="BUSINESS">رضيغ</option>
-                    </select>
-                  </div>
-                  <div class="col-lg-2 col-md-4">
-                    <div class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="multiCityOne"
-                      />
-                      <label class="form-check-label" for="multiCityOne">
-                        رحلات مباشرة
-                      </label>
-                    </div>
-                  </div>
-                </form>
-                <form class="row">
-                  <legend class="fs-5">رحلة 2</legend>
-                  <div class="col-lg-2 col-md-3 mb-3">
-                    <label for="inputEmail4" class="form-label">من</label>
-                    <input type="email" class="form-control" id="inputEmail4" />
-                  </div>
-                  <div class="col-lg-2 col-md-3 mb-3">
-                    <label for="inputPassword4" class="form-label"
-                      >وجهة الوصول</label
-                    >
-                    <input
-                      type="password"
-                      class="form-control"
-                      id="inputPassword4"
-                    />
-                  </div>
-                  <div class="col-lg-2 col-md-3 mb-3">
-                    <label for="inputPassword4" class="form-label"
-                      >تاريخ الذهاب</label
-                    >
-                    <input
-                      type="date"
-                      class="form-control"
-                      data-date-format="yyyy-mm-dd"
-                      placeholder="تاريخ الذهاب"
-                    />
-                  </div>
-                  <div class="col-lg-2 col-md-3">
-                    <label for="inputState" class="form-label"
-                      >نوع الرحلة</label
-                    >
-                    <select id="inputState" class="form-select">
-                      <option selected>اختر...</option>
-                      <option value="ECONOMY">اقتصادية</option>
-                      <option value="PREMIUM_ECONOMY">اقتصادية مميزه</option>
-                      <option value="BUSINESS">اعمال</option>
-                      <option value="FIRST">اولي</option>
-                    </select>
-                  </div>
-                  <div class="col-lg-2 col-md-3">
-                    <label for="inputState" class="form-label"
-                      >عمر المسافر</label
-                    >
-                    <select id="inputState" class="form-select">
-                      <option selected>اختر...</option>
-                      <option value="ECONOMY">بالغ</option>
-                      <option value="PREMIUM_ECONOMY">طفل</option>
-                      <option value="BUSINESS">رضيغ</option>
-                    </select>
-                  </div>
-                  <div class="col-lg-2 col-md-4">
-                    <div class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="multiCityTwo"
-                      />
-                      <label class="form-check-label" for="multiCityTwo">
-                        رحلات مباشرة
-                      </label>
-                    </div>
-                  </div>
-                </form>
-              </div>
-              <div class="tab-pane" id="compareFlights" role="tabpanel">
-                <form class="row">
-                  <legend class="fs-5">رحلة 1</legend>
-                  <div class="col-lg-2 col-md-3 mb-3">
-                    <label for="inputEmail4" class="form-label">من</label>
-                    <input type="email" class="form-control" id="inputEmail4" />
-                  </div>
-                  <div class="col-lg-2 col-md-3 mb-3">
-                    <label for="inputPassword4" class="form-label"
-                      >وجهة الوصول</label
-                    >
-                    <input
-                      type="password"
-                      class="form-control"
-                      id="inputPassword4"
-                    />
-                  </div>
-                  <div class="col-lg-2 col-md-3 mb-3">
-                    <label for="inputPassword4" class="form-label"
-                      >تاريخ الذهاب</label
-                    >
-                    <input
-                      type="date"
-                      class="form-control"
-                      data-date-format="yyyy-mm-dd"
-                      placeholder="تاريخ الذهاب"
-                    />
-                  </div>
-                  <div class="col-lg-2 col-md-3">
-                    <label for="inputState" class="form-label"
-                      >نوع الرحلة</label
-                    >
-                    <select id="inputState" class="form-select">
-                      <option selected>اختر...</option>
-                      <option value="ECONOMY">اقتصادية</option>
-                      <option value="PREMIUM_ECONOMY">اقتصادية مميزه</option>
-                      <option value="BUSINESS">اعمال</option>
-                      <option value="FIRST">اولي</option>
-                    </select>
-                  </div>
-                  <div class="col-lg-2 col-md-3">
-                    <label for="inputState" class="form-label"
-                      >عمر المسافر</label
-                    >
-                    <select id="inputState" class="form-select">
-                      <option selected>اختر...</option>
-                      <option value="ECONOMY">بالغ</option>
-                      <option value="PREMIUM_ECONOMY">طفل</option>
-                      <option value="BUSINESS">رضيغ</option>
-                    </select>
-                  </div>
-                  <div class="col-lg-2 col-md-4">
-                    <div class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="compareFlightsOne"
-                      />
-                      <label class="form-check-label" for="compareFlightsOne">
-                        رحلات مباشرة
-                      </label>
-                    </div>
-                  </div>
-                </form>
-                <form class="row">
-                  <legend class="fs-5">رحلة 2</legend>
-                  <div class="col-lg-2 col-md-3 mb-3">
-                    <label for="inputEmail4" class="form-label">من</label>
-                    <input type="email" class="form-control" id="inputEmail4" />
-                  </div>
-                  <div class="col-lg-2 col-md-3 mb-3">
-                    <label for="inputPassword4" class="form-label"
-                      >وجهة الوصول</label
-                    >
-                    <input
-                      type="password"
-                      class="form-control"
-                      id="inputPassword4"
-                    />
-                  </div>
-                  <div class="col-lg-2 col-md-3 mb-3">
-                    <label for="inputPassword4" class="form-label"
-                      >تاريخ الذهاب</label
-                    >
-                    <input
-                      type="date"
-                      class="form-control"
-                      data-date-format="yyyy-mm-dd"
-                      placeholder="تاريخ الذهاب"
-                    />
-                  </div>
-                  <div class="col-lg-2 col-md-3">
-                    <label for="inputState" class="form-label"
-                      >نوع الرحلة</label
-                    >
-                    <select id="inputState" class="form-select">
-                      <option selected>اختر...</option>
-                      <option value="ECONOMY">اقتصادية</option>
-                      <option value="PREMIUM_ECONOMY">اقتصادية مميزه</option>
-                      <option value="BUSINESS">اعمال</option>
-                      <option value="FIRST">اولي</option>
-                    </select>
-                  </div>
-                  <div class="col-lg-2 col-md-3">
-                    <label for="inputState" class="form-label"
-                      >عمر المسافر</label
-                    >
-                    <select id="inputState" class="form-select">
-                      <option selected>اختر...</option>
-                      <option value="ECONOMY">بالغ</option>
-                      <option value="PREMIUM_ECONOMY">طفل</option>
-                      <option value="BUSINESS">رضيغ</option>
-                    </select>
-                  </div>
-                  <div class="col-lg-2 col-md-4">
-                    <div class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="compareFlightsTwo"
-                      />
-                      <label class="form-check-label" for="compareFlightsTwo">
-                        رحلات مباشرة
-                      </label>
-                    </div>
-                  </div>
-                </form>
-              </div>
-              <div class="tab-pane" id="bookingInquiry" role="tabpanel">
+              <div
+                class="tab-pane fade"
+                id="outer-booking"
+                role="tabpanel"
+                aria-labelledby="outer-booking-tab"
+              >
                 <form class="row">
                   <div class="col-md-6">
                     <label for="pnr" class="form-label">رقم الحجز</label>
