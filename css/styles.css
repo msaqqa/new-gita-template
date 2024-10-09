@@ -26,6 +26,10 @@ a {
 /* End Global Styles */
 
 /* Start Components */
+.container-fluid {
+  padding-left: 40px !important; /* Increase padding-left */
+  padding-right: 40px !important; /* Increase padding-right */
+}
 .text-accent {
   color: var(--accent-color);
 }
@@ -100,6 +104,10 @@ a {
   background: var(--main-color);
 }
 @media (max-width: 768px) {
+  .container-fluid {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
   .section-title {
     font-size: 20px;
   }
@@ -130,11 +138,13 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid var(--main-color);
+  border-radius: 50%;
 }
 .loading-container img {
   position: relative;
   width: 80px;
-  z-index: 2;
+  z-index: 1031;
 }
 /* Spin animation */
 @keyframes spin {
@@ -168,13 +178,16 @@ a {
   z-index: 1030;
 }
 .navbar.default-background {
-  background-color: #00000080;
+  background-color: #3a2205;
 }
 .navbar.scrolled-background {
   background: linear-gradient(to bottom, #fef5ed, #ffffff);
 }
 .navbar .navbar-brand {
-  width: 50px;
+  height: 60px;
+}
+.navbar .navbar-brand img {
+  height: 100%;
 }
 .navbar.default-background .dropdown-toggle {
   color: var(--secondary-color) !important;
@@ -272,7 +285,7 @@ a {
   top: 80%;
 }
 .home-section .search-widget .widget-menu {
-  background-color: #00000080 !important;
+  background-color: #3a2205 !important;
 }
 .home-section .search-widget .search-container {
   background-color: var(--secondary-color);
@@ -401,13 +414,14 @@ a {
   position: relative;
 }
 .tourist-destinations .card-img-overlay {
-  background: rgba(0, 0, 0, 0.6);
+  /* background: rgba(0, 0, 0, 0.5); */
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.5));
   position: absolute;
   width: 100%;
   height: 100%;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 10100;
+  z-index: 100;
 }
 .tourist-destinations .card .card-content {
   height: 150px;
@@ -419,9 +433,10 @@ a {
 }
 .tourist-destinations .travel-line {
   position: absolute;
-  width: 70px;
+  width: 80px;
   top: 20px;
   right: 20px;
+  z-index: 100;
 }
 /* End Tourist Destinations Section */
 
@@ -461,8 +476,14 @@ a {
   font-size: 20px;
   font-weight: 700;
 }
-.fa-star {
+.offers-section .card .fa-star {
   color: var(--main-color);
+}
+.offers-section .card p {
+  display: -webkit-box; /* Required for the multi-line ellipsis effect */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* Limit to 3 lines */
+  overflow: hidden;
 }
 /* End offers Section */
 
@@ -472,6 +493,13 @@ a {
 }
 .best-fares .swiper-slide {
   height: 350px;
+}
+.best-fares .swiper-slide .card-img {
+  height: 70%;
+}
+.best-fares .swiper-slide .card-img img {
+  width: 100%;
+  height: 100%;
 }
 .best-fares .swiper-slide .price-from {
   display: flex;
@@ -527,7 +555,7 @@ a {
 }
 .contact-us .container-fluid {
   color: var(--secondary-color);
-  z-index: 1000;
+  z-index: 100;
 }
 .contact-us .form-label,
 .contact-us .form-control {
@@ -587,7 +615,9 @@ a {
 
 /* Start footer Section */
 footer {
-  background-color: #333;
+  /* background: linear-gradient(180deg, #1a1a1a, #3a2d0c, #be910c); */
+  /* background: linear-gradient(180deg, #4e2e07, #3a2205, #be910c); */
+  background-color: #3a2205;
   color: var(--secondary-color);
 }
 footer h4 {
@@ -612,8 +642,9 @@ footer ul li a i {
 
 /* Start Copy Right */
 .copyright {
-  background-color: #333333e6;
+  background-color: #3a2205;
   color: var(--secondary-color);
+  border-top: 1px solid #eee;
 }
 .footer-social ul li {
   margin-left: 10px;
