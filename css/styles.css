@@ -457,7 +457,6 @@ a {
 .offers-section .offer-box {
   background-color: var(--secondary-color);
   transition: transform 0.3s, box-shadow 0.3s;
-  height: 500px;
   overflow: hidden;
 }
 .offers-section .offer-box:hover {
