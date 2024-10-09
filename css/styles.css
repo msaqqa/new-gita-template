@@ -27,8 +27,8 @@ a {
 
 /* Start Components */
 .container-fluid {
-  padding-left: 40px !important; /* Increase padding-left */
-  padding-right: 40px !important; /* Increase padding-right */
+  padding-left: 60px !important; /* Increase padding-left */
+  padding-right: 60px !important; /* Increase padding-right */
 }
 .text-accent {
   color: var(--accent-color);
@@ -278,10 +278,10 @@ a {
   top: 25%;
 }
 .home-section .home-text h1 {
-  font-size: 50px;
+  font-size: 70px;
 }
 .home-section .home-text h2 {
-  font-size: 40px;
+  font-size: 50px;
 }
 .home-section .search-widget {
   position: absolute;
@@ -324,10 +324,10 @@ a {
     padding-top: 120px;
   }
   .home-section .home-text h1 {
-    font-size: 30px;
+    font-size: 40px;
   }
   .home-section .home-text h2 {
-    font-size: 20px;
+    font-size: 30px;
   }
   .home-section .search-widget {
     position: static;
@@ -457,7 +457,7 @@ a {
 .offers-section .offer-box {
   background-color: var(--secondary-color);
   transition: transform 0.3s, box-shadow 0.3s;
-  height: 470px;
+  height: 500px;
   overflow: hidden;
 }
 .offers-section .offer-box:hover {
