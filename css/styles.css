@@ -262,8 +262,6 @@ a {
     transform: translateX(-50%);
   }
 }
-/* padding-left: 0.75rem; */
-/* padding-right: 0.75rem; */
 /* End Navbar */
 
 /*  Start Home Section */
@@ -278,6 +276,12 @@ a {
 .home-section .home-text {
   position: absolute;
   top: 25%;
+}
+.home-section .home-text h1 {
+  font-size: 50px;
+}
+.home-section .home-text h2 {
+  font-size: 40px;
 }
 .home-section .search-widget {
   position: absolute;
@@ -318,6 +322,12 @@ a {
     position: static;
     width: 100%;
     padding-top: 120px;
+  }
+  .home-section .home-text h1 {
+    font-size: 30px;
+  }
+  .home-section .home-text h2 {
+    font-size: 20px;
   }
   .home-section .search-widget {
     position: static;
@@ -447,6 +457,7 @@ a {
 .offers-section .offer-box {
   background-color: var(--secondary-color);
   transition: transform 0.3s, box-shadow 0.3s;
+  height: 470px;
   overflow: hidden;
 }
 .offers-section .offer-box:hover {
@@ -480,10 +491,11 @@ a {
   color: var(--main-color);
 }
 .offers-section .card p {
-  display: -webkit-box; /* Required for the multi-line ellipsis effect */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3; /* Limit to 3 lines */
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 /* End offers Section */
 
@@ -495,7 +507,7 @@ a {
   height: 350px;
 }
 .best-fares .swiper-slide .card-img {
-  height: 70%;
+  height: 65%;
 }
 .best-fares .swiper-slide .card-img img {
   width: 100%;
@@ -533,6 +545,7 @@ a {
 }
 .reviews-section .swiper-reviews .swiper-slide {
   height: 250px;
+  overflow: hidden;
 }
 /* End Reviews Section */
 
@@ -656,3 +669,20 @@ footer ul li a i {
   color: var(--main-color);
 }
 /* Start Copy Right */
+
+/* Start whatsapp Mark */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 200;
+}
+
+.whatsapp-float img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+/* End whatsapp Mark */
