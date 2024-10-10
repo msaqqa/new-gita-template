@@ -458,6 +458,12 @@ a {
   background-color: var(--secondary-color);
   transition: transform 0.3s, box-shadow 0.3s;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.offers-section .offer-box .card-body {
+  flex-grow: 1;
 }
 .offers-section .offer-box:hover {
   transform: translateY(-10px);
@@ -495,6 +501,7 @@ a {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  min-height: 4.5em;
 }
 /* End offers Section */
 
