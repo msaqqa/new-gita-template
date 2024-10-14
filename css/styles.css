@@ -710,13 +710,26 @@ footer ul li a i {
 /* Start Search Page */
 /* start search */
 .search {
-  padding-bottom: 50px;
-}
-.search-with-filte {
   background-color: #eee;
-  padding: 50px 0;
 }
-.search-with-filte .left-sidebar {
+.search .time-box {
+  background-color: rgb(232, 246, 248);
+  margin-bottom: 30px;
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
+}
+.search .time-box .form-switch {
+  padding-right: 0;
+}
+.search .search-form {
+  background-color: var(--secondary-color);
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+.search-form .form-item {
+  width: calc(100% / 6);
+}
+.search .left-sidebar {
   background-color: var(--secondary-color);
 }
 .left-sidebar .filter-title {

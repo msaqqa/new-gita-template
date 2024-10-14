@@ -112,76 +112,28 @@
     </nav>
     <!-- End Navbar -->
 
-    <!-- Start Search Section -->
-    <div class="search section-padding">
-      <div class="container-fluid">
-        <form class="p-3 border rounded">
-          <div class="row">
-            <div class="col-md-2 mb-2">
-              <label for="inputEmail4" class="form-label">من</label>
-              <input type="email" class="form-control" id="inputEmail4" />
-            </div>
-            <div class="col-md-2 mb-2">
-              <label for="travleAccess" class="form-label">وجهة الوصول</label>
-              <input type="text" class="form-control" id="travleAccess" />
-            </div>
-            <div class="col-md-2 mb-2">
-              <label for="gowignDate" class="form-label">تاريخ الذهاب</label>
-              <input
-                type="date"
-                class="form-control"
-                data-date-format="yyyy-mm-dd"
-                id="gowignDate"
-              />
-            </div>
-            <div class="col-md-2 mb-2">
-              <label for="gowignDate" class="form-label">تاريخ العودة</label>
-              <input
-                type="date"
-                class="form-control"
-                data-date-format="yyyy-mm-dd"
-                id="gowignDate"
-              />
-            </div>
-            <div class="col-md-2">
-              <label for="travelType" class="form-label">نوع الرحلة</label>
-              <select id="travelType" class="form-select">
-                <option selected>اختر...</option>
-                <option value="ECONOMY">اقتصادية</option>
-                <option value="PREMIUM_ECONOMY">اقتصادية مميزه</option>
-                <option value="BUSINESS">اعمال</option>
-                <option value="FIRST">اولي</option>
-              </select>
-            </div>
-            <div class="col-md-2">
-              <label for="travelrtAge" class="form-label">عمر المسافر</label>
-              <select id="travelrtAge" class="form-select">
-                <option selected>اختر...</option>
-                <option value="ECONOMY">بالغ</option>
-                <option value="PREMIUM_ECONOMY">طفل</option>
-                <option value="BUSINESS">رضيغ</option>
-              </select>
-            </div>
-            <div class="search-btn text-end mt-2">
-              <button
-                type="button"
-                id="search-btn"
-                class="btn btn-main btn-rounded"
-              >
-                بحث
-              </button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-    <!-- End Search Section -->
-
     <!-- search-with-filter -->
-    <div class="search-with-filte">
+    <div class="search section-padding">
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-3">
+            <div class="time-box border rounded-3 p-3">
+              <div
+                class="form-check form-switch d-flex justify-content-between"
+              >
+                <img src="../images/clock.svg" alt="" />
+                <label class="form-check-label" for="flexSwitchCheckChecked"
+                  >عرض الأوقات بشكل <br /><b> صباحًا / مساءً </b></label
+                >
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  role="switch"
+                  id="flexSwitchCheckChecked"
+                  checked
+                />
+              </div>
+            </div>
             <!-- Start left-sidebar -->
             <div class="left-sidebar border rounded-3 p-3">
               <div class="collection-collapse-block open">
@@ -381,6 +333,94 @@
             <!-- End left-sidebar -->
           </div>
           <div class="col-md-9">
+            <!-- Start Search Form Section -->
+            <div class="search-form p-3 border rounded">
+              <form>
+                <div class="row d-flex align-items-center">
+                  <div class="col-md-10">
+                    <div class="d-flex justify-content-between gap-4">
+                      <div class="form-item mb-2">
+                        <label for="inputEmail4" class="form-label">من</label>
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="inputEmail4"
+                        />
+                      </div>
+                      <div class="form-item mb-2">
+                        <label for="travleAccess" class="form-label"
+                          >وجهة الوصول</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="travleAccess"
+                        />
+                      </div>
+                      <div class="form-item mb-2">
+                        <label for="gowignDate" class="form-label"
+                          >تاريخ الذهاب</label
+                        >
+                        <input
+                          type="date"
+                          class="form-control"
+                          data-date-format="yyyy-mm-dd"
+                          id="gowignDate"
+                        />
+                      </div>
+                      <div class="form-item mb-2">
+                        <label for="gowignDate" class="form-label"
+                          >تاريخ العودة</label
+                        >
+                        <input
+                          type="date"
+                          class="form-control"
+                          data-date-format="yyyy-mm-dd"
+                          id="gowignDate"
+                        />
+                      </div>
+                      <div class="form-item mb-2">
+                        <label for="travelType" class="form-label"
+                          >نوع الرحلة</label
+                        >
+                        <select id="travelType" class="form-select">
+                          <option selected>اختر...</option>
+                          <option value="ECONOMY">اقتصادية</option>
+                          <option value="PREMIUM_ECONOMY">
+                            اقتصادية مميزه
+                          </option>
+                          <option value="BUSINESS">اعمال</option>
+                          <option value="FIRST">اولي</option>
+                        </select>
+                      </div>
+                      <div class="form-item mb-2">
+                        <label for="travelAge" class="form-label"
+                          >عمر المسافر</label
+                        >
+                        <select id="travelAge" class="form-select">
+                          <option selected>اختر...</option>
+                          <option value="ECONOMY">بالغ</option>
+                          <option value="PREMIUM_ECONOMY">طفل</option>
+                          <option value="BUSINESS">رضيغ</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-2">
+                    <div class="search-btn text-end mt-2">
+                      <button
+                        type="button"
+                        id="search-btn"
+                        class="btn btn-main btn-rounded"
+                      >
+                        بحث
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!-- End Search Section -->
             <!-- Start results search -->
             <div class="results-search">
               <div class="cards-container">
@@ -421,42 +461,42 @@
                         </div>
                       </div>
                       <div class="col-3">
-                        <div class="border-start border-end-0 text-end">
+                        <div class="border-start border-end-0 text-center">
                           <div class="price">
                             <div>
-                              <h4>SAR 4788.00</h4>
-                              <p class="mt-3">GDS</p>
+                              <h4 class="mb-2">SAR 4788.00</h4>
+                              <h6 class="mb-2">GDS</h6>
                             </div>
                           </div>
                           <div class="book-flight">
                             <a
+                              class="btn btn-main mb-2"
                               data-href="https://gita.sa/booking/pricing"
                               data-offer="eyJ0eXBlIjoiZmxpZ2h0LW9mZmVyIiwiaWQiOiIxIiwic291cmNlIjoiR0RTIiwiaW5zdGFudFRpY2tldGluZ1JlcXVpcmVkIjpmYWxzZSwibm9uSG9tb2dlbmVvdXMiOmZhbHNlLCJvbmVXYXkiOmZhbHNlLCJpc1Vwc2VsbE9mZmVyIjpmYWxzZSwibGFzdFRpY2tldGluZ0RhdGUiOiIyMDI0LTEwLTMxIiwibGFzdFRpY2tldGluZ0RhdGVUaW1lIjoiMjAyNC0xMC0zMSIsIm51bWJlck9mQm9va2FibGVTZWF0cyI6OSwiaXRpbmVyYXJpZXMiOlt7ImR1cmF0aW9uIjoiUFQxMkg1ME0iLCJzZWdtZW50cyI6W3siZGVwYXJ0dXJlIjp7ImlhdGFDb2RlIjoiQVRIIiwiYXQiOiIyMDI0LTExLTAxVDEzOjE1OjAwIn0sImFycml2YWwiOnsiaWF0YUNvZGUiOiJDQUkiLCJ0ZXJtaW5hbCI6IjMiLCJhdCI6IjIwMjQtMTEtMDFUMTU6MTA6MDAifSwiY2FycmllckNvZGUiOiJNUyIsIm51bWJlciI6Ijc0OCIsImFpcmNyYWZ0Ijp7ImNvZGUiOiI3MzgifSwib3BlcmF0aW5nIjp7ImNhcnJpZXJDb2RlIjoiTVMifSwiZHVyYXRpb24iOiJQVDFINTVNIiwiaWQiOiIxIiwibnVtYmVyT2ZTdG9wcyI6MCwiYmxhY2tsaXN0ZWRJbkVVIjpmYWxzZX0seyJkZXBhcnR1cmUiOnsiaWF0YUNvZGUiOiJDQUkiLCJ0ZXJtaW5hbCI6IjMiLCJhdCI6IjIwMjQtMTEtMDFUMjM6MzA6MDAifSwiYXJyaXZhbCI6eyJpYXRhQ29kZSI6IkRNTSIsImF0IjoiMjAyNC0xMS0wMlQwMzowNTowMCJ9LCJjYXJyaWVyQ29kZSI6Ik1TIiwibnVtYmVyIjoiNjgzIiwiYWlyY3JhZnQiOnsiY29kZSI6IjczOCJ9LCJvcGVyYXRpbmciOnsiY2FycmllckNvZGUiOiJNUyJ9LCJkdXJhdGlvbiI6IlBUMkgzNU0iLCJpZCI6IjIiLCJudW1iZXJPZlN0b3BzIjowLCJibGFja2xpc3RlZEluRVUiOmZhbHNlfV19XSwicHJpY2UiOnsiY3VycmVuY3kiOiJTQVIiLCJ0b3RhbCI6IjQ3ODguMDAiLCJiYXNlIjoiMjMzOC4wMCIsImZlZXMiOlt7ImFtb3VudCI6IjAuMDAiLCJ0eXBlIjoiU1VQUExJRVIifSx7ImFtb3VudCI6IjAuMDAiLCJ0eXBlIjoiVElDS0VUSU5HIn1dLCJncmFuZFRvdGFsIjoiNDc4OC4wMCJ9LCJwcmljaW5nT3B0aW9ucyI6eyJmYXJlVHlwZSI6WyJORUdPVElBVEVEIl19LCJ2YWxpZGF0aW5nQWlybGluZUNvZGVzIjpbIk1TIl0sInRyYXZlbGVyUHJpY2luZ3MiOlt7InRyYXZlbGVySWQiOiIxIiwiZmFyZU9wdGlvbiI6IlNUQU5EQVJEIiwidHJhdmVsZXJUeXBlIjoiQURVTFQiLCJwcmljZSI6eyJjdXJyZW5jeSI6IlNBUiIsInRvdGFsIjoiMjU2MC4wMCIsImJhc2UiOiIxMzM1LjAwIn0sImZhcmVEZXRhaWxzQnlTZWdtZW50IjpbeyJzZWdtZW50SWQiOiIxIiwiY2FiaW4iOiJCVVNJTkVTUyIsImZhcmVCYXNpcyI6IlpSRUdSTyIsImNsYXNzIjoiWiIsImluY2x1ZGVkQ2hlY2tlZEJhZ3MiOnsicXVhbnRpdHkiOjJ9fSx7InNlZ21lbnRJZCI6IjIiLCJjYWJpbiI6IkJVU0lORVNTIiwiZmFyZUJhc2lzIjoiWlJFR1JPIiwiY2xhc3MiOiJaIiwiaW5jbHVkZWRDaGVja2VkQmFncyI6eyJxdWFudGl0eSI6Mn19XX0seyJ0cmF2ZWxlcklkIjoiMiIsImZhcmVPcHRpb24iOiJTVEFOREFSRCIsInRyYXZlbGVyVHlwZSI6IkNISUxEIiwicHJpY2UiOnsiY3VycmVuY3kiOiJTQVIiLCJ0b3RhbCI6IjIyMjguMDAiLCJiYXNlIjoiMTAwMy4wMCJ9LCJmYXJlRGV0YWlsc0J5U2VnbWVudCI6W3sic2VnbWVudElkIjoiMSIsImNhYmluIjoiQlVTSU5FU1MiLCJmYXJlQmFzaXMiOiJaUkVHUk8iLCJjbGFzcyI6IloifSx7InNlZ21lbnRJZCI6IjIiLCJjYWJpbiI6IkJVU0lORVNTIiwiZmFyZUJhc2lzIjoiWlJFR1JPIiwiY2xhc3MiOiJaIn1dfV0sImZhcmVSdWxlcyI6eyJydWxlcyI6W3siY2F0ZWdvcnkiOiJFWENIQU5HRSIsIm1heFBlbmFsdHlBbW91bnQiOiIyODguMDAifSx7ImNhdGVnb3J5IjoiUkVWQUxJREFUSU9OIiwibm90QXBwbGljYWJsZSI6dHJ1ZX1dfX0="
-                              class="btn btn-main"
                               >حجز الان</a
                             >
+                            <button
+                              class="btn btn-secondary border-top w-auto"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#collapseOne"
+                              aria-expanded="true"
+                              aria-controls="collapseOne"
+                            >
+                              عرض الخيارات الأخرى
+                            </button>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="accordion" id="accordionOtherOptions">
-                    <button
-                      class="accordion-button border-top rounded-bottom-2"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseOne"
-                      aria-expanded="true"
-                      aria-controls="collapseOne"
-                    >
-                      عرض الخيارات الأخرى
-                    </button>
                     <div
                       id="collapseOne"
                       class="accordion-collapse collapse"
                       data-bs-parent="#accordionOtherOptions"
                     >
-                      <div class="accordion-body d-flex gap-4">
+                      <div class="accordion-body d-flex gap-4 border-top">
                         <div class="card text-center">
                           <div class="card-body">
                             <h5 class="card-title">SAR 1542.00</h5>
