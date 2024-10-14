@@ -571,7 +571,8 @@ a {
 /* Satrt contact-us Section */
 .contact-us {
   background-image: url("../images/man-woman-are-looking-their-phones.jpg");
-  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
   background-attachment: fixed;
   position: relative;
@@ -705,3 +706,112 @@ footer ul li a i {
   cursor: pointer;
 }
 /* End whatsapp Mark */
+
+/* Start Search Page */
+/* start search */
+.search {
+  padding-bottom: 50px;
+}
+.search-with-filte {
+  background-color: #eee;
+  padding: 50px 0;
+}
+.search-with-filte .left-sidebar {
+  background-color: var(--secondary-color);
+}
+.left-sidebar .filter-title {
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #000;
+}
+.left-sidebar .collapse-title {
+  position: relative;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: capitalize;
+  cursor: pointer;
+  color: #000;
+}
+.left-sidebar .collapse-title::after {
+  content: "-";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  padding: 5px 10px;
+  background-color: #f9f9f9;
+}
+.left-sidebar .collapsed .collapse-title::after {
+  content: "+" !important;
+}
+/* End Left Sidbar */
+
+/* Start Results Search */
+.results-search .flight-line-logo {
+  width: 70px;
+}
+.results-search .flight-line-name {
+  font-size: 18px;
+  color: rgb(133, 151, 158);
+  margin-left: 18px;
+  margin-bottom: 0;
+  text-align: center;
+  margin: 0 20px;
+}
+.results-search .flight-line-name:first-child {
+  color: rgb(58, 58, 58);
+  font-weight: 600;
+}
+.results-search .airport-from h4,
+.results-search .airport-to h4 {
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+  color: rgb(58, 58, 58);
+  line-height: 25px;
+}
+.results-search .airport-part {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 20px;
+}
+.results-search .airport-progress {
+  display: flex;
+  align-items: center;
+}
+.results-search .fa-plane-departure,
+.results-search .fa-plane-arrival {
+  transform: scaleX(-1);
+  color: var(--main-color);
+}
+.results-search .stop {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  width: max-content;
+}
+.results-search .stop::before,
+.results-search .stop::after {
+  content: "";
+  width: 50px;
+  border-top: 1px dashed #ccc;
+  margin: 0 10px;
+}
+.results-search .fa-plane-departure {
+  display: inline-block;
+}
+.results-search .accordion-button {
+  border: 0;
+  margin-top: 1px solid #eee;
+  background-color: white !important;
+}
+.results-search .accordion-button:focus {
+  box-shadow: none;
+}
+.results-search .accordion-button::after {
+  margin-left: 0px;
+}
+/* End Results Search */
+/* End Search Page */
