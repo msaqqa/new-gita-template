@@ -708,28 +708,36 @@ footer ul li a i {
 /* End whatsapp Mark */
 
 /* Start Search Page */
-/* start search */
-.search {
+
+/* Start Search Form Section */
+.search-form {
   background-color: #eee;
+  padding-top: 100px;
+  padding-bottom: 30px;
 }
-.search .time-box {
-  background-color: rgb(232, 246, 248);
-  margin-bottom: 30px;
-  padding-top: 30px !important;
-  padding-bottom: 30px !important;
-}
-.search .time-box .form-switch {
-  padding-right: 0;
-}
-.search .search-form {
+.search-form form,
+.search-form .time-box {
   background-color: var(--secondary-color);
-  margin-bottom: 30px;
-  overflow: hidden;
+}
+.search-form .time-box {
+  height: 100%;
+}
+.search-form .time-box .form-switch {
+  padding-right: 0;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .search-form .form-item {
   width: calc(100% / 6);
 }
-.search .left-sidebar {
+/* End Search Form Section */
+
+.search-with-filter {
+  padding-bottom: 50px;
+  background-color: #eee;
+}
+.search-with-filter .left-sidebar {
   background-color: var(--secondary-color);
 }
 .left-sidebar .filter-title {
@@ -825,6 +833,11 @@ footer ul li a i {
 }
 .results-search .accordion-button::after {
   margin-left: 0px;
+}
+@media (max-width: 768px) {
+  .search-form .form-item {
+    width: 100%;
+  }
 }
 /* End Results Search */
 /* End Search Page */
