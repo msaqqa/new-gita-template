@@ -154,8 +154,8 @@ a {
 }
 /* End Preloader */
 
-/* alert */
-.alert {
+/* topbar */
+.topbar {
   background-color: var(--main-color);
   color: var(--secondary-color);
   font-size: 20px;
@@ -728,8 +728,17 @@ footer ul li a i {
   top: 50%;
   transform: translateY(-50%);
 }
+.search-form .time-box .form-check-input:focus {
+  background-image: url("../images/switch-bg.svg");
+}
+.search-form .time-box .form-check-input:checked {
+  background-image: url("../images/switch-bg-checked.svg");
+}
 .search-form .form-item {
   width: calc(100% / 6);
+}
+.search-form .form-item label {
+  padding-right: 0.75rem;
 }
 /* End Search Form Section */
 
@@ -841,3 +850,96 @@ footer ul li a i {
 }
 /* End Results Search */
 /* End Search Page */
+
+/* Satrt Booking Page */
+.booking {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.booking .alert {
+  /* height: 70px; */
+  margin-bottom: 1.5rem !important;
+}
+.booking .alert .fa-exclamation {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  background-color: rgb(255, 141, 25);
+  color: var(--secondary-color);
+  border-radius: 50%;
+}
+.booking .alert h4 {
+  font-size: 16px;
+  color: rgb(255, 141, 25);
+  margin-bottom: 0;
+}
+.booking .alert p {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+.booking .booking-summary .leave {
+  font-size: 16px;
+  font-weight: 700;
+  color: rgb(51, 51, 51);
+}
+.booking .booking-summary .booking-date {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(133, 151, 158);
+}
+.booking-summary .summary-content .flight-line-logo {
+  width: 30px;
+  height: 30px;
+}
+.booking-summary .summary-content .airport-from h4,
+.booking-summary .summary-content .airport-to h4 {
+  font-size: 20px !important;
+  margin-bottom: 0;
+}
+.booking-summary .summary-content .flight-time {
+  font-size: 14px;
+  font-weight: 400;
+}
+.booking .booking-summary .summary-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(133, 151, 158);
+}
+.popover {
+  background-color: #333;
+}
+.bs-popover-auto[data-popper-placement^="right"] > .popover-arrow::after {
+  border-right-color: #333;
+}
+.popover .bags {
+  color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+.booking .hr {
+  display: block;
+  border-top: 1px dashed #ccc;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.booking .price-details h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: rgb(58, 58, 58);
+}
+@media (max-width: 768px) {
+  .booking form {
+    width: 100% !important;
+  }
+  .booking-summary .summary-content .stop {
+    display: grid;
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+/* End Booking Page */
