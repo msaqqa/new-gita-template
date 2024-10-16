@@ -69,7 +69,7 @@
             data-bs-dismiss="offcanvas"
             aria-label="Close"
           ></button>
-          <ul class="navbar-nav mb-4 mb-lg-0 mx-auto">
+          <ul class="navbar-nav mb-4 mb-lg-0 ms-0 mx-lg-auto">
             <li class="nav-item">
               <a class="nav-link active" href="../index.html"> الرئيسية</a>
             </li>
@@ -77,13 +77,17 @@
               <a class="nav-link" href="#">من نحن</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">الشروط والاحكام</a>
+              <a class="nav-link" href="./alshrwt-walahkam.html"
+                >الشروط والاحكام</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">تواصل معنا</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">سياسة الخصوصية</a>
+              <a class="nav-link" href="./privacy-policy.html"
+                >سياسة الخصوصية</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">قيمنا</a>
@@ -116,7 +120,7 @@
     <div class="booking">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-md-8">
+          <div class="col-lg-8 col-md-7">
             <div class="alert alert-warning d-flex" role="alert">
               <i class="fa-solid fa-exclamation fa-xs me-2"></i>
               <div>
@@ -255,7 +259,7 @@
                     placeholder="1234 Main St"
                   />
                 </div>
-                <div class="col-md-6">
+                <div class="col-12">
                   <div class="form-check">
                     <input
                       class="form-check-input"
@@ -271,14 +275,14 @@
               </form>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-lg-4 col-md-5">
             <div class="booking-summary border rounded p-3 mb-4">
               <div class="d-flex">
                 <span class="leave me-3 ms-0">المغادرة</span>
                 <span class="booking-date">إثنين - تشرين الأول أكتوبر 14</span>
               </div>
               <div
-                class="summary-content results-search d-flex justify-content-between align-items-center"
+                class="summary-content results-search d-flex justify-content-between align-items-center my-3"
               >
                 <div class="flight-line-logo">
                   <img
@@ -312,15 +316,16 @@
               <div class="summary-footer d-flex justify-content-between">
                 <span>طيران أديل F3-144</span>
                 <!-- <span class="bags">شاملة الأمتعة</span> -->
-                <span
+                <div
                   id="popoverBags"
                   data-bs-container="body"
                   data-bs-toggle="popover"
                   data-bs-placement="bottom"
                   data-bs-content="Bottom popover"
                 >
-                  شاملة الأمتعة
-                </span>
+                  <i class="fa-solid fa-cart-flatbed-suitcase"></i>
+                  <span>شاملة الأمتعة</span>
+                </div>
               </div>
             </div>
             <div class="price-details border rounded p-3 mb-4">
@@ -385,9 +390,9 @@
             <ul class="list-unstyled">
               <li><a href="#">الرئيسيه</a></li>
               <li><a href="#">من نحن</a></li>
-              <li><a href="#">الشروط والاحكام</a></li>
+              <li><a href="./alshrwt-walahkam.html">الشروط والاحكام</a></li>
               <li><a href="#">تواصل معنا</a></li>
-              <li><a href="#">سياسة الخصوصية</a></li>
+              <li><a href="./privacy-policy.html">سياسة الخصوصية</a></li>
               <li>
                 <a
                   href="#"
@@ -581,21 +586,21 @@
         placement: "bottom",
         content: `
         <div class="bags">
-        <h5 class="fs-5 mb-3">الامتعة</h5>
-        <ul class="list-unstyled mb-4 text-white">
-          <li class="mb-2">
-            <i class="fa-regular fa-circle-check"></i>
-            <span>حقيبة صغيرة</span>
-          </li>
-          <li class="mb-2">
-            <i class="fa-regular fa-circle-check"></i>
-            <span>حقيبة كبيرة</span>
-          </li>
-          <li class="mb-2">
-            <i class="fa-regular fa-circle-check"></i>
-            <span>مجموع وزن أمتعة السفر 32 كغم</span>
-          </li>
-        </ul>
+          <h5 class="fs-6 mb-3">الأمتعة</h5>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2">
+              <i class="fa-regular fa-circle-check me-2"></i>
+              <span>حقيبة صغيرة</span>
+            </li>
+            <li class="mb-2">
+              <i class="fa-regular fa-circle-check me-2"></i>
+              <span>حقيبة كبيرة</span>
+            </li>
+            <li class="mb-2">
+              <i class="fa-regular fa-circle-check me-2"></i>
+              <span>مجموع وزن أمتعة السفر 32 كغم</span>
+            </li>
+          </ul>
         </div>
         `,
       });

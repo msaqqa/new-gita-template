@@ -2,10 +2,13 @@
 /* Start Variables */
 :root {
   --main-color: #be910c;
-  --secondary-color: #fff;
+  --white-color: #ffffff;
+  --black-color: #000000;
   --accent-color: #6c281c;
   --main-transition: all 0.3s ease-in;
-  --section-padding: 75px;
+  --bg-dark: #3a2205;
+  --bg-light: rgb(248, 249, 250);
+  --text-color: rgba(33, 37, 41, 0.75);
 }
 /* End Variables */
 
@@ -60,19 +63,19 @@ a {
 }
 .btn-main {
   background-color: var(--main-color) !important;
-  color: var(--secondary-color) !important;
+  color: var(--white-color) !important;
 }
 .btn-main:hover {
-  background-color: var(--secondary-color) !important;
+  background-color: var(--white-color) !important;
   color: var(--main-color) !important;
 }
 .btn-secondary {
-  background-color: var(--secondary-color) !important;
+  background-color: var(--white-color) !important;
   color: var(--main-color) !important;
 }
 .btn-secondary:hover {
   background-color: var(--main-color) !important;
-  color: var(--secondary-color) !important;
+  color: var(--white-color) !important;
 }
 /* Form Component */
 .form-label,
@@ -157,7 +160,7 @@ a {
 /* topbar */
 .topbar {
   background-color: var(--main-color);
-  color: var(--secondary-color);
+  color: var(--white-color);
   font-size: 20px;
 }
 
@@ -165,7 +168,7 @@ a {
 .navbar {
   transition: background-color 0.3s;
   background-color: black;
-  color: var(--secondary-color);
+  color: var(--white-color);
   height: 60px;
 }
 .navbar {
@@ -175,7 +178,7 @@ a {
   z-index: 1030;
 }
 .navbar.default-background {
-  background-color: #3a2205;
+  background-color: var(--bg-dark);
 }
 .navbar.scrolled-background {
   background: linear-gradient(to bottom, #fef5ed, #ffffff);
@@ -187,7 +190,7 @@ a {
   height: 100%;
 }
 .navbar.default-background .dropdown-toggle {
-  color: var(--secondary-color) !important;
+  color: var(--white-color) !important;
   cursor: pointer;
 }
 .navbar.scrolled-background .dropdown-toggle {
@@ -211,12 +214,11 @@ a {
 }
 .navbar.default-background .offcanvas a,
 .navbar-light .navbar-nav .nav-link {
-  color: var(--secondary-color);
+  color: var(--white-color);
 }
 .navbar.default-background .offcanvas a:hover,
 .navbar.default-background .offcanvas a.active {
   color: var(--main-color);
-  font-weight: 700;
 }
 .navbar .offcanvas .btn-close {
   box-shadow: none;
@@ -224,13 +226,13 @@ a {
   height: 0.5em;
 }
 .navbar .navbar-toggler {
-  border-color: var(--secondary-color);
+  border-color: var(--white-color);
 }
 .navbar .navbar-toggler-icon {
   background-image: url("../images/white-toggler-icon.svg");
 }
 .navbar-toggler-icon {
-  color: var(--secondary-color);
+  color: var(--white-color);
 }
 .navbar-toggler:focus {
   box-shadow: none;
@@ -238,10 +240,13 @@ a {
 
 @media (max-width: 991px) {
   .navbar .offcanvas {
-    background-color: var(--secondary-color) !important;
-    padding: 20px 0;
+    background-color: var(--white-color) !important;
+    padding: 1rem;
     transition: all 0.3s ease;
     border: 1px solid rgba(0, 0, 0, 0.175);
+    justify-content: start !important;
+    align-items: start !important;
+    margin-right: 0;
   }
   .navbar .offcanvas a,
   .navbar-light .navbar-nav .nav-link {
@@ -286,10 +291,10 @@ a {
   top: 80%;
 }
 .home-section .search-widget .widget-menu {
-  background-color: #3a2205 !important;
+  background-color: var(--bg-dark) !important;
 }
 .home-section .search-widget .search-container {
-  background-color: var(--secondary-color);
+  background-color: var(--white-color);
   padding: 1rem !important;
   border-bottom-right-radius: 7px;
   border-bottom-left-radius: 7px;
@@ -303,7 +308,7 @@ a {
   border-left: 0px solid rgb(141, 220, 216);
 }
 .home-section .nav-tabs .nav-item .nav-link {
-  color: var(--secondary-color);
+  color: var(--white-color);
   font-weight: 600;
 }
 .home-section .nav-tabs .nav-item .nav-link.active {
@@ -353,7 +358,7 @@ a {
 /* Statr Features Section */
 .features-section {
   margin-top: 250px;
-  background-color: #eee;
+  background-color: var(--bg-light);
 }
 .features-section .swiper-features {
   position: relative;
@@ -377,7 +382,7 @@ a {
   align-items: center;
   justify-content: center;
   margin-right: 10px;
-  background: var(--secondary-color); /* Remove default background */
+  background: var(--white-color); /* Remove default background */
   color: var(--main-color) !important;
 }
 /* .features-section .swiper-button-next + .swiper-button-next::after {
@@ -465,10 +470,10 @@ a {
 
 /* Start offers Section */
 .offers-section {
-  background-color: #eee;
+  background-color: var(--bg-light);
 }
 .offers-section .offer-box {
-  background-color: var(--secondary-color);
+  background-color: var(--white-color);
   transition: transform 0.3s, box-shadow 0.3s;
   overflow: hidden;
   display: flex;
@@ -494,14 +499,14 @@ a {
   z-index: 100;
 }
 .offers-section .card-img-top button {
-  color: var(--secondary-color);
+  color: var(--white-color);
   border: none !important;
 }
 .offers-section .card-img-top button:hover {
   color: var(--main-color);
 }
 .offers-section .card-img-top .top-bar {
-  color: var(--secondary-color);
+  color: var(--white-color);
   font-size: 20px;
   font-weight: 700;
 }
@@ -552,7 +557,7 @@ a {
 
 /* Start Reviews Section */
 .reviews-section {
-  background-color: #eee;
+  background-color: var(--bg-light);
 }
 .reviews-section .swiper-reviews {
   cursor: grab;
@@ -587,7 +592,7 @@ a {
   background-color: rgba(0, 0, 0, 0.4);
 }
 .contact-us .container-fluid {
-  color: var(--secondary-color);
+  color: var(--white-color);
   z-index: 100;
 }
 .contact-us .form-label,
@@ -607,7 +612,7 @@ a {
 /* start Mobile App Section */
 .mobile-app {
   display: flex;
-  background-color: #eee;
+  background-color: var(--bg-light);
   height: 600px;
 }
 .mobile-app ul li i {
@@ -632,7 +637,7 @@ a {
 /* Start first know Section */
 .first-know {
   background-color: var(--main-color);
-  color: var(--secondary-color);
+  color: var(--white-color);
   text-align: center;
   display: flex;
   justify-content: center;
@@ -642,16 +647,16 @@ a {
   font-size: 18px;
 }
 .first-know .btn-secondary:hover {
-  border-color: var(--secondary-color) !important;
+  border-color: var(--white-color) !important;
 }
 /* End first know Section */
 
 /* Start footer Section */
 footer {
   /* background: linear-gradient(180deg, #1a1a1a, #3a2d0c, #be910c); */
-  /* background: linear-gradient(180deg, #4e2e07, #3a2205, #be910c); */
-  background-color: #3a2205;
-  color: var(--secondary-color);
+  /* background: linear-gradient(180deg, #4e2e07, var(--bg-dark), #be910c); */
+  background-color: var(--bg-dark);
+  color: var(--white-color);
 }
 footer h4 {
   margin-bottom: 20px;
@@ -662,7 +667,7 @@ footer ul li {
   margin-bottom: 10px;
 }
 footer ul li a {
-  color: var(--secondary-color);
+  color: var(--white-color);
   font-size: 15px;
 }
 footer ul li a:hover {
@@ -675,15 +680,15 @@ footer ul li a i {
 
 /* Start Copy Right */
 .copyright {
-  background-color: #3a2205;
-  color: var(--secondary-color);
-  border-top: 1px solid #eee;
+  background-color: var(--bg-dark);
+  color: var(--white-color);
+  border-top: 1px solid var(--bg-light);
 }
 .footer-social ul li {
   margin-left: 10px;
 }
 .footer-social ul li a {
-  color: var(--secondary-color);
+  color: var(--white-color);
 }
 .footer-social ul li a:hover {
   color: var(--main-color);
@@ -711,13 +716,13 @@ footer ul li a i {
 
 /* Start Search Form Section */
 .search-form {
-  background-color: #eee;
+  background-color: var(--bg-light);
   padding-top: 100px;
   padding-bottom: 30px;
 }
 .search-form form,
 .search-form .time-box {
-  background-color: var(--secondary-color);
+  background-color: var(--white-color);
 }
 .search-form .time-box {
   height: 100%;
@@ -744,10 +749,10 @@ footer ul li a i {
 
 .search-with-filter {
   padding-bottom: 50px;
-  background-color: #eee;
+  background-color: var(--bg-light);
 }
 .search-with-filter .left-sidebar {
-  background-color: var(--secondary-color);
+  background-color: var(--white-color);
 }
 .left-sidebar .filter-title {
   font-weight: 600;
@@ -810,6 +815,7 @@ footer ul li a i {
 .results-search .airport-progress {
   display: flex;
   align-items: center;
+  padding-bottom: 2px;
 }
 .results-search .fa-plane-departure,
 .results-search .fa-plane-arrival {
@@ -819,7 +825,6 @@ footer ul li a i {
 .results-search .stop {
   display: flex;
   align-items: center;
-  padding: 10px 0;
   width: max-content;
 }
 .results-search .stop::before,
@@ -834,7 +839,7 @@ footer ul li a i {
 }
 .results-search .accordion-button {
   border: 0;
-  margin-top: 1px solid #eee;
+  margin-top: 1px solid var(--bg-light);
   background-color: white !important;
 }
 .results-search .accordion-button:focus {
@@ -856,8 +861,9 @@ footer ul li a i {
   padding-top: 100px;
   padding-bottom: 100px;
 }
+
+/* Alert */
 .booking .alert {
-  /* height: 70px; */
   margin-bottom: 1.5rem !important;
 }
 .booking .alert .fa-exclamation {
@@ -866,7 +872,7 @@ footer ul li a i {
   line-height: 20px;
   text-align: center;
   background-color: rgb(255, 141, 25);
-  color: var(--secondary-color);
+  color: var(--white-color);
   border-radius: 50%;
 }
 .booking .alert h4 {
@@ -878,6 +884,8 @@ footer ul li a i {
   font-size: 14px;
   margin-bottom: 0;
 }
+
+/* Booking Summary */
 .booking .booking-summary .leave {
   font-size: 16px;
   font-weight: 700;
@@ -901,6 +909,10 @@ footer ul li a i {
   font-size: 14px;
   font-weight: 400;
 }
+.booking-summary .summary-content .stop::before,
+.booking-summary .summary-content .stop::after {
+  width: 30px;
+}
 .booking .booking-summary .summary-footer {
   display: flex;
   justify-content: space-between;
@@ -910,14 +922,16 @@ footer ul li a i {
   color: rgb(133, 151, 158);
 }
 .popover {
-  background-color: #333;
-}
-.bs-popover-auto[data-popper-placement^="right"] > .popover-arrow::after {
-  border-right-color: #333;
+  background-color: var(--bg-dark);
+  --bs-popover-arrow-color: transparent; /* Remove the default arrow color */
+  --bs-popover-bg: var(--bg-dark); /* Background color of the popover */
 }
 .popover .bags {
-  color: var(--secondary-color);
-  border-color: var(--secondary-color);
+  color: var(--white-color);
+  border-color: var(--white-color);
+}
+.popover .bags ul li {
+  font-size: 12px;
 }
 .booking .hr {
   display: block;
@@ -925,6 +939,8 @@ footer ul li a i {
   margin-top: 15px;
   margin-bottom: 15px;
 }
+
+/* Price Details */
 .booking .price-details h4 {
   font-size: 18px;
   font-weight: 600;
@@ -934,12 +950,70 @@ footer ul li a i {
   .booking form {
     width: 100% !important;
   }
-  .booking-summary .summary-content .stop {
-    display: grid;
-    text-align: center;
-    margin-left: 5px;
-    margin-right: 5px;
-  }
 }
-
 /* End Booking Page */
+
+/* Start Privacy Policy Page */
+.privacy-policy-header {
+  background-image: url("../images/about-header.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 60px;
+  height: 400px;
+  position: relative;
+}
+.header-content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.header-content h1 {
+  font-size: 70px;
+  margin-bottom: 10px;
+  color: var(--white-color);
+}
+.breadcrumb {
+  font-size: 20px;
+}
+.breadcrumb .breadcrumb-item {
+  color: var(--main-color);
+}
+.breadcrumb .breadcrumb-item a {
+  color: var(--white-color);
+}
+.breadcrumb-item + .breadcrumb-item::before {
+  color: var(--white-color);
+}
+.page-privacy-policy .accordion-button::after {
+  margin-left: 0;
+}
+.page-privacy-policy .accordion-button {
+  background-color: var(--bg-light);
+}
+.page-privacy-policy .accordion-button:not(.collapsed) {
+  background-color: var(--bg-dark);
+  color: var(--white-color);
+}
+.page-privacy-policy .accordion-button:not(.collapsed)::after {
+  background-image: url("../images/chevron-down-solid.svg");
+}
+.accordion-button:focus {
+  box-shadow: none;
+}
+.accordion-item .accordion-body {
+  color: var(--text-color);
+}
+/* End Privacy Policy Page */
+
+/* Start Alshrwt Walahkam Page */
+.alshrwt-walahkam-header {
+  background-image: url("../images/banner-terms.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 60px;
+  height: 400px;
+  position: relative;
+}
+/* End Alshrwt Walahkam Page */

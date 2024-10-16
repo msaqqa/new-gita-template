@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الذهبية العالمية للسياحة</title>
+    <link rel="icon" href="../images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+
+  <body>
+    <!-- Start Preloader HTML -->
+    <div id="preloader">
+      <div class="loading-container">
+        <img src="../images/logo.png" alt="Logo" />
+      </div>
+    </div>
+    <!-- End Preloader HTML -->
+
+    <!-- Start Topbar Alert -->
+    <div
+      id="alert"
+      class="topbar alert d-none d-md-block alert-dismissible fade show m-0 text-center border-0 rounded-0"
+      role="alert"
+    >
+      <strong>نوفمبر ذهبي مع الذهبية العالمية ✈️</strong> حجز تذكرتك بخصم 10%
+      عرحلات مميزة خلال شهر نوفمبر
+      <button
+        type="button"
+        id="closeAlert"
+        class="btn-close"
+        data-bs-dismiss="alert"
+        aria-label="Close"
+      ></button>
+    </div>
+    <!-- End Topbar Alert -->
+
+    <!--Start Navbar -->
+    <nav id="navbar" class="navbar navbar-expand-lg default-background">
+      <div class="container-fluid">
+        <a id="navbar-brand" class="navbar-brand" href="#">
+          <img class="img-fluid" src="../images/logo.png" alt="Logo" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-start flex-column flex-lg-row align-items-center justify-content-between"
+          id="offcanvasNavbar"
+        >
+          <button
+            class="btn-close d-lg-none ms-auto me-3"
+            type="button"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+          <ul class="navbar-nav mb-4 mb-lg-0 ms-0 mx-lg-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html"> الرئيسية</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">من نحن</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./alshrwt-walahkam.html"
+                >الشروط والاحكام</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">تواصل معنا</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">سياسة الخصوصية</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">قيمنا</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#bookingInquiryModal"
+                >استعلام حجز</a
+              >
+            </li>
+          </ul>
+          <div class="header-icons" title="واتساب">
+            <a href="https://wa.me/+966920029449" target="_blank">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="#" class="mx-3" title="تسجيل الدخول">
+              <i class="fa-regular fa-user"></i>
+            </a>
+            <a href="#"><i class="far fa-heart" title="المفضلة"></i></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- Header Start -->
+    <header class="privacy-policy-header">
+      <div class="container-fluid">
+        <div class="header-content">
+          <h1 class="text-anime">سياسة الخصوصية</h1>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="../index.html">الرئيسية</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                سياسة الخصوصية
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Start Privacy Policy Accordion -->
+    <div class="page-privacy-policy section-padding">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-10 offset-md-1">
+            <!-- Start Accordion -->
+            <div class="accordion" id="faq_accordion">
+              <!-- Privacy Policy Item Start -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading1">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse1"
+                    aria-expanded="true"
+                    aria-controls="collapse1"
+                  >
+                    جمع المعلومات واستخدامها
+                  </button>
+                </h2>
+
+                <div
+                  id="collapse1"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="heading1"
+                  data-bs-parent="#faq_accordion"
+                >
+                  <div class="accordion-body">
+                    <p>
+                      لأننا في <strong>Gita</strong> نحترم أحقيتك في معرفة كيف
+                      يتعامل الموقع مع بياناتك الشخصية، فقد قمنا بطرح كل ما
+                      يتعلق بسياسة الخصوصية، بشكل مفصّل وشفّاف، لتطّلع عليها
+                      وعلى تحديثاتها في الوقت الذي تريد، وذلك إلتزاماً منّا تجاه
+                      خصوصيتك وحمايتها.
+                    </p>
+                    <p>
+                      يمكنك التواصل معنا في أي وقت بشأن الاستفسارات أو طلبات
+                      الإلغاء على بريد
+                      <a href="mailto:support@gita.sa">support@gita.sa</a>،
+                      وسيتم الرد عليك خلال 24 ساعة عمل.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Privacy Policy Item End -->
+
+              <!-- Privacy Policy Item Start -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading2">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse2"
+                    aria-expanded="true"
+                    aria-controls="collapse2"
+                  >
+                    ما هي المعلومات التي نحصل عليها؟
+                  </button>
+                </h2>
+
+                <div
+                  id="collapse2"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="heading2"
+                  data-bs-parent="#faq_accordion"
+                >
+                  <div class="accordion-body">
+                    <p>
+                      معلومات شخصية معلومات المعاملات معلومات الحجز معلومات أخرى
+                      مثل التفضيلات وخيارات الوجهة.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Privacy Policy Item End -->
+
+              <!-- Privacy Policy Item Start -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading3">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse3"
+                    aria-expanded="true"
+                    aria-controls="collapse3"
+                  >
+                    استخدام المعلومات
+                  </button>
+                </h2>
+
+                <div
+                  id="collapse3"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="heading3"
+                  data-bs-parent="#faq_accordion"
+                >
+                  <div class="accordion-body">
+                    <p>
+                      بعد تسجيلك على موقعنا، نقوم بإنشاء هوية افتراضية خاصة بك
+                      لتسهيل إدارة الحجز، التواصل معك، وحل أي مشكلات في حجوزاتك.
+                    </p>
+                    <p>تُستخدم المعلومات للأغراض التالية:</p>
+                    <p>
+                      إجراء الحجوزات، معاملات الدفع، وإدارة الرحلات. تحسين تجربة
+                      المستخدم وتخصيص الخدمات. تحليل حركة الموقع وإرسال إشعارات
+                      مخصصة. تحسين خدمة العملاء وتقديم دعم فعال.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Privacy Policy Item End -->
+
+              <!-- Privacy Policy Item Start -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading4">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse4"
+                    aria-expanded="true"
+                    aria-controls="collapse4"
+                  >
+                    كيف تساعدنا هذه المعلومات في تقديم خدمة أفضل لك؟
+                  </button>
+                </h2>
+
+                <div
+                  id="collapse4"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="heading4"
+                  data-bs-parent="#faq_accordion"
+                >
+                  <div class="accordion-body">
+                    <p>
+                      نستخدم معلوماتك لتخصيص تجربتك وتحسين خدماتنا وتلبية
+                      احتياجاتك. تشمل هذه الاستخدامات تقديم معلومات عن الرحلات،
+                      تأكيدات الحجز، ودعم العملاء.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Privacy Policy Item End -->
+
+              <!-- Privacy Policy Item Start -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading5">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse5"
+                    aria-expanded="true"
+                    aria-controls="collapse5"
+                  >
+                    كيف نستخدم المعلومات الشخصية الخاصة بك؟
+                  </button>
+                </h2>
+
+                <div
+                  id="collapse5"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="heading5"
+                  data-bs-parent="#faq_accordion"
+                >
+                  <div class="accordion-body">
+                    <p>
+                      نستخدم المعلومات لتطوير وتحسين الخدمات التي نقدمها لك،
+                      وكذلك لإطلاعك على المنتجات الجديدة والعروض الخاصة التي قد
+                      تهمك.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Privacy Policy Item End -->
+
+              <!-- Privacy Policy Item Start -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading6">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse6"
+                    aria-expanded="true"
+                    aria-controls="collapse6"
+                  >
+                    ما هي الجهات التي قد نُشارك معلوماتك معها؟
+                  </button>
+                </h2>
+
+                <div
+                  id="collapse6"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="heading6"
+                  data-bs-parent="#faq_accordion"
+                >
+                  <div class="accordion-body">
+                    <p>
+                      مكاتب دعم العملاء. جهات خارجية لتوفير خدمات مثل التأمين أو
+                      الاتصالات. المنظمات المشتركة في تفويض بطاقات الائتمان.
+                      الشركات التابعة لنا لتقديم خدمات ذات صلة.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Privacy Policy Item End -->
+
+              <!-- Privacy Policy Item Start -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading7">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse7"
+                    aria-expanded="true"
+                    aria-controls="collapse7"
+                  >
+                    ما هى البيانات التي نجمعها من تطبيقات الهاتف المحمول
+                  </button>
+                </h2>
+
+                <div
+                  id="collapse7"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="heading7"
+                  data-bs-parent="#faq_accordion"
+                >
+                  <div class="accordion-body">
+                    <p>
+                      عند تثبيت واستخدام تطبيق <strong>Gita</strong>، نقوم بجمع
+                      البيانات التالية:
+                    </p>
+                    <p>
+                      المعلومات الشخصية: الاسم، البريد الإلكتروني، رقم الهاتف.
+                      معلومات السفر: تفاصيل الرحلات والحجوزات. معلومات الحجز
+                      والنشاط في التطبيق.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Privacy Policy Item End -->
+
+              <!-- Privacy Policy Item Start -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading8">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse8"
+                    aria-expanded="true"
+                    aria-controls="collapse8"
+                  >
+                    لماذا نستخدم المعلومات على تطبيقات الهاتف المتنقل الخاص بـ
+                    Gita؟
+                  </button>
+                </h2>
+
+                <div
+                  id="collapse8"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="heading8"
+                  data-bs-parent="#faq_accordion"
+                >
+                  <div class="accordion-body">
+                    <p>
+                      نستخدم المعلومات على التطبيق لتلبية احتياجات حجوزاتك،
+                      إرسال تفاصيل الرحلات، والتواصل معك في حال وجود مشكلة.
+                      يمكنك التحكم في إعدادات خصوصيتك من خلال التطبيق.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Privacy Policy Item End -->
+
+              <!-- Privacy Policy Item Start -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading9">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse9"
+                    aria-expanded="true"
+                    aria-controls="collapse9"
+                  >
+                    كيف أطلب حذف بياناتي من موقع Gita؟
+                  </button>
+                </h2>
+
+                <div
+                  id="collapse9"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="heading9"
+                  data-bs-parent="#faq_accordion"
+                >
+                  <div class="accordion-body">
+                    <p>لإرسال طلب حذف بياناتك، اتبع الخطوات التالية:</p>
+                    <p>
+                      أرسل بريدًا إلكترونيًا إلى
+                      <a href="mailto:info@gita.sa">info@gita.sa</a> بعنوان "طلب
+                      حذف بياناتي". أرفق في نص البريد: اسمك، بريدك الإلكتروني،
+                      رقم هاتفك، وحسابك المطلوب حذفه.
+                    </p>
+                    <p>سيتم معالجة طلبك خلال يومي عمل.</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Privacy Policy Item End -->
+
+              <!-- Privacy Policy Item Start -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading10">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse10"
+                    aria-expanded="true"
+                    aria-controls="collapse10"
+                  >
+                    اتفاقية ملفات تعريف الارتباط
+                  </button>
+                </h2>
+
+                <div
+                  id="collapse10"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="heading10"
+                  data-bs-parent="#faq_accordion"
+                >
+                  <div class="accordion-body">
+                    <p>
+                      "ملفات تعريف الارتباط" هي تقنية نستخدمها لتخصيص تجربتك على
+                      موقعنا. يمكنك إعداد متصفحك لقبول أو رفض ملفات تعريف
+                      الارتباط وفقًا لاختياراتك.
+                    </p>
+                    <p>
+                      نؤكد مجددًا على أن زيارتك لموقعنا أو استخدامك للتطبيق يعني
+                      قبولك للتحديثات في سياسة الخصوصية. نوصي بمراجعتها بانتظام
+                      للتأكد من معرفتك بالتغييرات.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Privacy Policy Item End -->
+            </div>
+            <!-- End Accordion -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Privacy Policy Accordion -->
+
+    <!-- Start Footer Section -->
+    <footer class="section-padding">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-6 col-md-2 mb-2">
+            <img
+              class="img-fluid"
+              src="../images/logo.png"
+              alt=""
+              width="100px"
+            />
+          </div>
+          <div class="col-6 col-md-2 mb-2">
+            <h4>معلومات الشركة</h4>
+            <p>الذهبيه العالميه للسفر والسياحه</p>
+            <ul class="list-unstyled">
+              <li>
+                <a
+                  target="_blank"
+                  href="https://www.google.com/maps/place/%D8%A7%D9%84%D8%B0%D9%87%D8%A8%D9%8A%D8%A9+%D8%A7%D9%84%D8%B9%D8%A7%D9%84%D9%85%D9%8A%D8%A9+%D9%84%D9%84%D8%B3%D9%81%D8%B1+%D9%88%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%AD%D8%A9%E2%80%AD/@24.5753293,46.698213,659m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3e2f0f00341dcb43:0x7050a1667f20747a!8m2!3d24.5753244!4d46.6956381!16s%2Fg%2F11y5vhjp39?hl=ar&entry=ttu&g_ep=EgoyMDI0MTAwNS4yIKXMDSoASAFQAw%3D%3D"
+                >
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>فرع المدينة</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  href="https://www.google.com/maps/place/%D8%A7%D9%84%D8%B0%D9%87%D8%A8%D9%8A%D8%A9+%D8%A7%D9%84%D8%B9%D8%A7%D9%84%D9%85%D9%8A%D8%A9+%D9%84%D9%84%D8%B3%D9%81%D8%B1+%D9%88%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%AD%D8%A9%E2%80%AD/@24.5753244,46.6956381,3624m/data=!3m1!1e3!4m6!3m5!1s0x3e2f0f00341dcb43:0x7050a1667f20747a!8m2!3d24.5753244!4d46.6956381!16s%2Fg%2F11y5vhjp39?entry=tts&g_ep=EgoyMDI0MDkwOC4wKgBIAVAD"
+                >
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>فرع الرياض</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-2">
+            <h4>الصفحات</h4>
+            <ul class="list-unstyled">
+              <li><a href="#">الرئيسيه</a></li>
+              <li><a href="#">من نحن</a></li>
+              <li><a href="./alshrwt-walahkam.html">الشروط والاحكام</a></li>
+              <li><a href="#">تواصل معنا</a></li>
+              <li><a href="#">سياسة الخصوصية</a></li>
+              <li>
+                <a
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#bookingInquiryModal"
+                  >استعلام حجز</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-2">
+            <h4>تواصل معنا</h4>
+            <ul class="list-unstyled">
+              <li>
+                <a href="tel:920029449"
+                  ><i class="fas fa-phone"></i> 920029449</a
+                >
+              </li>
+              <li>
+                <a href="tel:920029449"
+                  ><i class="fab fa-whatsapp"></i> 920029449</a
+                >
+              </li>
+              <li>
+                <a href="mailto:info@gita.sa"
+                  ><i class="fas fa-envelope"></i> info@gita.sa</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h4>افضل الوجهات</h4>
+            <div class="footer-blog">
+              <div class="media d-flex gap-4 mb-4">
+                <div class="img-part">
+                  <a
+                    href="index.html?originLocationCode=MED&amp;destinationLocationCode=RUH&amp;departureDate=2024-09-22&amp;returnDate=2024-09-30&amp;adults=1&amp;children=&amp;infants=&amp;travelClass=ECONOMY"
+                    ><img
+                      src="images/flights/destination/ruh.jpg"
+                      class="img-fluid blur-up lazyload"
+                      alt=""
+                      style="height: 100px"
+                  /></a>
+                </div>
+                <div class="media-body">
+                  <h5>القاهره للرياض</h5>
+                  <p>2024-09-22 / 2024-09-30</p>
+                </div>
+              </div>
+              <div class="media d-flex gap-4">
+                <div class="img-part rounded5">
+                  <a
+                    href="index.html?originLocationCode=MED&amp;destinationLocationCode=DXB&amp;departureDate=2024-09-22&amp;returnDate=2024-09-30&amp;adults=1&amp;children=&amp;infants=&amp;travelClass=ECONOMY"
+                    ><img
+                      src="images/flights/destination/dxb.jpg"
+                      class="img-fluid blur-up lazyload"
+                      alt=""
+                      style="height: 100px"
+                  /></a>
+                </div>
+                <div class="media-body">
+                  <h5>القاهره لدبي</h5>
+                  <p>2024-09-22 / 2024-09-30</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer Section -->
+
+    <!-- Start Copy Right -->
+    <div class="copyright py-3">
+      <div
+        class="container-fluid d-flex justify-content-between align-items-center"
+      >
+        <div class="footer-social">
+          <ul class="list-unstyled d-flex mb-0">
+            <li>
+              <a href="https://www.facebook.com/gita2sa"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/gita2sa/"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://x.com/gita2sa"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="https://www.snapchat.com/add/gita2sa/"
+                ><i class="fab fa-snapchat"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <p class="mb-0">
+          &copy; 2024 جميع الحقوق محفوظة لشركـــة الذهـبــية العــالـمـيـة
+          للـسفـر والسـيـاحة
+        </p>
+        <p class="mb-0">سجل تجاري : 4650051095</p>
+      </div>
+    </div>
+    <!-- End Copy Right -->
+
+    <!-- Start booking Inquiry Modal -->
+    <div
+      class="modal fade"
+      id="bookingInquiryModal"
+      tabindex="-1"
+      aria-labelledby="bookingInquiryModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="bookingInquiryModalLabel">
+              استعلام حجز
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form
+              id="inq-form"
+              action="https://gita.sa/pages/inquiry"
+              method="GET"
+            >
+              <div class="mb-3">
+                <label for="pnr" class="form-label">رقم الحجز</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="pnr"
+                  name="pnr"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="lastName" class="form-label">الاسم الاخير</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastName"
+                  name="lastName"
+                  required
+                />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              الغاء
+            </button>
+            <button form="inq-form" type="submit" class="btn btn-main btn-sm">
+              استعلام
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="whatsapp-float d-flex">
+      <a href="https://wa.me/+966920029449" target="_blank">
+        <img src="../images/whatsapp.png" alt="WhatsApp" />
+      </a>
+    </div>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>
