@@ -119,111 +119,125 @@
     <!-- Start Search Form Section -->
     <div class="search-form">
       <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-3 mb-4 mb-md-0">
-            <div class="time-box border rounded-3 p-3">
-              <div
-                class="form-check form-switch d-flex justify-content-between"
-              >
-                <img src="../images/clock.svg" alt="" />
-                <label class="form-check-label" for="flexSwitchCheckChecked"
-                  >عرض الأوقات بشكل <br /><b> صباحًا / مساءً </b></label
+        <button
+          class="btn btn-main d-block d-md-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseEditSearch"
+          aria-expanded="false"
+          aria-controls="collapseEditSearch"
+        >
+          تعديل البحث
+        </button>
+        <div class="collapse mt-4" id="collapseEditSearch">
+          <div class="row">
+            <div class="col-md-3 mb-4 mb-md-0">
+              <div class="time-box border rounded-3 p-3">
+                <div
+                  class="form-check form-switch d-flex justify-content-between"
                 >
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  role="switch"
-                  id="flexSwitchCheckChecked"
-                  checked
-                />
+                  <img src="../images/clock.svg" alt="" />
+                  <label class="form-check-label" for="flexSwitchCheckChecked"
+                    >عرض الأوقات بشكل <br /><b> صباحًا / مساءً </b></label
+                  >
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    role="switch"
+                    id="flexSwitchCheckChecked"
+                    checked
+                  />
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-md-9">
-            <form class="p-3 border rounded">
-              <div class="row d-flex align-items-center">
-                <div class="col-md-10">
-                  <div
-                    class="d-flex flex-column flex-md-row justify-content-between gap-4"
-                  >
-                    <div class="form-item mb-2">
-                      <label for="inputEmail4" class="form-label">من</label>
-                      <input
-                        type="email"
-                        class="form-control"
-                        id="inputEmail4"
-                      />
-                    </div>
-                    <div class="form-item mb-2">
-                      <label for="travleAccess" class="form-label"
-                        >وجهة الوصول</label
-                      >
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="travleAccess"
-                      />
-                    </div>
-                    <div class="form-item mb-2">
-                      <label for="gowignDate" class="form-label"
-                        >تاريخ الذهاب</label
-                      >
-                      <input
-                        type="date"
-                        class="form-control"
-                        data-date-format="yyyy-mm-dd"
-                        id="gowignDate"
-                      />
-                    </div>
-                    <div class="form-item mb-2">
-                      <label for="gowignDate" class="form-label"
-                        >تاريخ العودة</label
-                      >
-                      <input
-                        type="date"
-                        class="form-control"
-                        data-date-format="yyyy-mm-dd"
-                        id="gowignDate"
-                      />
-                    </div>
-                    <div class="form-item mb-2">
-                      <label for="travelType" class="form-label"
-                        >نوع الرحلة</label
-                      >
-                      <select id="travelType" class="form-select">
-                        <option selected>اختر...</option>
-                        <option value="ECONOMY">اقتصادية</option>
-                        <option value="PREMIUM_ECONOMY">اقتصادية مميزه</option>
-                        <option value="BUSINESS">اعمال</option>
-                        <option value="FIRST">اولي</option>
-                      </select>
-                    </div>
-                    <div class="form-item mb-2">
-                      <label for="travelAge" class="form-label"
-                        >عمر المسافر</label
-                      >
-                      <select id="travelAge" class="form-select">
-                        <option selected>اختر...</option>
-                        <option value="ECONOMY">بالغ</option>
-                        <option value="PREMIUM_ECONOMY">طفل</option>
-                        <option value="BUSINESS">رضيغ</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-2">
-                  <div class="search-btn text-end mt-2">
-                    <button
-                      type="button"
-                      id="search-btn"
-                      class="btn btn-main btn-rounded"
+            <div class="col-md-9">
+              <form class="p-3 border rounded">
+                <div class="row d-flex align-items-center">
+                  <div class="col-md-10">
+                    <div
+                      class="d-flex flex-column flex-md-row justify-content-between gap-4"
                     >
-                      بحث
-                    </button>
+                      <div class="form-item mb-2">
+                        <label for="inputEmail4" class="form-label">من</label>
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="inputEmail4"
+                        />
+                      </div>
+                      <div class="form-item mb-2">
+                        <label for="travleAccess" class="form-label"
+                          >وجهة الوصول</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="travleAccess"
+                        />
+                      </div>
+                      <div class="form-item mb-2">
+                        <label for="gowignDate" class="form-label"
+                          >تاريخ الذهاب</label
+                        >
+                        <input
+                          type="date"
+                          class="form-control"
+                          data-date-format="yyyy-mm-dd"
+                          id="gowignDate"
+                        />
+                      </div>
+                      <div class="form-item mb-2">
+                        <label for="gowignDate" class="form-label"
+                          >تاريخ العودة</label
+                        >
+                        <input
+                          type="date"
+                          class="form-control"
+                          data-date-format="yyyy-mm-dd"
+                          id="gowignDate"
+                        />
+                      </div>
+                      <div class="form-item mb-2">
+                        <label for="travelType" class="form-label"
+                          >نوع الرحلة</label
+                        >
+                        <select id="travelType" class="form-select">
+                          <option selected>اختر...</option>
+                          <option value="ECONOMY">اقتصادية</option>
+                          <option value="PREMIUM_ECONOMY">
+                            اقتصادية مميزه
+                          </option>
+                          <option value="BUSINESS">اعمال</option>
+                          <option value="FIRST">اولي</option>
+                        </select>
+                      </div>
+                      <div class="form-item mb-2">
+                        <label for="travelAge" class="form-label"
+                          >عمر المسافر</label
+                        >
+                        <select id="travelAge" class="form-select">
+                          <option selected>اختر...</option>
+                          <option value="ECONOMY">بالغ</option>
+                          <option value="PREMIUM_ECONOMY">طفل</option>
+                          <option value="BUSINESS">رضيغ</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-2">
+                    <div class="search-btn text-end mt-2">
+                      <button
+                        type="button"
+                        id="search-btn"
+                        class="btn btn-main btn-rounded"
+                      >
+                        بحث
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </form>
+              </form>
+            </div>
           </div>
         </div>
       </div>
@@ -233,13 +247,13 @@
     <!-- search-with-filter -->
     <div class="search-with-filter">
       <div class="container-fluid">
-        <div class="row d-flex flex-column-reverse flex-md-row">
+        <div class="row">
           <div class="col-md-3 mb-4 mb-md-0">
             <!-- Start left-sidebar -->
             <div class="left-sidebar border rounded-3 p-3">
               <div class="collection-collapse-block open">
                 <a
-                  class="d-flex justify-content-between align-items-center mb-4"
+                  class="collapsed d-flex justify-content-between align-items-center"
                   data-bs-toggle="collapse"
                   href="#collapseFilter"
                   role="button"
@@ -254,7 +268,7 @@
                   />
                 </a>
 
-                <div class="collapse show" id="collapseFilter">
+                <div class="collapse show mt-4" id="collapseFilter">
                   <div class="collapseBreakpoints mb-4">
                     <a
                       class=""
@@ -825,5 +839,34 @@
     <script src="../js/swiper-bundle.min.js"></script>
     <script src="../https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script src="../js/main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const collapseEditSearch =
+          document.getElementById("collapseEditSearch");
+        const collapseFilter = document.getElementById("collapseFilter");
+        // Apply fade class only on mobile (smaller than 768px)
+        function applyFadeOnMobile() {
+          if (window.innerWidth < 768) {
+            collapseEditSearch.classList.remove("show");
+            collapseEditSearch.classList.add("fade");
+
+            collapseFilter.classList.remove("show");
+            collapseFilter.classList.add("fade");
+          } else {
+            collapseEditSearch.classList.remove("fade");
+            collapseEditSearch.classList.add("show");
+
+            collapseFilter.classList.remove("fade");
+            collapseFilter.classList.add("show");
+          }
+        }
+
+        // Call the function when the page loads
+        applyFadeOnMobile();
+
+        // Handle window resize
+        window.addEventListener("resize", applyFadeOnMobile);
+      });
+    </script>
   </body>
 </html>

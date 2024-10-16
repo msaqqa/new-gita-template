@@ -852,6 +852,21 @@ footer ul li a i {
   .search-form .form-item {
     width: 100%;
   }
+  .collapse {
+    opacity: 0;
+    height: 0;
+    transition: opacity 0.25s ease, height 0.25s ease;
+  }
+
+  .collapse.show {
+    opacity: 1;
+    height: auto;
+  }
+
+  .fade {
+    opacity: 0; /* Initially hidden with fade */
+    transition: opacity 0.5s ease; /* Transition effect */
+  }
 }
 /* End Results Search */
 /* End Search Page */
