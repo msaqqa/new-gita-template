@@ -119,39 +119,44 @@
     <!-- Start Search Form Section -->
     <div class="search-form">
       <div class="container-fluid">
-        <button
-          class="btn btn-main w-100 d-block d-md-none"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapseEditSearch"
-          aria-expanded="false"
-          aria-controls="collapseEditSearch"
-        >
-          تعديل البحث
-        </button>
-        <div class="collapse mt-4" id="collapseEditSearch">
-          <div class="row">
-            <div class="col-md-3 mb-4 mb-md-0">
-              <div class="time-box border rounded-3 p-3">
-                <div
-                  class="form-check form-switch d-flex justify-content-between"
+        <div class="row d-flex d-collom-reverse d-md-row">
+          <div class="col-md-3 mb-4">
+            <div class="time-box border rounded-3 p-3">
+              <div
+                class="form-check form-switch d-flex justify-content-between"
+              >
+                <img src="../images/clock.svg" alt="" />
+                <label class="form-check-label" for="flexSwitchCheckChecked"
+                  >عرض الأوقات بشكل <br /><b> صباحًا / مساءً </b></label
                 >
-                  <img src="../images/clock.svg" alt="" />
-                  <label class="form-check-label" for="flexSwitchCheckChecked"
-                    >عرض الأوقات بشكل <br /><b> صباحًا / مساءً </b></label
-                  >
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    role="switch"
-                    id="flexSwitchCheckChecked"
-                    checked
-                  />
-                </div>
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  role="switch"
+                  id="flexSwitchCheckChecked"
+                  checked
+                />
               </div>
             </div>
-            <div class="col-md-9">
-              <form class="p-3 border rounded">
+          </div>
+          <div class="col-md-9 mb-4">
+            <form class="p-3 border rounded">
+              <a
+                class="d-flex justify-content-between align-items-center d-block d-md-none"
+                href="#collapseEditSearch"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseEditSearch"
+                aria-expanded="true"
+                aria-controls="collapseEditSearch"
+              >
+                <h5 class="filter-title">تعديل البحث</h5>
+                <img
+                  class="img-fluid blur-up lazyloaded"
+                  src="../../images/adjust.png"
+                  alt=""
+                />
+              </a>
+              <div class="collapse" id="collapseEditSearch">
                 <div class="row d-flex align-items-center">
                   <div class="col-md-10">
                     <div
@@ -236,8 +241,8 @@
                     </div>
                   </div>
                 </div>
-              </form>
-            </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -250,196 +255,193 @@
         <div class="row">
           <div class="col-md-3 mb-4 mb-md-0">
             <!-- Start left-sidebar -->
-            <div class="left-sidebar border rounded-3 p-3">
-              <div class="collection-collapse-block open">
-                <a
-                  class="collapsed d-flex justify-content-between align-items-center"
-                  data-bs-toggle="collapse"
-                  href="#collapseFilter"
-                  role="button"
-                  aria-expanded="false"
-                  aria-controls="collapseFilter"
-                >
-                  <h5 class="filter-title">تصفية</h5>
-                  <img
-                    class="img-fluid blur-up lazyloaded"
-                    src="../../images/adjust.png"
-                    alt=""
-                  />
-                </a>
+            <div class="left-sidebar border rounded p-3">
+              <a
+                class="collapsed d-flex justify-content-between align-items-center"
+                data-bs-toggle="collapse"
+                href="#collapseFilter"
+                aria-expanded="false"
+                aria-controls="collapseFilter"
+              >
+                <h5 class="filter-title">تصفية</h5>
+                <img
+                  class="img-fluid blur-up lazyloaded"
+                  src="../../images/adjust.png"
+                  alt=""
+                />
+              </a>
 
-                <div class="collapse show mt-4" id="collapseFilter">
-                  <div class="collapseBreakpoints mb-4">
-                    <a
-                      class=""
-                      data-bs-toggle="collapse"
-                      href="#collapseBreakpoints"
-                      role="button"
-                      aria-expanded="false"
-                      aria-controls="collapseBreakpoints"
-                    >
-                      <h6 class="collapse-title">نقاط التوقف</h6>
-                    </a>
+              <div class="collapse show" id="collapseFilter">
+                <div class="collapseBreakpoints mb-4">
+                  <a
+                    class=""
+                    data-bs-toggle="collapse"
+                    href="#collapseBreakpoints"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="collapseBreakpoints"
+                  >
+                    <h6 class="collapse-title">نقاط التوقف</h6>
+                  </a>
 
-                    <div class="collapse show" id="collapseBreakpoints">
-                      <div class="form-check">
-                        <input
-                          type="checkbox"
-                          class="form-check-input stops_filter"
-                          id="stops_0"
-                          value="0"
-                        />
-                        <label class="form-check-label" for="stops_0"
-                          >مباشر</label
-                        >
-                      </div>
-                      <div class="form-check">
-                        <input
-                          type="checkbox"
-                          class="form-check-input stops_filter"
-                          id="stops_1"
-                          value="1"
-                        />
-                        <label class="form-check-label" for="stops_1"
-                          >1 توقف</label
-                        >
-                      </div>
-                      <div class="form-check">
-                        <input
-                          type="checkbox"
-                          class="form-check-input stops_filter"
-                          id="stops_2"
-                          value="2"
-                        />
-                        <label class="form-check-label" for="stops_2"
-                          >2 توقف</label
-                        >
-                      </div>
+                  <div class="collapse show" id="collapseBreakpoints">
+                    <div class="form-check">
+                      <input
+                        type="checkbox"
+                        class="form-check-input stops_filter"
+                        id="stops_0"
+                        value="0"
+                      />
+                      <label class="form-check-label" for="stops_0"
+                        >مباشر</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        type="checkbox"
+                        class="form-check-input stops_filter"
+                        id="stops_1"
+                        value="1"
+                      />
+                      <label class="form-check-label" for="stops_1"
+                        >1 توقف</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        type="checkbox"
+                        class="form-check-input stops_filter"
+                        id="stops_2"
+                        value="2"
+                      />
+                      <label class="form-check-label" for="stops_2"
+                        >2 توقف</label
+                      >
                     </div>
                   </div>
+                </div>
 
-                  <div class="collapseLines">
-                    <a
-                      data-bs-toggle="collapse"
-                      href="#collapseLines"
-                      role="button"
-                      aria-expanded="false"
-                      aria-controls="collapseLines"
-                    >
-                      <h6 class="collapse-title">الخطوط</h6>
-                    </a>
+                <div class="collapseLines">
+                  <a
+                    data-bs-toggle="collapse"
+                    href="#collapseLines"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="collapseLines"
+                  >
+                    <h6 class="collapse-title">الخطوط</h6>
+                  </a>
 
-                    <div class="collapse show" id="collapseLines">
-                      <div class="form-check">
-                        <input
-                          type="checkbox"
-                          class="form-check-input"
-                          id="carrier_GF"
-                          value="GF"
-                        />
-                        <label class="form-check-label" for="carrier_GF"
-                          >طيران الخليج</label
-                        >
-                      </div>
-                      <div class="form-check">
-                        <input
-                          type="checkbox"
-                          class="form-check-input"
-                          id="carrier_SV"
-                          value="SV"
-                        />
-                        <label class="form-check-label" for="carrier_SV"
-                          >الخطوط الجوية السعودية</label
-                        >
-                      </div>
-                      <div class="form-check">
-                        <input
-                          type="checkbox"
-                          class="form-check-input"
-                          id="carrier_MS"
-                          value="MS"
-                        />
-                        <label class="form-check-label" for="carrier_MS"
-                          >مصر للطيران</label
-                        >
-                      </div>
-                      <div class="form-check">
-                        <input
-                          type="checkbox"
-                          class="form-check-input"
-                          id="carrier_FZ"
-                          value="FZ"
-                        />
-                        <label class="form-check-label" for="carrier_FZ"
-                          >فلاي دبي</label
-                        >
-                      </div>
-                      <div class="form-check">
-                        <input
-                          type="checkbox"
-                          class="form-check-input"
-                          id="carrier_MH"
-                          value="MH"
-                        />
-                        <label class="form-check-label" for="carrier_MH"
-                          >الخطوط الجوية الماليزية</label
-                        >
-                      </div>
-                      <div class="form-check">
-                        <input
-                          type="checkbox"
-                          class="form-check-input"
-                          id="carrier_QR"
-                          value="QR"
-                        />
-                        <label class="form-check-label" for="carrier_QR"
-                          >الخطوط القطرية</label
-                        >
-                      </div>
-                      <div class="form-check">
-                        <input
-                          type="checkbox"
-                          class="form-check-input"
-                          id="carrier_EK"
-                          value="EK"
-                        />
-                        <label class="form-check-label" for="carrier_EK"
-                          >طيران الامارات</label
-                        >
-                      </div>
-                      <div class="form-check">
-                        <input
-                          type="checkbox"
-                          class="form-check-input"
-                          id="carrier_TK"
-                          value="TK"
-                        />
-                        <label class="form-check-label" for="carrier_TK"
-                          >الخطوط التركية</label
-                        >
-                      </div>
-                      <div class="form-check">
-                        <input
-                          type="checkbox"
-                          class="form-check-input"
-                          id="carrier_CX"
-                          value="CX"
-                        />
-                        <label class="form-check-label" for="carrier_CX"
-                          >كاثي باسيفيك Cathay Pacific</label
-                        >
-                      </div>
-                      <div class="form-check">
-                        <input
-                          type="checkbox"
-                          class="form-check-input"
-                          id="carrier_ET"
-                          value="ET"
-                        />
-                        <label class="form-check-label" for="carrier_ET"
-                          >الخطوط الجوية الإثيوبية</label
-                        >
-                      </div>
+                  <div class="collapse show" id="collapseLines">
+                    <div class="form-check">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="carrier_GF"
+                        value="GF"
+                      />
+                      <label class="form-check-label" for="carrier_GF"
+                        >طيران الخليج</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="carrier_SV"
+                        value="SV"
+                      />
+                      <label class="form-check-label" for="carrier_SV"
+                        >الخطوط الجوية السعودية</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="carrier_MS"
+                        value="MS"
+                      />
+                      <label class="form-check-label" for="carrier_MS"
+                        >مصر للطيران</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="carrier_FZ"
+                        value="FZ"
+                      />
+                      <label class="form-check-label" for="carrier_FZ"
+                        >فلاي دبي</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="carrier_MH"
+                        value="MH"
+                      />
+                      <label class="form-check-label" for="carrier_MH"
+                        >الخطوط الجوية الماليزية</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="carrier_QR"
+                        value="QR"
+                      />
+                      <label class="form-check-label" for="carrier_QR"
+                        >الخطوط القطرية</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="carrier_EK"
+                        value="EK"
+                      />
+                      <label class="form-check-label" for="carrier_EK"
+                        >طيران الامارات</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="carrier_TK"
+                        value="TK"
+                      />
+                      <label class="form-check-label" for="carrier_TK"
+                        >الخطوط التركية</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="carrier_CX"
+                        value="CX"
+                      />
+                      <label class="form-check-label" for="carrier_CX"
+                        >كاثي باسيفيك Cathay Pacific</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="carrier_ET"
+                        value="ET"
+                      />
+                      <label class="form-check-label" for="carrier_ET"
+                        >الخطوط الجوية الإثيوبية</label
+                      >
                     </div>
                   </div>
                 </div>
@@ -457,25 +459,25 @@
                       <div
                         class="col-md-9 d-flex flex-column flex-md-row align-items-center"
                       >
-                        <div class="flight-line-logo me-4">
+                        <div class="flight-line-logo me-4 mb-3">
                           <img
                             src="https://assets.wego.com/image/upload/h_240,c_fill,f_auto,fl_lossy,q_auto:best,g_auto/v20240602/flights/airlines_square/MS.png"
                             class="w-100"
                             alt=""
                           />
                         </div>
-                        <div class="flight-line-name">
-                          <p class="title">مصر للطيران</p>
-                          <p class="title-code">MS-748</p>
+                        <div class="flight-line-name mb-3">
+                          <span class="d-block mb-2">مصر للطيران</span>
+                          <span class="d-block">MS-748</span>
                         </div>
-                        <div class="airport-from text-center">
+                        <div class="airport-from text-center mb-3">
                           <h4>2:15 م</h4>
                           <h6 class="my-1">
                             مطار أثينا الدولي "الفثيريوس فنيزيلوس"
                           </h6>
                           <small>أثينا، اليونان</small>
                         </div>
-                        <div class="airport-part">
+                        <div class="airport-part mb-3">
                           <div class="airport-progress">
                             <i class="fas fa-plane-departure"></i>
                             <div class="stop">1 توقف</div>
@@ -483,7 +485,7 @@
                           </div>
                           <div class="flight-time">12 ساعات 50 دقائق</div>
                         </div>
-                        <div class="airport-to text-center">
+                        <div class="airport-to text-center mb-3">
                           <h4>03:05 م</h4>
                           <h6 class="my-1">مطار الملك فهد الدولي</h6>
                           <small>الدمام - المملكة العربية السعودية</small>
@@ -494,19 +496,19 @@
                           <div class="price">
                             <div>
                               <h4 class="mb-2">SAR 4788.00</h4>
-                              <h6 class="mb-2">GDS</h6>
+                              <h6 class="mb-3">GDS</h6>
                             </div>
                           </div>
                           <div class="book-flight">
-                            <a
-                              class="btn btn-main mb-md-2"
+                            <button
+                              class="btn btn-main mb-3"
                               data-href="https://gita.sa/booking/pricing"
                               data-offer="eyJ0eXBlIjoiZmxpZ2h0LW9mZmVyIiwiaWQiOiIxIiwic291cmNlIjoiR0RTIiwiaW5zdGFudFRpY2tldGluZ1JlcXVpcmVkIjpmYWxzZSwibm9uSG9tb2dlbmVvdXMiOmZhbHNlLCJvbmVXYXkiOmZhbHNlLCJpc1Vwc2VsbE9mZmVyIjpmYWxzZSwibGFzdFRpY2tldGluZ0RhdGUiOiIyMDI0LTEwLTMxIiwibGFzdFRpY2tldGluZ0RhdGVUaW1lIjoiMjAyNC0xMC0zMSIsIm51bWJlck9mQm9va2FibGVTZWF0cyI6OSwiaXRpbmVyYXJpZXMiOlt7ImR1cmF0aW9uIjoiUFQxMkg1ME0iLCJzZWdtZW50cyI6W3siZGVwYXJ0dXJlIjp7ImlhdGFDb2RlIjoiQVRIIiwiYXQiOiIyMDI0LTExLTAxVDEzOjE1OjAwIn0sImFycml2YWwiOnsiaWF0YUNvZGUiOiJDQUkiLCJ0ZXJtaW5hbCI6IjMiLCJhdCI6IjIwMjQtMTEtMDFUMTU6MTA6MDAifSwiY2FycmllckNvZGUiOiJNUyIsIm51bWJlciI6Ijc0OCIsImFpcmNyYWZ0Ijp7ImNvZGUiOiI3MzgifSwib3BlcmF0aW5nIjp7ImNhcnJpZXJDb2RlIjoiTVMifSwiZHVyYXRpb24iOiJQVDFINTVNIiwiaWQiOiIxIiwibnVtYmVyT2ZTdG9wcyI6MCwiYmxhY2tsaXN0ZWRJbkVVIjpmYWxzZX0seyJkZXBhcnR1cmUiOnsiaWF0YUNvZGUiOiJDQUkiLCJ0ZXJtaW5hbCI6IjMiLCJhdCI6IjIwMjQtMTEtMDFUMjM6MzA6MDAifSwiYXJyaXZhbCI6eyJpYXRhQ29kZSI6IkRNTSIsImF0IjoiMjAyNC0xMS0wMlQwMzowNTowMCJ9LCJjYXJyaWVyQ29kZSI6Ik1TIiwibnVtYmVyIjoiNjgzIiwiYWlyY3JhZnQiOnsiY29kZSI6IjczOCJ9LCJvcGVyYXRpbmciOnsiY2FycmllckNvZGUiOiJNUyJ9LCJkdXJhdGlvbiI6IlBUMkgzNU0iLCJpZCI6IjIiLCJudW1iZXJPZlN0b3BzIjowLCJibGFja2xpc3RlZEluRVUiOmZhbHNlfV19XSwicHJpY2UiOnsiY3VycmVuY3kiOiJTQVIiLCJ0b3RhbCI6IjQ3ODguMDAiLCJiYXNlIjoiMjMzOC4wMCIsImZlZXMiOlt7ImFtb3VudCI6IjAuMDAiLCJ0eXBlIjoiU1VQUExJRVIifSx7ImFtb3VudCI6IjAuMDAiLCJ0eXBlIjoiVElDS0VUSU5HIn1dLCJncmFuZFRvdGFsIjoiNDc4OC4wMCJ9LCJwcmljaW5nT3B0aW9ucyI6eyJmYXJlVHlwZSI6WyJORUdPVElBVEVEIl19LCJ2YWxpZGF0aW5nQWlybGluZUNvZGVzIjpbIk1TIl0sInRyYXZlbGVyUHJpY2luZ3MiOlt7InRyYXZlbGVySWQiOiIxIiwiZmFyZU9wdGlvbiI6IlNUQU5EQVJEIiwidHJhdmVsZXJUeXBlIjoiQURVTFQiLCJwcmljZSI6eyJjdXJyZW5jeSI6IlNBUiIsInRvdGFsIjoiMjU2MC4wMCIsImJhc2UiOiIxMzM1LjAwIn0sImZhcmVEZXRhaWxzQnlTZWdtZW50IjpbeyJzZWdtZW50SWQiOiIxIiwiY2FiaW4iOiJCVVNJTkVTUyIsImZhcmVCYXNpcyI6IlpSRUdSTyIsImNsYXNzIjoiWiIsImluY2x1ZGVkQ2hlY2tlZEJhZ3MiOnsicXVhbnRpdHkiOjJ9fSx7InNlZ21lbnRJZCI6IjIiLCJjYWJpbiI6IkJVU0lORVNTIiwiZmFyZUJhc2lzIjoiWlJFR1JPIiwiY2xhc3MiOiJaIiwiaW5jbHVkZWRDaGVja2VkQmFncyI6eyJxdWFudGl0eSI6Mn19XX0seyJ0cmF2ZWxlcklkIjoiMiIsImZhcmVPcHRpb24iOiJTVEFOREFSRCIsInRyYXZlbGVyVHlwZSI6IkNISUxEIiwicHJpY2UiOnsiY3VycmVuY3kiOiJTQVIiLCJ0b3RhbCI6IjIyMjguMDAiLCJiYXNlIjoiMTAwMy4wMCJ9LCJmYXJlRGV0YWlsc0J5U2VnbWVudCI6W3sic2VnbWVudElkIjoiMSIsImNhYmluIjoiQlVTSU5FU1MiLCJmYXJlQmFzaXMiOiJaUkVHUk8iLCJjbGFzcyI6IloifSx7InNlZ21lbnRJZCI6IjIiLCJjYWJpbiI6IkJVU0lORVNTIiwiZmFyZUJhc2lzIjoiWlJFR1JPIiwiY2xhc3MiOiJaIn1dfV0sImZhcmVSdWxlcyI6eyJydWxlcyI6W3siY2F0ZWdvcnkiOiJFWENIQU5HRSIsIm1heFBlbmFsdHlBbW91bnQiOiIyODguMDAifSx7ImNhdGVnb3J5IjoiUkVWQUxJREFUSU9OIiwibm90QXBwbGljYWJsZSI6dHJ1ZX1dfX0="
-                              >حجز الان</a
                             >
+                              حجز الان
+                            </button>
                             <button
                               class="btn btn-secondary border-top w-auto"
-                              type="button"
                               data-bs-toggle="collapse"
                               data-bs-target="#collapseOne"
                               aria-expanded="true"
@@ -643,10 +645,10 @@
           <div class="col-6 col-md-2">
             <h4>الصفحات</h4>
             <ul class="list-unstyled">
-              <li><a href="#">الرئيسيه</a></li>
-              <li><a href="#">من نحن</a></li>
+              <li><a href="../index.html">الرئيسيه</a></li>
+              <li><a href="./mn-nhn.html">من نحن</a></li>
               <li><a href="./alshrwt-walahkam.html">الشروط والاحكام</a></li>
-              <li><a href="#">تواصل معنا</a></li>
+              <li><a href="./contact-us.html">تواصل معنا</a></li>
               <li><a href="./privacy-policy.html">سياسة الخصوصية</a></li>
               <li>
                 <a
@@ -834,39 +836,10 @@
     </div>
 
     <script src="../js/bootstrap.bundle.min.js"></script>
-    <script src="../js/jquery.min.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
     <script src="../js/swiper-bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
     <script src="../https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
     <script src="../js/main.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const collapseEditSearch =
-          document.getElementById("collapseEditSearch");
-        const collapseFilter = document.getElementById("collapseFilter");
-        // Apply fade class only on mobile (smaller than 768px)
-        function applyFadeOnMobile() {
-          if (window.innerWidth < 768) {
-            collapseEditSearch.classList.remove("show");
-            collapseEditSearch.classList.add("fade");
-
-            collapseFilter.classList.remove("show");
-            collapseFilter.classList.add("fade");
-          } else {
-            collapseEditSearch.classList.remove("fade");
-            collapseEditSearch.classList.add("show");
-
-            collapseFilter.classList.remove("fade");
-            collapseFilter.classList.add("show");
-          }
-        }
-
-        // Call the function when the page loads
-        applyFadeOnMobile();
-
-        // Handle window resize
-        window.addEventListener("resize", applyFadeOnMobile);
-      });
-    </script>
   </body>
 </html>

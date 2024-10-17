@@ -103,6 +103,23 @@ a {
 .swiper-pagination-bullet-active {
   background: var(--main-color);
 }
+.page-header {
+  background-image: url("../images/banner-terms.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 60px;
+  height: 400px;
+  position: relative;
+}
+.header-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
 @media (max-width: 768px) {
   .container-fluid {
     padding-left: 20px !important;
@@ -718,7 +735,6 @@ footer ul li a i {
 .search-form {
   background-color: var(--bg-light);
   padding-top: 100px;
-  padding-bottom: 30px;
 }
 .search-form form,
 .search-form .time-box {
@@ -754,7 +770,8 @@ footer ul li a i {
 .search-with-filter .left-sidebar {
   background-color: var(--white-color);
 }
-.left-sidebar .filter-title {
+.left-sidebar .filter-title,
+.search-form .filter-title {
   font-weight: 600;
   text-transform: capitalize;
   color: #000;
@@ -851,21 +868,6 @@ footer ul li a i {
 @media (max-width: 768px) {
   .search-form .form-item {
     width: 100%;
-  }
-  .collapse {
-    opacity: 0;
-    height: 0;
-    transition: opacity 0.25s ease, height 0.25s ease;
-  }
-
-  .collapse.show {
-    opacity: 1;
-    height: auto;
-  }
-
-  .fade {
-    opacity: 0; /* Initially hidden with fade */
-    transition: opacity 0.5s ease; /* Transition effect */
   }
 }
 /* End Results Search */
@@ -970,13 +972,7 @@ footer ul li a i {
 
 /* Start Privacy Policy Page */
 .privacy-policy-header {
-  background-image: url("../images/about-header.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-top: 60px;
-  height: 400px;
-  position: relative;
+  background-image: url("../images/privacy-policy.jpg");
 }
 .header-content {
   position: absolute;
@@ -1022,13 +1018,54 @@ footer ul li a i {
 /* End Privacy Policy Page */
 
 /* Start Alshrwt Walahkam Page */
-.alshrwt-walahkam-header {
+.alshrwt-walahkam-header page-header {
   background-image: url("../images/banner-terms.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-top: 60px;
-  height: 400px;
-  position: relative;
 }
 /* End Alshrwt Walahkam Page */
+
+/* Start Contact Us Page */
+.contact-us-header {
+  background-image: url("../images/contact-us.jpg");
+}
+.contact-form {
+  background-color: var(--white-color);
+}
+.contact-form .contact-info {
+  background-color: var(--main-color);
+  color: var(--white-color);
+  height: 100%;
+}
+.contact-form .contact-info ul li {
+  color: var(--white-color);
+}
+.contact-form form .form-control {
+  background-color: var(--bg-light);
+}
+.contact-form .form-label,
+.contact-form .form-control {
+  font-size: 16px;
+}
+.contact-form form {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 768px) {
+  .contact-form form {
+    width: 100% !important;
+  }
+}
+/* End Contact Us Page */
+
+/* Start Mn Nhn Page */
+.mn-nhn-header {
+  background-image: url("../images/about-us.jpg");
+}
+.mn-nhn-content p,
+ul {
+  color: var(--text-color);
+}
+.mn-nhn-content ul li {
+  margin-bottom: 0.5rem;
+}
+/* End  Mn Nhn Page */
