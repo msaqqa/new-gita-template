@@ -103,23 +103,6 @@ a {
 .swiper-pagination-bullet-active {
   background: var(--main-color);
 }
-.page-header {
-  background-image: url("../images/banner-terms.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-top: 60px;
-  height: 400px;
-  position: relative;
-}
-.header-overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-}
 @media (max-width: 768px) {
   .container-fluid {
     padding-left: 20px !important;
@@ -201,7 +184,7 @@ a {
   background: linear-gradient(to bottom, #fef5ed, #ffffff);
 }
 .navbar .navbar-brand {
-  height: 60px;
+  height: 50px;
 }
 .navbar .navbar-brand img {
   height: 100%;
@@ -224,14 +207,10 @@ a {
 .dropdown-menu .dropdown-item:active {
   background-color: #f8f9fa !important;
 }
-.navbar .offcanvas a,
-.navbar-light .navbar-nav .nav-link {
-  font-size: 18px;
-  font-weight: 400;
-}
 .navbar.default-background .offcanvas a,
 .navbar-light .navbar-nav .nav-link {
   color: var(--white-color);
+  font-size: 18px;
 }
 .navbar.default-background .offcanvas a:hover,
 .navbar.default-background .offcanvas a.active {
@@ -710,19 +689,24 @@ footer ul li a i {
 .footer-social ul li a:hover {
   color: var(--main-color);
 }
+@media (max-width: 768px) {
+  .copyright p {
+    font-size: 14px;
+  }
+}
 /* Start Copy Right */
 
 /* Start whatsapp Mark */
 .whatsapp-float {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 10px;
+  right: 10px;
   z-index: 200;
 }
 
 .whatsapp-float img {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
@@ -948,6 +932,7 @@ footer ul li a i {
   border-color: var(--white-color);
 }
 .popover .bags ul li {
+  color: var(--white-color);
   font-size: 12px;
 }
 .booking .hr {
@@ -970,9 +955,23 @@ footer ul li a i {
 }
 /* End Booking Page */
 
-/* Start Privacy Policy Page */
-.privacy-policy-header {
-  background-image: url("../images/privacy-policy.jpg");
+/* Start Pages Compomets */
+.page-header {
+  background-image: url("../images/banner-terms.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 60px;
+  height: 400px;
+  position: relative;
+}
+.header-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 .header-content {
   position: absolute;
@@ -996,17 +995,17 @@ footer ul li a i {
 .breadcrumb-item + .breadcrumb-item::before {
   color: var(--white-color);
 }
-.page-privacy-policy .accordion-button::after {
+.page-accordion .accordion-button::after {
   margin-left: 0;
 }
-.page-privacy-policy .accordion-button {
+.page-accordion .accordion-button {
   background-color: var(--bg-light);
 }
-.page-privacy-policy .accordion-button:not(.collapsed) {
+.page-accordion .accordion-button:not(.collapsed) {
   background-color: var(--bg-dark);
   color: var(--white-color);
 }
-.page-privacy-policy .accordion-button:not(.collapsed)::after {
+.page-accordion .accordion-button:not(.collapsed)::after {
   background-image: url("../images/chevron-down-solid.svg");
 }
 .accordion-button:focus {
@@ -1015,10 +1014,15 @@ footer ul li a i {
 .accordion-item .accordion-body {
   color: var(--text-color);
 }
+
+/* Start Privacy Policy Page */
+.privacy-policy-header {
+  background-image: url("../images/privacy-policy.jpg");
+}
 /* End Privacy Policy Page */
 
 /* Start Alshrwt Walahkam Page */
-.alshrwt-walahkam-header page-header {
+.alshrwt-walahkam-header {
   background-image: url("../images/banner-terms.jpg");
 }
 /* End Alshrwt Walahkam Page */
@@ -1050,6 +1054,24 @@ footer ul li a i {
   margin-left: auto;
   margin-right: auto;
 }
+.footer-contact {
+  background-color: var(--bg-light);
+  padding: 50px 0;
+}
+.footer-contact .footer-contact-box i {
+  font-size: 80px;
+  margin-left: 30px;
+  color: var(--main-color);
+  border-radius: 30px;
+}
+.footer-contact .footer-contact-box h3 {
+  font-size: 25px;
+  font-weight: 700;
+}
+.footer-contact .footer-contact-box a {
+  font-size: 20px;
+  color: var(--black-color);
+}
 @media (max-width: 768px) {
   .contact-form form {
     width: 100% !important;
@@ -1066,6 +1088,16 @@ ul {
   color: var(--text-color);
 }
 .mn-nhn-content ul li {
+  position: relative;
+  list-style: none;
   margin-bottom: 0.5rem;
+}
+.mn-nhn-content ul li::before {
+  content: "\f058";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  right: -2rem;
+  color: var(--main-color);
 }
 /* End  Mn Nhn Page */
