@@ -256,8 +256,14 @@ a {
 }
 
 @media (max-width: 991px) {
-  .navbar .offcanvas {
+  .navbar {
+    height: auto;
+  }
+  .offcanvas-backdrop {
     background-color: var(--white-color) !important;
+    opacity: 1 !important;
+  }
+  .navbar .offcanvas {
     padding: 1rem;
     transition: all 0.3s ease;
     border: 1px solid rgba(0, 0, 0, 0.175);
