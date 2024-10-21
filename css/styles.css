@@ -34,7 +34,7 @@ a {
   color: var(--green-color);
 }
 .section-padding {
-  padding: 100px 0;
+  padding: 120px 0;
 }
 .section-title {
   font-size: 40px;
@@ -102,16 +102,18 @@ a {
   background: #ecdeb7;
   width: 14px;
   height: 14px;
+  border: 1px solid #ccc;
 }
 .swiper-pagination-bullet-active {
   background-color: var(--main-color);
+  border: 1px solid var(--main-color);
 }
 @media (max-width: 768px) {
   .section-title {
     font-size: 20px;
   }
   .section-padding {
-    padding: 50px 0;
+    padding: 60px 0;
   }
 }
 /* End Components */
@@ -291,7 +293,7 @@ a {
   padding-bottom: 30px;
 }
 .home-section .home-text {
-  padding-top: 60px;
+  padding-top: 100px;
   color: var(--white-color);
 }
 .home-section .home-text h1 {
@@ -304,6 +306,7 @@ a {
 .home-section .home-text h2 {
   font-size: 50px;
   font-weight: 700;
+  margin-bottom: 20px;
 }
 .home-section .home-text h2 span {
   color: var(--green-color);
@@ -363,10 +366,11 @@ a {
     padding-top: 120px;
   }
   .home-section .home-text h1 {
-    font-size: 40px;
+    font-size: 50px;
+    line-height: 50px;
   }
   .home-section .home-text h2 {
-    font-size: 30px;
+    font-size: 25px;
   }
   .home-section .search-widget {
     position: static;
@@ -493,16 +497,16 @@ a {
   display: flex;
   flex-direction: column;
   height: 100%;
+  box-shadow: 0 2px 15px rgba(0 0 0 / 20%);
 }
 .offers-section .offer-box .card-body {
   flex-grow: 1;
 }
 .offers-section .offer-box:hover {
   transform: translateY(-10px);
-  box-shadow: 0 2px 15px rgba(0 0 0 / 20%);
 }
 .offers-section .offer-box .card-title {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   color: #242424;
   margin-bottom: 0;
@@ -513,7 +517,7 @@ a {
   color: var(--text-color);
 }
 .offers-section .offer-box .fa-star {
-  color: var(--main-color);
+  font-size: 14px;
 }
 .offers-section .offer-box p {
   display: -webkit-box;
@@ -522,14 +526,6 @@ a {
   overflow: hidden;
   text-overflow: ellipsis;
   min-height: 3em;
-}
-@media (max-width: 768px) {
-  .offers-section .offer-box .card-title {
-    font-size: 18px;
-  }
-  .offers-section .offer-box .fa-star {
-    font-size: 14px;
-  }
 }
 /* End offers Section */
 
@@ -610,7 +606,7 @@ a {
 
 /* Satrt contact-us Section */
 .contact-us {
-  background-image: url("../images/man-woman-are-looking-their-phones.jpg");
+  background-image: url("../images/backgrounds//contact-section.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -658,8 +654,9 @@ a {
 .mobile-app .section-title {
   color: var(--green-color);
 }
-.mobile-app ul {
+.mobile-app ul li {
   color: #212529bf;
+  margin-bottom: 10px;
 }
 .mobile-app ul li i {
   color: var(--main-color);
@@ -670,6 +667,9 @@ a {
 }
 .mobile-app .mobile-img {
   width: 35%;
+}
+.mobile-app .mobile-img img {
+  border: 5px solid #008270;
 }
 @media (max-width: 768px) {
   .mobile-app {
