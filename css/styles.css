@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Zain:wght@200;300;400;700;800;900&display=swap");
 /* Start Variables */
 :root {
-  --main-color: #be910c;
+  --main-color: #c19617;
+  --dark-color: #57440a;
   --white-color: #ffffff;
   --black-color: #000000;
   --green-color: #00806e;
   --main-transition: all 0.3s ease-in;
-  --bg-dark: #3a2205;
   --bg-light: #f9f5e8;
-  --text-color: rgba(33, 37, 41, 0.75);
+  --text-color: #525252;
 }
 /* End Variables */
 
@@ -21,6 +21,7 @@ body {
   padding: 0;
   font-family: "Zain", sans-serif;
   overflow-x: hidden;
+  color: #212529;
 }
 a {
   transition: color 0.3s ease;
@@ -29,10 +30,6 @@ a {
 /* End Global Styles */
 
 /* Start Components */
-.container-fluid {
-  padding-left: 60px !important; /* Increase padding-left */
-  padding-right: 60px !important; /* Increase padding-right */
-}
 .text-accent {
   color: var(--green-color);
 }
@@ -110,10 +107,6 @@ a {
   background-color: var(--main-color);
 }
 @media (max-width: 768px) {
-  .container-fluid {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-  }
   .section-title {
     font-size: 20px;
   }
@@ -170,9 +163,10 @@ a {
   font-size: 20px;
   height: 100px;
   background: linear-gradient(90deg, #00806e 0%, #00b7a1 100%);
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
+}
+.topbar span {
+  color: var(--main-color);
+  font-weight: 900;
 }
 .topbar .btn-close {
   background-image: none;
@@ -194,15 +188,22 @@ a {
 /* Start Navbar */
 .navbar {
   position: fixed;
-  right: 60px;
-  left: 60px;
+  height: 100px;
+  left: 0;
+  right: 0;
   z-index: 1030;
-  height: 60px;
+  padding-top: 0 !important;
+}
+.navbar .navbar-container {
+  width: 100%;
+  height: 100%;
   backdrop-filter: blur(11px);
-  color: var(--white-color);
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .navbar .navbar-brand {
-  height: 50px;
+  display: inline-block;
+  height: 56px;
 }
 .navbar .navbar-brand img {
   height: 100%;
@@ -223,13 +224,16 @@ a {
 }
 .navbar .offcanvas a,
 .navbar-light .navbar-nav .nav-link {
-  color: var(--bg-dark);
+  color: #242424;
   font-size: 24px;
   font-weight: 700;
 }
 .navbar .offcanvas a:hover,
 .navbar .offcanvas a.active {
   color: var(--main-color);
+}
+.navbar .header-icons a {
+  color: var(--black-color);
 }
 .navbar .offcanvas .btn-close {
   box-shadow: none;
@@ -295,11 +299,14 @@ a {
   line-height: 140px;
 }
 .home-section .home-text h1 span {
-  color: var(--bg-dark);
+  color: var(--dark-color);
 }
 .home-section .home-text h2 {
   font-size: 50px;
   font-weight: 700;
+}
+.home-section .home-text h2 span {
+  color: var(--green-color);
 }
 .home-section .search-widget .widget-menu {
   background-color: var(--green-color) !important;
@@ -451,15 +458,11 @@ a {
   z-index: 100;
 }
 .tourist-destinations .card .card-content {
-  height: 110px;
   overflow: hidden;
-  color: var(--bg-dark);
+  color: var(--dark-color);
   font-size: 16px;
   font-weight: 400;
   transition: all 0.3s ease-in;
-}
-.tourist-destinations .card:hover .card-content {
-  height: auto;
 }
 .tourist-destinations .card-content .card-title {
   font-size: 20px;
@@ -501,13 +504,13 @@ a {
 .offers-section .offer-box .card-title {
   font-size: 20px;
   font-weight: 700;
-  color: var(--bg-dark);
+  color: #242424;
   margin-bottom: 0;
 }
 .offers-section .offer-box .card-text {
   font-size: 14px;
   font-weight: 400;
-  color: var(--bg-dark);
+  color: var(--text-color);
 }
 .offers-section .offer-box .fa-star {
   color: var(--main-color);
@@ -530,37 +533,28 @@ a {
 }
 /* End offers Section */
 
-/* Start best-fares Section */
-.best-fares .swiper {
-  height: 400px;
-}
-.best-fares .swiper-slide {
-  height: 350px;
-}
-.best-fares .swiper-slide .card-img {
-  height: 65%;
-}
-.best-fares .swiper-slide .card-img img {
-  width: 100%;
-  height: 100%;
-}
-.best-fares .swiper-slide .price-from {
+/* Start first know Section */
+.first-know .first-know-container {
+  padding: 75px 16px;
+  background-image: url("../images/backgrounds/first-know.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   display: flex;
-  justify-content: end;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  font-size: 20px;
-  font-weight: 600;
-  color: var(--main-color);
 }
-.best-fares .swiper-button-next,
-.best-fares .swiper-button-prev {
-  color: var(--main-color);
-  /* left: 10px */
+.first-know .section-title {
+  color: #303030;
+  font-size: 30px;
 }
-.best-fares .swiper-button-next::after {
-  left: -10px;
+.first-know p {
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--text-color);
 }
-/* End best-fares Section */
+/* End first know Section */
 
 /* Start Reviews Section */
 .reviews-section .swiper-reviews {
@@ -635,7 +629,7 @@ a {
 .contact-us .section-title {
   color: var(--white-color);
 }
-.contact-us .container-fluid {
+.contact-us .container {
   color: var(--white-color);
   z-index: 100;
 }
@@ -659,12 +653,20 @@ a {
 }
 .mobile-app .mobile-info {
   width: 65%;
+  color: #212529bf;
 }
 .mobile-app .section-title {
   color: var(--green-color);
 }
+.mobile-app ul {
+  color: #212529bf;
+}
 .mobile-app ul li i {
   color: var(--main-color);
+}
+.mobile-app h5,
+.mobile-app h6 {
+  color: #212529;
 }
 .mobile-app .mobile-img {
   width: 35%;
@@ -685,42 +687,21 @@ a {
 }
 /* End Mobile App Section */
 
-/* Start first know Section */
-.first-know {
-  background-image: url("../images/backgrounds/first-know.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.first-know .section-title {
-  color: var(--bg-dark);
-  font-size: 30px;
-}
-.first-know p {
-  font-size: 24px;
-  font-weight: 400;
-}
-/* End first know Section */
-
 /* Start footer Section */
 footer {
   background-color: var(--bg-light);
-  color: var(--bg-dark);
+  color: #303030;
 }
 footer h4 {
   margin-bottom: 20px;
   font-weight: 700;
-  color: var(--main-color);
+  color: var(--green-color);
 }
 footer ul li {
   margin-bottom: 10px;
 }
 footer ul li a {
-  color: var(--bg-dark);
+  color: #303030;
   font-size: 15px;
 }
 footer ul li a:hover {
@@ -728,20 +709,28 @@ footer ul li a:hover {
 }
 footer ul li a i {
   margin-left: 10px;
+  color: var(--main-color);
+}
+footer .media .media-body h5,
+footer .media .media-body p {
+  color: var(--main-color);
 }
 /* End Footer Section */
 
 /* Start Copy Right */
 .copyright {
-  background-color: var(--bg-dark);
-  color: var(--white-color);
-  border-top: 1px solid var(--bg-light);
+  background-color: var(--bg-light);
+  color: #303030;
+}
+.copyright .container {
+  border-top: 1px solid #ecdeb7;
+  padding-top: 1rem;
 }
 .footer-social ul li {
   margin-left: 10px;
 }
 .footer-social ul li a {
-  color: var(--white-color);
+  color: var(--main-color);
 }
 .footer-social ul li a:hover {
   color: var(--main-color);
@@ -980,9 +969,9 @@ footer ul li a i {
   color: rgb(133, 151, 158);
 }
 .popover {
-  background-color: var(--bg-dark);
+  background-color: var(--dark-color);
   --bs-popover-arrow-color: transparent; /* Remove the default arrow color */
-  --bs-popover-bg: var(--bg-dark); /* Background color of the popover */
+  --bs-popover-bg: var(--dark-color); /* Background color of the popover */
 }
 .popover .bags {
   color: var(--white-color);
@@ -1059,7 +1048,7 @@ footer ul li a i {
   background-color: var(--bg-light);
 }
 .page-accordion .accordion-button:not(.collapsed) {
-  background-color: var(--bg-dark);
+  background-color: var(--dark-color);
   color: var(--white-color);
 }
 .page-accordion .accordion-button:not(.collapsed)::after {

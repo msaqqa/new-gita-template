@@ -29,12 +29,13 @@
     <!-- Start Topbar Alert -->
     <div
       id="alert"
-      class="topbar alert d-none d-md-flex alert-dismissible show m-0 text-center border-0 rounded-0"
+      class="topbar alert d-none d-md-flex justify-content-center align-items-center alert-dismissible show m-0 text-center border-0 rounded-0"
       role="alert"
     >
-      <div class="container-fluid position-relative">
-        <strong>نوفمبر ذهبي مع الذهبية العالمية ✈️</strong> حجز تذكرتك بخصم 10%
-        عرحلات مميزة خلال شهر نوفمبر
+      <div class="container position-relative">
+        أكتوبر ذهبي مع الذهبية العالمية ،، إحجز تذكرتك
+        <img src="./images/topbar.png" alt="" />
+        خصومات تصل إلى <span>10%</span> عرحلات مميزة خلال شهر أكتوبر
         <button
           type="button"
           id="closeAlert"
@@ -49,11 +50,13 @@
     <!-- End Topbar Alert -->
 
     <!--Start Navbar -->
-    <header>
-      <div class="container-fluid position-relative">
-        <nav id="navbar" class="navbar navbar-expand-lg p-3">
+    <nav id="navbar" class="navbar navbar-expand-lg">
+      <div class="container h-100">
+        <div
+          class="navbar-container d-flex justify-content-between align-items-center"
+        >
           <a id="navbar-brand" class="navbar-brand" href="#">
-            <img class="img-fluid" src="./images/logo.png" alt="Logo" />
+            <img src="./images/logo.png" alt="Logo" />
           </a>
           <button
             class="navbar-toggler"
@@ -119,16 +122,15 @@
               <a href="#"><i class="far fa-heart" title="المفضلة"></i></a>
             </div>
           </div>
-        </nav>
+        </div>
       </div>
-    </header>
-
+    </nav>
     <!-- End Navbar -->
 
     <!-- Start Home Section -->
     <section class="home-section">
       <div
-        class="container-fluid position-relative h-100 wow animate__animated animate__fadeInUp"
+        class="container position-relative h-100 wow animate__animated animate__fadeInUp"
       >
         <div class="home-text">
           <h1 class="fw-bold">
@@ -136,7 +138,7 @@
             ><br />إستثنائية لك ولعائلتك
           </h1>
           <h2 class="text-white fw-bold">
-            احجز بسهولة <span class="text-accent">وجهتك التي تبيها</span>
+            <span>احجز بسهولة</span> وجهتك التي تبيها
           </h2>
         </div>
 
@@ -838,7 +840,7 @@
 
     <!-- Start Features Section -->
     <section class="features-section">
-      <div class="container-fluid wow animate__animated animate__fadeInUp">
+      <div class="container wow animate__animated animate__fadeInUp">
         <div class="swiper swiper-features">
           <div class="slider-heading mb-5 pt-4">
             <h2 class="section-title mb-0">عروض رهيبة ومميزات كثيرة</h2>
@@ -876,7 +878,7 @@
 
     <!-- Start Tourist Destinations -->
     <section class="tourist-destinations section-padding">
-      <div class="container-fluid wow animate__animated animate__fadeInUp">
+      <div class="container wow animate__animated animate__fadeInUp">
         <h2 class="section-title">
           سافر معنا في رحلة جديدة على وجهات سياحية مميزة
         </h2>
@@ -1206,7 +1208,7 @@
 
     <!-- Start Offers section -->
     <section class="offers-section section-padding">
-      <div class="container-fluid wow animate__animated animate__fadeInUp">
+      <div class="container wow animate__animated animate__fadeInUp">
         <h2 class="section-title">
           خطط لرحلتك القادمة مع أفضل عروض من الذهبية العالمية
         </h2>
@@ -1494,105 +1496,10 @@
     </section>
     <!-- End Offers Section -->
 
-    <!-- Start best fares Section -->
-    <section class="best-fares section-padding">
-      <div class="container-fluid wow animate__animated animate__fadeInUp">
-        <h2 class="section-title">وجهات السفر الأكثر رواجا</h2>
-        <div class="swiper swiper-best-fares">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="card h-100 rounded-5 overflow-hidden">
-                <div class="card-img">
-                  <img
-                    class="img-fluid"
-                    src="https://content.skyscnr.com/m/7e851dbf8ff26954/original/Al-Wathba-Fossil-Dune.jpg"
-                    class="card-img-top"
-                    alt="..."
-                  />
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">ابو ظبي</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">الامارات</h6>
-                  <div class="price-from">
-                    <span>وابتدا من 194</span>
-                    <i class="fas fa-angle-left ms-2"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card h-100 rounded-5 overflow-hidden">
-                <div class="card-img">
-                  <img
-                    class="img-fluid"
-                    src="https://content.skyscnr.com/m/25a4050e20f9b8eb/original/7945.jpg"
-                    class="card-img-top"
-                    alt="..."
-                  />
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">الدمام</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">السعودية</h6>
-                  <div class="price-from">
-                    <span>وابتدا من 293</span>
-                    <i class="fas fa-angle-left ms-2"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card h-100 rounded-5 overflow-hidden">
-                <div class="card-img">
-                  <img
-                    class="img-fluid"
-                    src="https://content.skyscnr.com/afaacdea074d53702da4daccbdfdd28a/GettyImages-115889746.jpg"
-                    class="card-img-top"
-                    alt="..."
-                  />
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">الكويت</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">الكويت</h6>
-                  <div class="price-from">
-                    <span>وابتدا من 348</span>
-                    <i class="fas fa-angle-left ms-2"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card h-100 rounded-5 overflow-hidden">
-                <div class="card-img">
-                  <img
-                    class="img-fluid"
-                    src="https://content.skyscnr.com/m/4dc3cee04825a86f/original/GettyImages-149110112_doc.jpg"
-                    class="card-img-top"
-                    alt="..."
-                  />
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">بوخارست</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">رومانيا</h6>
-                  <div class="price-from">
-                    <span>وابتدا من 349</span>
-                    <i class="fas fa-angle-left ms-2"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-pagination"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-        </div>
-      </div>
-    </section>
-    <!-- End best fares Section -->
-
     <!-- Start First Know -->
     <section class="first-know section-padding">
-      <div class="container-fluid wow animate__animated animate__fadeInUp">
-        <div>
+      <div class="container wow animate__animated animate__fadeInUp">
+        <div class="first-know-container">
           <h2 class="section-title mb-3">
             سافر للوجهة الي تبيها .. تأشيرة سفرك لرحلتك الدولية جاهزة من الذهبية
             العالمية
@@ -1600,8 +1507,6 @@
           <p class="fs-4 mb-5">
             توفير تجارب سفر سلسة من خلال طرق مرنة لإجراءات السفر الرقمي
           </p>
-        </div>
-        <div>
           <button class="btn btn-main">تواصل معنا لإنجاز تأشيرتك</button>
         </div>
       </div>
@@ -1610,7 +1515,7 @@
 
     <!-- Start Reviews section  -->
     <section class="reviews-section section-padding">
-      <div class="container-fluid wow animate__animated animate__fadeInUp">
+      <div class="container wow animate__animated animate__fadeInUp">
         <h2 class="section-title">
           إحجز وجهتك القادمة الأن واصنع تجربتك المميزة
         </h2>
@@ -1730,7 +1635,7 @@
     <!-- Start contact us Section -->
     <section class="contact-us section-padding">
       <div class="contact-overlay"></div>
-      <div class="container-fluid wow animate__animated animate__fadeInUp">
+      <div class="container wow animate__animated animate__fadeInUp">
         <div class="contact-content w-75">
           <h2 class="section-title">
             جهز شنطتك وجوازك ... وخلي برنامجك السياحي المناسب لك علينا
@@ -1778,18 +1683,16 @@
     <!-- start Mobile App Section -->
     <section class="mobile-app section-padding">
       <div
-        class="container-fluid d-md-flex gap-4 wow animate__animated animate__fadeInUp"
+        class="container d-md-flex gap-4 wow animate__animated animate__fadeInUp"
       >
         <div class="mobile-info mb-5 mb-md-0">
           <h2 class="section-title mb-3">أفضل تطبيق لحجز الرحلات الجوية</h2>
-          <p class="text-muted">
+          <p>
             قم بتحميل أفضل تطبيق للرحلات الجوية، حيث يمكنك البحث عن الرحلات
             بسهولة وحجزها في ثوانٍ. استمتع بتجربة سفر مريحة ومباشرة من هاتفك
             المحمول.
           </p>
-          <ul
-            class="list-unstyled d-flex flex-column flex-md-row mb-4 text-muted"
-          >
+          <ul class="list-unstyled d-flex flex-column flex-md-row mb-4">
             <li>
               <i class="fa-regular fa-circle-check"></i>
               <span class="ms-2">البحث السريع عن الرحلات</span>
@@ -1809,7 +1712,7 @@
           </ul>
           <h5>قم بتنزيل التطبيق الآن واستمتع بتجربة حجز سهلة وسريعة.</h5>
           <h6>حمل التطبيق الآن واستفد من كافة المزايا!</h6>
-          <div class="app-buttons d-flex flex-column flex-md-row mt-3">
+          <div class="app-buttons d-flex flex-column flex-md-row mt-5">
             <a
               href="https://play.google.com/store/apps/details?id=com.gita.flightbooking1&amp;hl=ar"
               class="btn btn-main mb-3 mb-md-0 me-md-2"
@@ -1823,10 +1726,10 @@
           </div>
         </div>
         <div class="mobile-img d-flex gap-4 justify-content-center">
-          <div class="w-50 pt-5">
+          <div class="w-50 pt-md-5 text-center">
             <img src="images/app/b1.png" alt="" class="img-fluid rounded-3" />
           </div>
-          <div class="w-50">
+          <div class="w-50 text-center">
             <img src="images/app/b2.png" class="img-fluid rounded-3" alt="" />
           </div>
         </div>
@@ -1836,7 +1739,7 @@
 
     <!-- Start Footer Section -->
     <footer class="section-padding">
-      <div class="container-fluid">
+      <div class="container">
         <div class="row">
           <div class="col-6 col-md-2 mb-2">
             <img class="img-fluid" src="images/logo.png" alt="" width="100px" />
@@ -1948,8 +1851,12 @@
     <!-- Start Copy Right -->
     <div class="copyright py-3">
       <div
-        class="container-fluid d-flex flex-column flex-md-row justify-content-between align-items-center"
+        class="container d-flex flex-column flex-md-row justify-content-between align-items-center"
       >
+        <p class="mb-2 mb-md-0 text-center">
+          جميع الحقوق محفوظة لشركـــة الذهـبــية العــالـمـيـة للـسفـر
+          والسـيـاحة
+        </p>
         <div class="footer-social mb-2 mb-md-0">
           <ul class="list-unstyled d-flex mb-0">
             <li>
@@ -1972,11 +1879,6 @@
             </li>
           </ul>
         </div>
-        <p class="mb-2 mb-md-0 text-center">
-          &copy; 2024 جميع الحقوق محفوظة لشركـــة الذهـبــية العــالـمـيـة
-          للـسفـر والسـيـاحة
-        </p>
-        <p class="mb-0">سجل تجاري : 4650051095</p>
       </div>
     </div>
     <!-- End Copy Right -->
