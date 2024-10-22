@@ -135,12 +135,20 @@ a {
   position: relative;
   width: 100px;
   height: 100px;
-  animation: spin 2s infinite linear;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid var(--main-color);
+}
+.loading-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 3px solid var(--main-color);
   border-radius: 50%;
+  animation: spin 1s infinite linear;
 }
 .loading-container img {
   position: relative;
@@ -256,20 +264,19 @@ a {
 }
 
 @media (max-width: 991px) {
-  .navbar {
-    height: auto;
+  .navbar .offcanvas {
+    border: 0;
+    width: 100%;
+    padding: 2rem 1rem;
+    transition: all 0.3s ease;
+    justify-content: start !important;
+    align-items: start !important;
+    margin-right: 0;
   }
   .offcanvas-backdrop {
     background-color: var(--white-color) !important;
     opacity: 1 !important;
-  }
-  .navbar .offcanvas {
-    padding: 1rem;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(0, 0, 0, 0.175);
-    justify-content: start !important;
-    align-items: start !important;
-    margin-right: 0;
+    width: 100%;
   }
   .navbar .offcanvas a,
   .navbar-light .navbar-nav .nav-link {
@@ -600,7 +607,7 @@ a {
   min-height: 3em;
 }
 .reviews-section .review-box hr {
-  border-top: 1px solid #ccc !important;
+  border-top: 1px solid #ecdeb7 !important;
 }
 .reviews-section .review-box .review-name {
   color: var(--main-color);
@@ -612,7 +619,7 @@ a {
 
 /* Satrt contact-us Section */
 .contact-us {
-  background-image: url("../images/backgrounds//contact-section.jpg");
+  background-image: url("../images/backgrounds/contact-section.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1009,7 +1016,7 @@ footer .media .media-body p {
 
 /* Start Pages Compomets */
 .page-header {
-  background-image: url("../images/banner-terms.jpg");
+  background-image: url("../images/backgrounds/banner-terms.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1069,19 +1076,19 @@ footer .media .media-body p {
 
 /* Start Privacy Policy Page */
 .privacy-policy-header {
-  background-image: url("../images/privacy-policy.jpg");
+  background-image: url("../images/backgrounds/privacy-policy.jpg");
 }
 /* End Privacy Policy Page */
 
 /* Start Alshrwt Walahkam Page */
 .alshrwt-walahkam-header {
-  background-image: url("../images/banner-terms.jpg");
+  background-image: url("../images/backgrounds/banner-terms.jpg");
 }
 /* End Alshrwt Walahkam Page */
 
 /* Start Contact Us Page */
 .contact-us-header {
-  background-image: url("../images/contact-us.jpg");
+  background-image: url("../images/backgrounds/contact-us.jpg");
 }
 .contact-form {
   background-color: var(--white-color);
@@ -1133,7 +1140,7 @@ footer .media .media-body p {
 
 /* Start Mn Nhn Page */
 .mn-nhn-header {
-  background-image: url("../images/about-us.jpg");
+  background-image: url("../images/backgrounds/about-us.jpg");
 }
 .mn-nhn-content p,
 ul {

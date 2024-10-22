@@ -1,16 +1,32 @@
-// Initialize Preloader
-(function ($) {
-  "use strict";
-  $(window).on(
-    "load",
-    function () {
-      $("#preloader").fadeOut("slow", function () {
-        $(this).remove();
-      });
-    },
-    calcvulateNavbarTop()
-  );
-})(jQuery);
+// // Initialize Preloader
+// (function ($) {
+//   "use strict";
+//   $(window).on(
+//     "load",
+//     function () {
+//       $("#preloader").fadeOut("slow", function () {
+//         $(this).remove();
+//       });
+//     },
+//     calcvulateNavbarTop()
+//   );
+// })(jQuery);
+
+window.addEventListener("load", function () {
+  const preloader = document.getElementById("preloader");
+
+  if (preloader) {
+    preloader.style.transition = "opacity 0.5s ease"; // Adjust duration as needed
+    preloader.style.opacity = 0;
+
+    // Wait for the transition to complete before removing the element
+    setTimeout(() => {
+      preloader.remove();
+    }, 500); // Match this duration with the CSS transition
+  }
+
+  calcvulateNavbarTop(); // Call your function directly
+});
 
 // Change Navbar Top
 window.addEventListener("scroll", calcvulateNavbarTop);
