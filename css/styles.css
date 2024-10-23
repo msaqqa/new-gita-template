@@ -173,7 +173,7 @@ a {
   background-color: var(--main-color);
   color: var(--white-color);
   font-size: 20px;
-  height: 70px;
+  height: 80px;
   background: linear-gradient(90deg, #00806e 0%, #00b7a1 100%);
 }
 .topbar span {
@@ -200,7 +200,7 @@ a {
 /* Start Navbar */
 .navbar {
   position: fixed;
-  height: 70px;
+  height: 80px;
   left: 0;
   right: 0;
   z-index: 1030;
@@ -296,7 +296,7 @@ a {
 /*  Start Home Section */
 .home-section {
   background-image: url("../images//backgrounds/home-header.png");
-  height: calc(100vh - 70px);
+  height: calc(100vh - 80px);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
