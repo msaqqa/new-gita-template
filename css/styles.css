@@ -307,7 +307,7 @@ a {
   color: var(--white-color);
 }
 .home-section .home-text h1 {
-  font-size: 70px;
+  font-size: 100px;
 }
 .home-section .home-text h1 span {
   color: var(--dark-color);
