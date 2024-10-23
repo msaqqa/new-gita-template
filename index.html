@@ -14,6 +14,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
 
@@ -301,11 +305,21 @@
                               >وجهة الوصول</label
                             >
                             <input
+                              name="originLocationCodeOne"
+                              value=""
+                              id="originLocationCodeOne"
                               type="text"
-                              id="travelTo"
+                              class="form-control destinations-input open-select airport-origin"
+                              autocomplete="off"
                               placeholder="وجهة الوصول"
-                              class="form-control"
                             />
+                            <div class="selector-box mt-1">
+                              <ul
+                                class="mt-1"
+                                id="originLocationCodeOneComplete"
+                                style="background-color: white; padding: 0"
+                              ></ul>
+                            </div>
                           </div>
                           <div class="col-md-2 mb-2">
                             <label for="travelDate" class="form-label"
@@ -1554,7 +1568,7 @@
                 <div class="d-flex align-items-center justify-content-center">
                   <img
                     class="rounded-circle"
-                    src="./images/nour khaled.jpeg"
+                    src="./images/nour khaled.png"
                     width="50"
                     loading="lazy"
                   />
@@ -1581,7 +1595,7 @@
                 <div class="d-flex align-items-center justify-content-center">
                   <img
                     class="rounded-circle"
-                    src="./images/nour khaled.jpeg"
+                    src="./images/nour khaled.png"
                     width="50"
                     loading="lazy"
                   />
@@ -1608,7 +1622,7 @@
                 <div class="d-flex align-items-center justify-content-center">
                   <img
                     class="rounded-circle"
-                    src="./images/nour khaled.jpeg"
+                    src="./images/nour khaled.png"
                     width="50"
                     loading="lazy"
                   />
@@ -2001,10 +2015,62 @@
       </a>
     </div>
 
+    <script src="./js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
     <script src="js/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script src="./js/main.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#originLocationCodeOne").keyup(function (e) {
+          $("#originLocationCodeOneComplete").html("");
+          $.ajax({
+            url: "https://gita.sa/api/airlines",
+            data: {
+              input: "originLocationCodeOne",
+              search: $("#originLocationCodeOne").val(),
+            },
+            type: "get",
+            success: function (res) {
+              $("#originLocationCodeOneComplete").html(res);
+            },
+          });
+        });
+
+        $(document).on("click", ".airline-option", function (e) {
+          e.preventDefault();
+          var _val = $(this).data("code");
+          var _group = $(this).closest(".form-group");
+          _group.find(".destinations-input").val($(this).data("city"));
+          _group.find(".destinations-input").data("val", _val);
+          $(this).closest(".selector-box").removeClass("show");
+        });
+      });
+
+      $(".open-select").click(function () {
+        $(this)
+          .parent()
+          .find(".selector-box, .selector-box-flight")
+          .addClass("show");
+      });
+
+      /*==============================
+     12. Close box when mouseup js
+     ==============================*/
+      $(document).mouseup(function (e) {
+        var container = $(
+          ".open-select, .selector-box, .selector-box-flight, .fare-calender, .setting"
+        );
+
+        if (!container.is(e.target) && container.has(e.target).length === 0) {
+          $(
+            ".selector-box, .selector-box-flight, .calender-external, .setting-open"
+          ).removeClass("show");
+        }
+      });
+    </script>
   </body>
 </html>
