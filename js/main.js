@@ -31,6 +31,8 @@ window.addEventListener("load", function () {
 // Change Navbar Top
 window.addEventListener("scroll", calcvulateNavbarTop);
 
+window.addEventListener("resize", calcvulateNavbarTop);
+
 function calcvulateNavbarTop() {
   const navbar = document.getElementById("navbar");
   const alert = document.getElementById("alert");

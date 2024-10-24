@@ -136,14 +136,21 @@
           <div class="col-md-3 mb-4">
             <div class="time-box border rounded-3 p-3">
               <div
-                class="form-check form-switch d-flex justify-content-between"
+                class="form-check form-switch d-flex flex-column flex-lg-row justify-content-between align-items-center pe-0"
               >
-                <img src="../images/clock.svg" alt="" />
-                <label class="form-check-label" for="flexSwitchCheckChecked"
+                <img
+                  class="mb-md-3 mb-lg-0"
+                  width="40"
+                  src="../images/clock.svg"
+                  alt=""
+                />
+                <label
+                  class="form-check-label mb-md-3 mb-lg-0 text-center"
+                  for="flexSwitchCheckChecked"
                   >عرض الأوقات بشكل <br /><b> صباحًا / مساءً </b></label
                 >
                 <input
-                  class="form-check-input"
+                  class="form-check-input ms-md-0"
                   type="checkbox"
                   role="switch"
                   id="flexSwitchCheckChecked"
@@ -165,15 +172,15 @@
                 <h5 class="filter-title">تعديل البحث</h5>
                 <img
                   class="img-fluid blur-up lazyloaded"
-                  src="../../images/adjust.png"
+                  src="../images/adjust.png"
                   alt=""
                 />
               </a>
               <div class="collapse" id="collapseEditSearch">
-                <div class="row d-flex align-items-center">
-                  <div class="col-md-10">
+                <div class="row d-flex align-items-end">
+                  <div class="col-lg-10">
                     <div
-                      class="d-flex flex-column flex-md-row justify-content-between gap-4"
+                      class="d-flex flex-column flex-md-row flex-md-wrap flex-lg-nowrap gap-2"
                     >
                       <div class="form-item mb-2">
                         <label for="inputEmail4" class="form-label">من</label>
@@ -242,15 +249,9 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-md-2">
-                    <div class="search-btn text-end mt-2">
-                      <button
-                        type="button"
-                        id="search-btn"
-                        class="btn btn-main btn-rounded"
-                      >
-                        بحث
-                      </button>
+                  <div class="col-lg-2">
+                    <div class="search-btn text-end mb-2 mt-md-3 mt-lg-0">
+                      <button type="button" class="btn btn-main">بحث</button>
                     </div>
                   </div>
                 </div>
@@ -279,7 +280,7 @@
                 <h5 class="filter-title">تصفية</h5>
                 <img
                   class="img-fluid blur-up lazyloaded"
-                  src="../../images/adjust.png"
+                  src="../images/adjust.png"
                   alt=""
                 />
               </a>
@@ -464,147 +465,145 @@
           </div>
           <div class="col-md-9">
             <!-- Start results search -->
-            <div class="results-search">
-              <div class="cards-container">
-                <div class="card mb-4">
-                  <div class="card-body">
-                    <div class="row">
-                      <div
-                        class="col-md-9 d-flex flex-column flex-md-row align-items-center"
-                      >
-                        <div class="flight-line-logo me-4 mb-3">
-                          <img
-                            src="https://assets.wego.com/image/upload/h_240,c_fill,f_auto,fl_lossy,q_auto:best,g_auto/v20240602/flights/airlines_square/MS.png"
-                            class="w-100"
-                            alt=""
-                          />
+            <div class="results-search mb-4">
+              <div class="card">
+                <div class="card-body">
+                  <div class="row">
+                    <div
+                      class="col-lg-9 d-flex flex-column flex-md-row align-items-center"
+                    >
+                      <div class="flight-line-logo mb-3">
+                        <img
+                          src="https://assets.wego.com/image/upload/h_240,c_fill,f_auto,fl_lossy,q_auto:best,g_auto/v20240602/flights/airlines_square/MS.png"
+                          class="w-100"
+                          alt=""
+                        />
+                      </div>
+                      <div class="flight-line-name mb-3">
+                        <span class="d-block mb-2">مصر للطيران</span>
+                        <span class="d-block">MS-748</span>
+                      </div>
+                      <div class="airport-from text-center mb-3">
+                        <h4>2:15 م</h4>
+                        <h6 class="my-1">
+                          مطار أثينا الدولي "الفثيريوس فنيزيلوس"
+                        </h6>
+                        <small>أثينا، اليونان</small>
+                      </div>
+                      <div class="airport-part mb-3">
+                        <div class="airport-progress">
+                          <i class="fas fa-plane-departure"></i>
+                          <div class="stop">1 توقف</div>
+                          <i class="fas fa-plane-arrival"></i>
                         </div>
-                        <div class="flight-line-name mb-3">
-                          <span class="d-block mb-2">مصر للطيران</span>
-                          <span class="d-block">MS-748</span>
-                        </div>
-                        <div class="airport-from text-center mb-3">
-                          <h4>2:15 م</h4>
-                          <h6 class="my-1">
-                            مطار أثينا الدولي "الفثيريوس فنيزيلوس"
-                          </h6>
-                          <small>أثينا، اليونان</small>
-                        </div>
-                        <div class="airport-part mb-3">
-                          <div class="airport-progress">
-                            <i class="fas fa-plane-departure"></i>
-                            <div class="stop">1 توقف</div>
-                            <i class="fas fa-plane-arrival"></i>
-                          </div>
-                          <div class="flight-time">12 ساعات 50 دقائق</div>
-                        </div>
-                        <div class="airport-to text-center mb-3">
-                          <h4>03:05 م</h4>
-                          <h6 class="my-1">مطار الملك فهد الدولي</h6>
-                          <small>الدمام - المملكة العربية السعودية</small>
+                        <div class="flight-time">12 ساعات 50 دقائق</div>
+                      </div>
+                      <div class="airport-to text-center mb-3">
+                        <h4>03:05 م</h4>
+                        <h6 class="my-1">مطار الملك فهد الدولي</h6>
+                        <small>الدمام - المملكة العربية السعودية</small>
+                      </div>
+                    </div>
+                    <div
+                      class="col-lg-3 lastPart border-start border-end-0 text-center"
+                    >
+                      <div class="price">
+                        <div>
+                          <h4 class="mb-2">SAR 4788.00</h4>
+                          <h6 class="mb-3">GDS</h6>
                         </div>
                       </div>
-                      <div class="col-md-3">
-                        <div class="border-start border-end-0 text-center">
-                          <div class="price">
-                            <div>
-                              <h4 class="mb-2">SAR 4788.00</h4>
-                              <h6 class="mb-3">GDS</h6>
-                            </div>
-                          </div>
-                          <div class="book-flight">
-                            <button
-                              class="btn btn-main mb-3"
-                              data-href="https://gita.sa/booking/pricing"
-                              data-offer="eyJ0eXBlIjoiZmxpZ2h0LW9mZmVyIiwiaWQiOiIxIiwic291cmNlIjoiR0RTIiwiaW5zdGFudFRpY2tldGluZ1JlcXVpcmVkIjpmYWxzZSwibm9uSG9tb2dlbmVvdXMiOmZhbHNlLCJvbmVXYXkiOmZhbHNlLCJpc1Vwc2VsbE9mZmVyIjpmYWxzZSwibGFzdFRpY2tldGluZ0RhdGUiOiIyMDI0LTEwLTMxIiwibGFzdFRpY2tldGluZ0RhdGVUaW1lIjoiMjAyNC0xMC0zMSIsIm51bWJlck9mQm9va2FibGVTZWF0cyI6OSwiaXRpbmVyYXJpZXMiOlt7ImR1cmF0aW9uIjoiUFQxMkg1ME0iLCJzZWdtZW50cyI6W3siZGVwYXJ0dXJlIjp7ImlhdGFDb2RlIjoiQVRIIiwiYXQiOiIyMDI0LTExLTAxVDEzOjE1OjAwIn0sImFycml2YWwiOnsiaWF0YUNvZGUiOiJDQUkiLCJ0ZXJtaW5hbCI6IjMiLCJhdCI6IjIwMjQtMTEtMDFUMTU6MTA6MDAifSwiY2FycmllckNvZGUiOiJNUyIsIm51bWJlciI6Ijc0OCIsImFpcmNyYWZ0Ijp7ImNvZGUiOiI3MzgifSwib3BlcmF0aW5nIjp7ImNhcnJpZXJDb2RlIjoiTVMifSwiZHVyYXRpb24iOiJQVDFINTVNIiwiaWQiOiIxIiwibnVtYmVyT2ZTdG9wcyI6MCwiYmxhY2tsaXN0ZWRJbkVVIjpmYWxzZX0seyJkZXBhcnR1cmUiOnsiaWF0YUNvZGUiOiJDQUkiLCJ0ZXJtaW5hbCI6IjMiLCJhdCI6IjIwMjQtMTEtMDFUMjM6MzA6MDAifSwiYXJyaXZhbCI6eyJpYXRhQ29kZSI6IkRNTSIsImF0IjoiMjAyNC0xMS0wMlQwMzowNTowMCJ9LCJjYXJyaWVyQ29kZSI6Ik1TIiwibnVtYmVyIjoiNjgzIiwiYWlyY3JhZnQiOnsiY29kZSI6IjczOCJ9LCJvcGVyYXRpbmciOnsiY2FycmllckNvZGUiOiJNUyJ9LCJkdXJhdGlvbiI6IlBUMkgzNU0iLCJpZCI6IjIiLCJudW1iZXJPZlN0b3BzIjowLCJibGFja2xpc3RlZEluRVUiOmZhbHNlfV19XSwicHJpY2UiOnsiY3VycmVuY3kiOiJTQVIiLCJ0b3RhbCI6IjQ3ODguMDAiLCJiYXNlIjoiMjMzOC4wMCIsImZlZXMiOlt7ImFtb3VudCI6IjAuMDAiLCJ0eXBlIjoiU1VQUExJRVIifSx7ImFtb3VudCI6IjAuMDAiLCJ0eXBlIjoiVElDS0VUSU5HIn1dLCJncmFuZFRvdGFsIjoiNDc4OC4wMCJ9LCJwcmljaW5nT3B0aW9ucyI6eyJmYXJlVHlwZSI6WyJORUdPVElBVEVEIl19LCJ2YWxpZGF0aW5nQWlybGluZUNvZGVzIjpbIk1TIl0sInRyYXZlbGVyUHJpY2luZ3MiOlt7InRyYXZlbGVySWQiOiIxIiwiZmFyZU9wdGlvbiI6IlNUQU5EQVJEIiwidHJhdmVsZXJUeXBlIjoiQURVTFQiLCJwcmljZSI6eyJjdXJyZW5jeSI6IlNBUiIsInRvdGFsIjoiMjU2MC4wMCIsImJhc2UiOiIxMzM1LjAwIn0sImZhcmVEZXRhaWxzQnlTZWdtZW50IjpbeyJzZWdtZW50SWQiOiIxIiwiY2FiaW4iOiJCVVNJTkVTUyIsImZhcmVCYXNpcyI6IlpSRUdSTyIsImNsYXNzIjoiWiIsImluY2x1ZGVkQ2hlY2tlZEJhZ3MiOnsicXVhbnRpdHkiOjJ9fSx7InNlZ21lbnRJZCI6IjIiLCJjYWJpbiI6IkJVU0lORVNTIiwiZmFyZUJhc2lzIjoiWlJFR1JPIiwiY2xhc3MiOiJaIiwiaW5jbHVkZWRDaGVja2VkQmFncyI6eyJxdWFudGl0eSI6Mn19XX0seyJ0cmF2ZWxlcklkIjoiMiIsImZhcmVPcHRpb24iOiJTVEFOREFSRCIsInRyYXZlbGVyVHlwZSI6IkNISUxEIiwicHJpY2UiOnsiY3VycmVuY3kiOiJTQVIiLCJ0b3RhbCI6IjIyMjguMDAiLCJiYXNlIjoiMTAwMy4wMCJ9LCJmYXJlRGV0YWlsc0J5U2VnbWVudCI6W3sic2VnbWVudElkIjoiMSIsImNhYmluIjoiQlVTSU5FU1MiLCJmYXJlQmFzaXMiOiJaUkVHUk8iLCJjbGFzcyI6IloifSx7InNlZ21lbnRJZCI6IjIiLCJjYWJpbiI6IkJVU0lORVNTIiwiZmFyZUJhc2lzIjoiWlJFR1JPIiwiY2xhc3MiOiJaIn1dfV0sImZhcmVSdWxlcyI6eyJydWxlcyI6W3siY2F0ZWdvcnkiOiJFWENIQU5HRSIsIm1heFBlbmFsdHlBbW91bnQiOiIyODguMDAifSx7ImNhdGVnb3J5IjoiUkVWQUxJREFUSU9OIiwibm90QXBwbGljYWJsZSI6dHJ1ZX1dfX0="
-                            >
-                              حجز الان
-                            </button>
-                            <button
-                              class="btn btn-secondary border-top w-auto"
-                              data-bs-toggle="collapse"
-                              data-bs-target="#collapseOne"
-                              aria-expanded="true"
-                              aria-controls="collapseOne"
-                            >
-                              عرض الخيارات الأخرى
-                            </button>
-                          </div>
-                        </div>
+                      <div class="book-flight">
+                        <button
+                          class="btn btn-main mb-3 w-100"
+                          data-href="https://gita.sa/booking/pricing"
+                          data-offer="eyJ0eXBlIjoiZmxpZ2h0LW9mZmVyIiwiaWQiOiIxIiwic291cmNlIjoiR0RTIiwiaW5zdGFudFRpY2tldGluZ1JlcXVpcmVkIjpmYWxzZSwibm9uSG9tb2dlbmVvdXMiOmZhbHNlLCJvbmVXYXkiOmZhbHNlLCJpc1Vwc2VsbE9mZmVyIjpmYWxzZSwibGFzdFRpY2tldGluZ0RhdGUiOiIyMDI0LTEwLTMxIiwibGFzdFRpY2tldGluZ0RhdGVUaW1lIjoiMjAyNC0xMC0zMSIsIm51bWJlck9mQm9va2FibGVTZWF0cyI6OSwiaXRpbmVyYXJpZXMiOlt7ImR1cmF0aW9uIjoiUFQxMkg1ME0iLCJzZWdtZW50cyI6W3siZGVwYXJ0dXJlIjp7ImlhdGFDb2RlIjoiQVRIIiwiYXQiOiIyMDI0LTExLTAxVDEzOjE1OjAwIn0sImFycml2YWwiOnsiaWF0YUNvZGUiOiJDQUkiLCJ0ZXJtaW5hbCI6IjMiLCJhdCI6IjIwMjQtMTEtMDFUMTU6MTA6MDAifSwiY2FycmllckNvZGUiOiJNUyIsIm51bWJlciI6Ijc0OCIsImFpcmNyYWZ0Ijp7ImNvZGUiOiI3MzgifSwib3BlcmF0aW5nIjp7ImNhcnJpZXJDb2RlIjoiTVMifSwiZHVyYXRpb24iOiJQVDFINTVNIiwiaWQiOiIxIiwibnVtYmVyT2ZTdG9wcyI6MCwiYmxhY2tsaXN0ZWRJbkVVIjpmYWxzZX0seyJkZXBhcnR1cmUiOnsiaWF0YUNvZGUiOiJDQUkiLCJ0ZXJtaW5hbCI6IjMiLCJhdCI6IjIwMjQtMTEtMDFUMjM6MzA6MDAifSwiYXJyaXZhbCI6eyJpYXRhQ29kZSI6IkRNTSIsImF0IjoiMjAyNC0xMS0wMlQwMzowNTowMCJ9LCJjYXJyaWVyQ29kZSI6Ik1TIiwibnVtYmVyIjoiNjgzIiwiYWlyY3JhZnQiOnsiY29kZSI6IjczOCJ9LCJvcGVyYXRpbmciOnsiY2FycmllckNvZGUiOiJNUyJ9LCJkdXJhdGlvbiI6IlBUMkgzNU0iLCJpZCI6IjIiLCJudW1iZXJPZlN0b3BzIjowLCJibGFja2xpc3RlZEluRVUiOmZhbHNlfV19XSwicHJpY2UiOnsiY3VycmVuY3kiOiJTQVIiLCJ0b3RhbCI6IjQ3ODguMDAiLCJiYXNlIjoiMjMzOC4wMCIsImZlZXMiOlt7ImFtb3VudCI6IjAuMDAiLCJ0eXBlIjoiU1VQUExJRVIifSx7ImFtb3VudCI6IjAuMDAiLCJ0eXBlIjoiVElDS0VUSU5HIn1dLCJncmFuZFRvdGFsIjoiNDc4OC4wMCJ9LCJwcmljaW5nT3B0aW9ucyI6eyJmYXJlVHlwZSI6WyJORUdPVElBVEVEIl19LCJ2YWxpZGF0aW5nQWlybGluZUNvZGVzIjpbIk1TIl0sInRyYXZlbGVyUHJpY2luZ3MiOlt7InRyYXZlbGVySWQiOiIxIiwiZmFyZU9wdGlvbiI6IlNUQU5EQVJEIiwidHJhdmVsZXJUeXBlIjoiQURVTFQiLCJwcmljZSI6eyJjdXJyZW5jeSI6IlNBUiIsInRvdGFsIjoiMjU2MC4wMCIsImJhc2UiOiIxMzM1LjAwIn0sImZhcmVEZXRhaWxzQnlTZWdtZW50IjpbeyJzZWdtZW50SWQiOiIxIiwiY2FiaW4iOiJCVVNJTkVTUyIsImZhcmVCYXNpcyI6IlpSRUdSTyIsImNsYXNzIjoiWiIsImluY2x1ZGVkQ2hlY2tlZEJhZ3MiOnsicXVhbnRpdHkiOjJ9fSx7InNlZ21lbnRJZCI6IjIiLCJjYWJpbiI6IkJVU0lORVNTIiwiZmFyZUJhc2lzIjoiWlJFR1JPIiwiY2xhc3MiOiJaIiwiaW5jbHVkZWRDaGVja2VkQmFncyI6eyJxdWFudGl0eSI6Mn19XX0seyJ0cmF2ZWxlcklkIjoiMiIsImZhcmVPcHRpb24iOiJTVEFOREFSRCIsInRyYXZlbGVyVHlwZSI6IkNISUxEIiwicHJpY2UiOnsiY3VycmVuY3kiOiJTQVIiLCJ0b3RhbCI6IjIyMjguMDAiLCJiYXNlIjoiMTAwMy4wMCJ9LCJmYXJlRGV0YWlsc0J5U2VnbWVudCI6W3sic2VnbWVudElkIjoiMSIsImNhYmluIjoiQlVTSU5FU1MiLCJmYXJlQmFzaXMiOiJaUkVHUk8iLCJjbGFzcyI6IloifSx7InNlZ21lbnRJZCI6IjIiLCJjYWJpbiI6IkJVU0lORVNTIiwiZmFyZUJhc2lzIjoiWlJFR1JPIiwiY2xhc3MiOiJaIn1dfV0sImZhcmVSdWxlcyI6eyJydWxlcyI6W3siY2F0ZWdvcnkiOiJFWENIQU5HRSIsIm1heFBlbmFsdHlBbW91bnQiOiIyODguMDAifSx7ImNhdGVnb3J5IjoiUkVWQUxJREFUSU9OIiwibm90QXBwbGljYWJsZSI6dHJ1ZX1dfX0="
+                        >
+                          حجز الان
+                        </button>
+                        <button
+                          class="btn btn-secondary px-3 w-100"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseOne"
+                          aria-expanded="true"
+                          aria-controls="collapseOne"
+                        >
+                          عرض الخيارات الأخرى
+                        </button>
                       </div>
                     </div>
                   </div>
-                  <div class="accordion" id="accordionOtherOptions">
+                </div>
+                <div class="accordion" id="accordionOtherOptions">
+                  <div
+                    id="collapseOne"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionOtherOptions"
+                  >
                     <div
-                      id="collapseOne"
-                      class="accordion-collapse collapse"
-                      data-bs-parent="#accordionOtherOptions"
+                      class="accordion-body d-flex flex-column flex-md-row gap-4 border-top"
                     >
-                      <div
-                        class="accordion-body d-flex flex-column flex-md-row gap-4 border-top"
-                      >
-                        <div class="card text-center">
-                          <div class="card-body">
-                            <h5 class="card-title">SAR 1542.00</h5>
-                            <p class="card-text">حد الامتعة المسموح به</p>
-                            <ul class="list-unstyled">
-                              <li class="mb-2">
-                                <i class="fas fa-check text-success"></i>
-                                <span>amenities.0MQ</span>
-                              </li>
-                              <li class="mb-2">
-                                <i class="fas fa-check text-success"></i>
-                                <span>amenities.0C2</span>
-                              </li>
-                              <li class="mb-2">
-                                <i class="fas fa-times text-danger"></i>
-                                <span>amenities.0CZ</span>
-                              </li>
-                            </ul>
-                            <a class="btn btn-main" href="#">حجز الان</a>
-                          </div>
+                      <div class="card text-center">
+                        <div class="card-body">
+                          <h5 class="card-title">SAR 1542.00</h5>
+                          <p class="card-text">حد الامتعة المسموح به</p>
+                          <ul class="list-unstyled">
+                            <li class="mb-2">
+                              <i class="fas fa-check text-success"></i>
+                              <span>amenities.0MQ</span>
+                            </li>
+                            <li class="mb-2">
+                              <i class="fas fa-check text-success"></i>
+                              <span>amenities.0C2</span>
+                            </li>
+                            <li class="mb-2">
+                              <i class="fas fa-times text-danger"></i>
+                              <span>amenities.0CZ</span>
+                            </li>
+                          </ul>
+                          <a class="btn btn-main" href="#">حجز الان</a>
                         </div>
-                        <div class="card text-center">
-                          <div class="card-body">
-                            <h5 class="card-title">SAR 1542.00</h5>
-                            <p class="card-text">حد الامتعة المسموح به</p>
-                            <ul class="list-unstyled">
-                              <li class="mb-2">
-                                <i class="fas fa-check text-success"></i>
-                                <span>amenities.0MQ</span>
-                              </li>
-                              <li class="mb-2">
-                                <i class="fas fa-check text-success"></i>
-                                <span>amenities.0C2</span>
-                              </li>
-                              <li class="mb-2">
-                                <i class="fas fa-times text-danger"></i>
-                                <span>amenities.0CZ</span>
-                              </li>
-                            </ul>
-                            <a class="btn btn-main" href="#">حجز الان</a>
-                          </div>
+                      </div>
+                      <div class="card text-center">
+                        <div class="card-body">
+                          <h5 class="card-title">SAR 1542.00</h5>
+                          <p class="card-text">حد الامتعة المسموح به</p>
+                          <ul class="list-unstyled">
+                            <li class="mb-2">
+                              <i class="fas fa-check text-success"></i>
+                              <span>amenities.0MQ</span>
+                            </li>
+                            <li class="mb-2">
+                              <i class="fas fa-check text-success"></i>
+                              <span>amenities.0C2</span>
+                            </li>
+                            <li class="mb-2">
+                              <i class="fas fa-times text-danger"></i>
+                              <span>amenities.0CZ</span>
+                            </li>
+                          </ul>
+                          <a class="btn btn-main" href="#">حجز الان</a>
                         </div>
-                        <div class="card text-center">
-                          <div class="card-body">
-                            <h5 class="card-title">SAR 1542.00</h5>
-                            <p class="card-text">حد الامتعة المسموح به</p>
-                            <ul class="list-unstyled">
-                              <li class="mb-2">
-                                <i class="fas fa-check text-success"></i>
-                                <span>amenities.0MQ</span>
-                              </li>
-                              <li class="mb-2">
-                                <i class="fas fa-check text-success"></i>
-                                <span>amenities.0C2</span>
-                              </li>
-                              <li class="mb-2">
-                                <i class="fas fa-times text-danger"></i>
-                                <span>amenities.0CZ</span>
-                              </li>
-                            </ul>
-                            <a class="btn btn-main" href="#">حجز الان</a>
-                          </div>
+                      </div>
+                      <div class="card text-center">
+                        <div class="card-body">
+                          <h5 class="card-title">SAR 1542.00</h5>
+                          <p class="card-text">حد الامتعة المسموح به</p>
+                          <ul class="list-unstyled">
+                            <li class="mb-2">
+                              <i class="fas fa-check text-success"></i>
+                              <span>amenities.0MQ</span>
+                            </li>
+                            <li class="mb-2">
+                              <i class="fas fa-check text-success"></i>
+                              <span>amenities.0C2</span>
+                            </li>
+                            <li class="mb-2">
+                              <i class="fas fa-times text-danger"></i>
+                              <span>amenities.0CZ</span>
+                            </li>
+                          </ul>
+                          <a class="btn btn-main" href="#">حجز الان</a>
                         </div>
                       </div>
                     </div>
@@ -699,7 +698,7 @@
                   <a
                     href="index.html?originLocationCode=MED&amp;destinationLocationCode=RUH&amp;departureDate=2024-09-22&amp;returnDate=2024-09-30&amp;adults=1&amp;children=&amp;infants=&amp;travelClass=ECONOMY"
                     ><img
-                      src="images/flights/destination/ruh.jpg"
+                      src="../images/flights/destination/ruh.jpg"
                       class="img-fluid blur-up lazyload"
                       alt=""
                       style="height: 100px"
@@ -715,7 +714,7 @@
                   <a
                     href="index.html?originLocationCode=MED&amp;destinationLocationCode=DXB&amp;departureDate=2024-09-22&amp;returnDate=2024-09-30&amp;adults=1&amp;children=&amp;infants=&amp;travelClass=ECONOMY"
                     ><img
-                      src="images/flights/destination/dxb.jpg"
+                      src="../images/flights/destination/dxb.jpg"
                       class="img-fluid blur-up lazyload"
                       alt=""
                       style="height: 100px"

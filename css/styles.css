@@ -49,9 +49,11 @@ a {
   margin-bottom: 1.5rem;
 }
 .btn {
-  padding: 0.5rem 4rem;
-  /* min-width: 200px; */
-  /* height: 48px; */
+  width: 200px;
+  max-width: 100%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  max-height: 100%;
   font-size: 16px;
   font-weight: 700;
   border-radius: 8px;
@@ -220,22 +222,7 @@ a {
 .navbar .navbar-brand img {
   height: 100%;
 }
-.navbar .dropdown-toggle {
-  color: var(--white-color) !important;
-  cursor: pointer;
-}
-.dropdown-menu {
-  border-color: var(--main-color);
-}
-.dropdown-menu .dropdown-item {
-  color: var(--main-color) !important;
-  font-size: 14px !important;
-}
-.dropdown-menu .dropdown-item:active {
-  background-color: #f8f9fa !important;
-}
-.navbar .offcanvas a,
-.navbar-light .navbar-nav .nav-link {
+.navbar .navbar-nav .nav-link {
   color: #242424;
   font-size: 24px;
   font-weight: 700;
@@ -254,17 +241,14 @@ a {
 }
 .navbar .navbar-toggler {
   border-color: var(--white-color);
+  cursor: pointer;
 }
 .navbar .navbar-toggler-icon {
   background-image: url("../images/white-toggler-icon.svg");
 }
-.navbar-toggler-icon {
-  color: var(--white-color);
-}
 .navbar-toggler:focus {
   box-shadow: none;
 }
-
 @media (max-width: 991px) {
   .navbar .offcanvas {
     border: 0;
@@ -279,16 +263,9 @@ a {
     opacity: 1 !important;
     width: 100%;
   }
-  .navbar .dropdown-toggle {
-    color: var(--main-color) !important;
-    margin-bottom: 12px;
-  }
-  .dropdown-menu {
-    width: 25%;
-    top: 50% !important;
-    left: 50% !important;
-    right: auto !important;
-    transform: translateX(-50%);
+  .navbar .navbar-nav .nav-link,
+  .navbar .header-icons i {
+    font-size: 18px;
   }
 }
 /* End Navbar */
@@ -834,12 +811,12 @@ footer .media .media-body p {
   width: 70px;
 }
 .results-search .flight-line-name {
-  font-size: 18px;
+  font-size: 16px;
   color: rgb(133, 151, 158);
   margin-left: 18px;
   margin-bottom: 0;
   text-align: center;
-  margin: 0 20px;
+  margin: 0 10px;
 }
 .results-search .flight-line-name:first-child {
   color: rgb(58, 58, 58);
@@ -858,7 +835,7 @@ footer .media .media-body p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0 20px;
+  margin: 0 10px;
 }
 .results-search .airport-progress {
   display: flex;
@@ -899,6 +876,14 @@ footer .media .media-body p {
 @media (max-width: 768px) {
   .search-form .form-item {
     width: 100%;
+  }
+  .results-search .lastPart {
+    border-right: 0 !important;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .search-form .form-item {
+    width: calc(100% / 3 - 6px);
   }
 }
 /* End Results Search */

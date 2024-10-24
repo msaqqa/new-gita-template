@@ -72,7 +72,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div
-            class="offcanvas offcanvas-top flex-column flex-lg-row align-items-center justify-content-between"
+            class="offcanvas offcanvas-top flex-column flex-lg-row justify-content-between align-items-center"
             id="offcanvasNavbar"
           >
             <button
@@ -81,7 +81,7 @@
               data-bs-dismiss="offcanvas"
               aria-label="Close"
             ></button>
-            <ul class="navbar-nav mb-4 mb-lg-0 mx-lg-auto">
+            <ul class="navbar-nav mb-3 mb-lg-0 mx-lg-auto">
               <li class="nav-item">
                 <a class="nav-link active" href="#">الرئيسية</a>
               </li>
@@ -116,7 +116,7 @@
                 >
               </li>
             </ul>
-            <div class="header-icons ms-6">
+            <div class="header-icons">
               <a
                 href="https://wa.me/+966920029449"
                 target="_blank"
@@ -307,11 +307,11 @@
                               >وجهة الوصول</label
                             >
                             <input
-                              id="originLocationCodeOne"
                               type="text"
+                              id="travelTo"
                               autocomplete="off"
                               placeholder="وجهة الوصول"
-                              class="form-control destinations-input open-select airport-origin"
+                              class="form-control destinations-input"
                             />
                             <ul class="selector-box list-unstyled"></ul>
                           </div>
@@ -348,6 +348,7 @@
                               id="adults"
                               placeholder="1"
                               class="form-control"
+                              min="0"
                             />
                           </div>
                           <div class="col-md-1">
@@ -359,6 +360,7 @@
                               id="children"
                               placeholder="0"
                               class="form-control"
+                              min="0"
                             />
                           </div>
                           <div class="col-md-1">
@@ -370,6 +372,7 @@
                               id="infants"
                               placeholder="0"
                               class="form-control"
+                              min="0"
                             />
                           </div>
                         </form>
@@ -387,7 +390,7 @@
                               id="travelFrom"
                               autocomplete="off"
                               placeholder="المغادرة من"
-                              class="form-control destinations-input open-select airport-origin"
+                              class="form-control destinations-input"
                             />
                             <ul class="selector-box list-unstyled"></ul>
                           </div>
@@ -402,7 +405,7 @@
                               id="travelTo"
                               autocomplete="off"
                               placeholder="وجهة الوصول"
-                              class="form-control destinations-input open-select airport-origin"
+                              class="form-control destinations-input"
                             />
                             <ul class="selector-box list-unstyled"></ul>
                           </div>
@@ -439,6 +442,7 @@
                               id="adults"
                               placeholder="1"
                               class="form-control"
+                              min="0"
                             />
                           </div>
                           <div class="col-md-1">
@@ -450,6 +454,7 @@
                               id="children"
                               placeholder="0"
                               class="form-control"
+                              min="0"
                             />
                           </div>
                           <div class="col-md-1">
@@ -461,6 +466,7 @@
                               id="infants"
                               placeholder="0"
                               class="form-control"
+                              min="0"
                             />
                           </div>
                         </form>
@@ -478,7 +484,7 @@
                               id="travelFrom"
                               autocomplete="off"
                               placeholder="المغادرة من"
-                              class="form-control destinations-input open-select airport-origin"
+                              class="form-control destinations-input"
                             />
                             <ul class="selector-box list-unstyled"></ul>
                           </div>
@@ -493,7 +499,7 @@
                               id="travelTo"
                               autocomplete="off"
                               placeholder="وجهة الوصول"
-                              class="form-control destinations-input open-select airport-origin"
+                              class="form-control destinations-input"
                             />
                             <ul class="selector-box list-unstyled"></ul>
                           </div>
@@ -530,6 +536,7 @@
                               id="adults"
                               placeholder="1"
                               class="form-control"
+                              min="0"
                             />
                           </div>
                           <div class="col-md-1">
@@ -541,6 +548,7 @@
                               id="children"
                               placeholder="0"
                               class="form-control"
+                              min="0"
                             />
                           </div>
                           <div class="col-md-1">
@@ -552,6 +560,7 @@
                               id="infants"
                               placeholder="0"
                               class="form-control"
+                              min="0"
                             />
                           </div>
                         </form>
@@ -567,7 +576,7 @@
                               id="travelFrom"
                               autocomplete="off"
                               placeholder="المغادرة من"
-                              class="form-control destinations-input open-select airport-origin"
+                              class="form-control destinations-input"
                             />
                             <ul class="selector-box list-unstyled"></ul>
                           </div>
@@ -582,7 +591,7 @@
                               id="travelTo"
                               autocomplete="off"
                               placeholder="وجهة الوصول"
-                              class="form-control destinations-input open-select airport-origin"
+                              class="form-control destinations-input"
                             />
                             <ul class="selector-box list-unstyled"></ul>
                           </div>
@@ -619,6 +628,7 @@
                               id="adults"
                               placeholder="1"
                               class="form-control"
+                              min="0"
                             />
                           </div>
                           <div class="col-md-1">
@@ -630,6 +640,7 @@
                               id="children"
                               placeholder="0"
                               class="form-control"
+                              min="0"
                             />
                           </div>
                           <div class="col-md-1">
@@ -641,6 +652,7 @@
                               id="infants"
                               placeholder="0"
                               class="form-control"
+                              min="0"
                             />
                           </div>
                         </form>
@@ -662,7 +674,7 @@
                               id="travelFrom"
                               autocomplete="off"
                               placeholder="المغادرة من"
-                              class="form-control destinations-input open-select airport-origin"
+                              class="form-control destinations-input"
                             />
                             <ul class="selector-box list-unstyled"></ul>
                           </div>
@@ -677,7 +689,7 @@
                               id="travelTo"
                               autocomplete="off"
                               placeholder="وجهة الوصول"
-                              class="form-control destinations-input open-select airport-origin"
+                              class="form-control destinations-input"
                             />
                             <ul class="selector-box list-unstyled"></ul>
                           </div>
@@ -714,6 +726,7 @@
                               id="adults"
                               placeholder="1"
                               class="form-control"
+                              min="0"
                             />
                           </div>
                           <div class="col-md-1">
@@ -725,6 +738,7 @@
                               id="children"
                               placeholder="0"
                               class="form-control"
+                              min="0"
                             />
                           </div>
                           <div class="col-md-1">
@@ -736,6 +750,7 @@
                               id="infants"
                               placeholder="0"
                               class="form-control"
+                              min="0"
                             />
                           </div>
                         </form>
@@ -751,7 +766,7 @@
                               id="travelFrom"
                               autocomplete="off"
                               placeholder="المغادرة من"
-                              class="form-control destinations-input open-select airport-origin"
+                              class="form-control destinations-input"
                             />
                             <ul class="selector-box list-unstyled"></ul>
                           </div>
@@ -766,7 +781,7 @@
                               id="travelTo"
                               autocomplete="off"
                               placeholder="وجهة الوصول"
-                              class="form-control destinations-input open-select airport-origin"
+                              class="form-control destinations-input"
                             />
                             <ul class="selector-box list-unstyled"></ul>
                           </div>
@@ -803,6 +818,7 @@
                               id="adults"
                               placeholder="1"
                               class="form-control"
+                              min="0"
                             />
                           </div>
                           <div class="col-md-1">
@@ -814,6 +830,7 @@
                               id="children"
                               placeholder="0"
                               class="form-control"
+                              min="0"
                             />
                           </div>
                           <div class="col-md-1">
@@ -825,6 +842,7 @@
                               id="infants"
                               placeholder="0"
                               class="form-control"
+                              min="0"
                             />
                           </div>
                         </form>
@@ -1803,18 +1821,18 @@
           </div>
         </div>
         <div class="mobile-img d-flex gap-4 justify-content-center">
-          <div class="pt-md-5 text-center">
+          <div class="pt-5 text-center">
             <img
               src="images/app/b1.png"
               alt=""
-              class="img-fluid rounded-3"
+              class="w-100 rounded-3"
               loading="lazy"
             />
           </div>
           <div class="text-center">
             <img
               src="images/app/b2.png"
-              class="img-fluid rounded-3"
+              class="w-100 rounded-3"
               alt=""
               loading="lazy"
             />
@@ -2060,7 +2078,6 @@
     <script>
       $(document).ready(function () {
         $(".destinations-input").keyup(function (e) {
-          console.log("1");
           var _group = $(this).closest(".form-group");
           _group.find(".selector-box").html("");
           $.ajax({
@@ -2082,16 +2099,18 @@
           _group.find(".destinations-input").val($(this).data("city"));
           _group.find(".destinations-input").data("val", _val);
           $(this).closest(".selector-box").removeClass("show");
+
+          console.log("object", _group.find(".destinations-input").val);
         });
       });
 
-      $(".open-select").keyup(function () {
+      $(".destinations-input").keyup(function () {
         $(this).parent().find(".selector-box").addClass("show");
       });
 
       //  Close box when mouseup js
       $(document).mouseup(function (e) {
-        var container = $(".open-select, .selector-box");
+        var container = $(".selector-box");
 
         if (!container.is(e.target) && container.has(e.target).length === 0) {
           $(".selector-box").removeClass("show");
