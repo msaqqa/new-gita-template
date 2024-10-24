@@ -231,8 +231,9 @@ a {
 .navbar .offcanvas a.active {
   color: var(--main-color);
 }
-.navbar .header-icons a {
+.navbar .header-icons i {
   color: var(--black-color);
+  font-size: 24px;
 }
 .navbar .offcanvas .btn-close {
   box-shadow: none;

@@ -14,10 +14,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
 
@@ -876,8 +872,8 @@
                 role="tabpanel"
                 aria-labelledby="outer-booking-tab"
               >
-                <form class="row">
-                  <div class="col-md-6">
+                <form class="row d-flex align-items-center">
+                  <div class="col-md-5">
                     <label for="pnr" class="form-label">رقم الحجز</label>
                     <input
                       type="text"
@@ -887,7 +883,7 @@
                       required
                     />
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-5">
                     <label for="lastName" class="form-label"
                       >الاسم الاخير</label
                     >
@@ -898,6 +894,9 @@
                       name="lastName"
                       required
                     />
+                  </div>
+                  <div class="col-md-2">
+                    <button class="btn btn-main mt-4">استعلام</button>
                   </div>
                 </form>
               </div>
@@ -2069,53 +2068,9 @@
 
     <script src="./js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
     <script src="js/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script src="./js/main.js"></script>
-
-    <script>
-      $(document).ready(function () {
-        $(".destinations-input").keyup(function (e) {
-          var _group = $(this).closest(".form-group");
-          _group.find(".selector-box").html("");
-          $.ajax({
-            url: "https://gita.sa/api/airlines",
-            data: {
-              search: $(this).val(),
-            },
-            type: "get",
-            success: function (res) {
-              _group.find(".selector-box").html(res);
-            },
-          });
-        });
-
-        $(document).on("click", ".airline-option", function (e) {
-          e.preventDefault();
-          var _val = $(this).data("code");
-          var _group = $(this).closest(".form-group");
-          _group.find(".destinations-input").val($(this).data("city"));
-          _group.find(".destinations-input").data("val", _val);
-          $(this).closest(".selector-box").removeClass("show");
-
-          console.log("object", _group.find(".destinations-input").val);
-        });
-      });
-
-      $(".destinations-input").keyup(function () {
-        $(this).parent().find(".selector-box").addClass("show");
-      });
-
-      //  Close box when mouseup js
-      $(document).mouseup(function (e) {
-        var container = $(".selector-box");
-
-        if (!container.is(e.target) && container.has(e.target).length === 0) {
-          $(".selector-box").removeClass("show");
-        }
-      });
-    </script>
   </body>
 </html>

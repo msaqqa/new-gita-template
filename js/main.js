@@ -1,17 +1,3 @@
-// // Initialize Preloader
-// (function ($) {
-//   "use strict";
-//   $(window).on(
-//     "load",
-//     function () {
-//       $("#preloader").fadeOut("slow", function () {
-//         $(this).remove();
-//       });
-//     },
-//     calcvulateNavbarTop()
-//   );
-// })(jQuery);
-
 window.addEventListener("load", function () {
   const preloader = document.getElementById("preloader");
 
@@ -24,29 +10,34 @@ window.addEventListener("load", function () {
       preloader.remove();
     }, 500); // Match this duration with the CSS transition
   }
-
-  calcvulateNavbarTop(); // Call your function directly
 });
 
-// Change Navbar Top
-window.addEventListener("scroll", calcvulateNavbarTop);
-
-window.addEventListener("resize", calcvulateNavbarTop);
-
-function calcvulateNavbarTop() {
-  const navbar = document.getElementById("navbar");
-  const alert = document.getElementById("alert");
-  const alertHeight = alert.clientHeight;
-  const closeBtn = document.getElementById("closeAlert");
-  if (alertHeight - window.scrollY >= 0) {
-    navbar.style.top = `${alertHeight - window.scrollY}px`;
-  } else {
-    navbar.style.top = 0;
+// Calculate the Space Top for Navbar
+document.addEventListener("DOMContentLoaded", function () {
+  function calcvulateNavbarTop() {
+    const navbar = document.getElementById("navbar");
+    const alert = document.getElementById("alert");
+    const alertHeight = alert.clientHeight;
+    const closeBtn = document.getElementById("closeAlert");
+    if (alertHeight - window.scrollY >= 0) {
+      navbar.style.top = `${alertHeight - window.scrollY}px`;
+    } else {
+      navbar.style.top = 0;
+    }
+    closeBtn.addEventListener("click", () => {
+      navbar.style.top = 0;
+    });
   }
-  closeBtn.addEventListener("click", () => {
-    navbar.style.top = 0;
-  });
-}
+
+  // Call the function when the page loads
+  window.addEventListener("scroll", calcvulateNavbarTop);
+
+  // Call the function when the page resize
+  window.addEventListener("resize", calcvulateNavbarTop);
+
+  // Call your function directly
+  calcvulateNavbarTop();
+});
 
 // Toggle Classes for Collapse in the Search Page
 document.addEventListener("DOMContentLoaded", function () {
@@ -146,4 +137,46 @@ const swiperReviews = new Swiper(".swiper-reviews", {
     el: ".swiper-pagination",
     clickable: true,
   },
+});
+
+// Change Input Text in the Search Form to Select Box and Auto Complete
+$(document).ready(function () {
+  $(".destinations-input").keyup(function (e) {
+    var _group = $(this).closest(".form-group");
+    _group.find(".selector-box").html("");
+    $.ajax({
+      url: "https://gita.sa/api/airlines",
+      data: {
+        search: $(this).val(),
+      },
+      type: "get",
+      success: function (res) {
+        _group.find(".selector-box").html(res);
+      },
+    });
+  });
+
+  // Take the Selected Value to the Input
+  $(document).on("click", ".airline-option", function (e) {
+    e.preventDefault();
+    var _val = $(this).data("code");
+    var _group = $(this).closest(".form-group");
+    _group.find(".destinations-input").val($(this).data("city"));
+    _group.find(".destinations-input").data("val", _val);
+    $(this).closest(".selector-box").removeClass("show");
+  });
+});
+
+// Toggle Classes Show to Selector Box
+$(".destinations-input").keyup(function () {
+  $(this).parent().find(".selector-box").addClass("show");
+});
+
+// Close the Select Box when Mouseup
+$(document).mouseup(function (e) {
+  var container = $(".selector-box");
+
+  if (!container.is(e.target) && container.has(e.target).length === 0) {
+    $(".selector-box").removeClass("show");
+  }
 });
